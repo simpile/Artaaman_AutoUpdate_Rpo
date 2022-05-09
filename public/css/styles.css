@@ -1,0 +1,574 @@
+@font-face {
+  font-family: "Shabnam-Normal";
+  src: url("../fonts/Shabnam.eot"), url("../fonts/Shabnam.woff") format("woff"),
+    url("../fonts/Shabnam.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Shabnam-Bold";
+  src: url("../fonts/Shabnam-Bold.eot"),
+    url("../fonts/Shabnam-Bold.woff") format("woff"),
+    url("../fonts/Shabnam-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Shabnam-S";
+  src: url("../fonts/Shabnam.eot"), url("../fonts/Shabnam.woff") format("woff");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "Shabnam-L";
+  src: url("../fonts/Shabnam-Light.eot"),
+    url("../fonts/Shabnam-Light.woff") format("woff"),
+    url("../fonts/Shabnam-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Shabnam-DG-N";
+  src: url(../fonts/Shabnam-FD.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Shabnam-DG-B";
+  src: url(../fonts/Shabnam-Bold-FD.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Shabnam-DG-L";
+  src: url(../fonts/Shabnam-Light-FD.woff) format("woff");
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  GENERALS                                  */
+/* -------------------------------------------------------------------------- */
+:root {
+  --yellow-light: #febf50;
+  --yallow-mid: #ffb724;
+  --yellow-dark: #fba100;
+  --green-light: #2b6859;
+  --green-mid: #214e43;
+  --green-dark: #1b3c34;
+  --grey-light: #ecebeb;
+  --grey-mid: #797979;
+  --grey-dark: #1a1818;
+  --black-color: #000000;
+  --white-color: #ffffff;
+  --white-bg: #ffffff86;
+  --green-bg: #2b68599a;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Shabnam-Normal";
+  margin: 0;
+  padding: 0;
+}
+
+::selection {
+  color: white;
+  background: var(--green-light);
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none;
+}
+
+h1 {
+  font-family: "Shabnam-Bold";
+}
+
+
+strong {
+  color: var(--yellow-dark);
+}
+.mainWrapper {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.myMore {
+  margin: 1rem auto;
+  color: var(--white-color);
+  background-color: var(--grey-mid);
+  font-size: 12px;
+  /* border: 1px var(--green-dark) solid; */
+  padding: 0 1rem;
+  border-radius: 15px;
+  box-shadow: 1px 1px 3px rgb(210 208 208);
+}
+
+.myMore:hover {
+  background-color: var(--yellow-light);
+  /* box-shadow: 0px -1px 3px rgb(210 208 208); */
+}
+.myMore:active {
+  box-shadow: none;
+}
+.myBackBtn {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  background-color: var(--grey-mid);
+  color: var(--white-color)!important;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.myBackBtn:hover {
+  background-color: var(--yellow-light);
+  color: var(--black-color);
+}
+
+.outerPart {
+  background-color: var(--grey-light);
+  min-height: 70vh;
+  padding: 4rem 6rem;
+  text-align: center;
+  direction: rtl;
+  font-family: "Shabnam-DG-N";
+}
+.myMainTitle {
+  margin-bottom: 2rem;
+  padding-top: 4rem;
+  text-align: center;
+}
+
+.backBtnWrapper {
+  display: flex;
+  justify-content: center;
+}
+img{color: var(--green-mid);}
+/* Ripple In */
+@-webkit-keyframes hvr-ripple-in {
+  100% {
+    inset: 0 0 0 0;
+    opacity: 0.8;
+  }
+}
+@keyframes hvr-ripple-in {
+  100% {
+    inset: 0 0 0 0;
+    opacity: 0.8;
+  }
+}
+.hvr-ripple-in {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+}
+.hvr-ripple-in:before {
+  content: "";
+  position: absolute;
+  border: var(--yallow-mid) solid 1px;
+  border-radius: 25px;
+  top: -12px;
+  right: -12px;
+  bottom: -12px;
+  left: -12px;
+  opacity: 0;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+.hvr-ripple-in:hover:before,
+.hvr-ripple-in:focus:before,
+.hvr-ripple-in:active:before {
+  -webkit-animation-name: hvr-ripple-in;
+  animation-name: hvr-ripple-in;
+}
+/* -------------------------------------------------------------------------- */
+/*                                  PRELODER                                  */
+/* -------------------------------------------------------------------------- */
+
+
+
+
+.preloader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: var(--grey-light);
+  z-index: 9999;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--grey-dark);
+  font-size: 12px;
+}
+.preloader-iconWrapper {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: reveal 3s ease-out ;
+}
+.preloader-icon {
+  width: 100px;
+    animation: shake 2s ease-out infinite;
+}
+
+
+.preloader p {
+  background-color: var(--white-color);
+  margin-top: 0.4rem;
+  padding: 0.2rem;
+  border-radius: 25px;
+  animation: reveal 3s forwards;
+}
+@keyframes shake {
+  0% {
+    transform: translate(1px, -1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(1px, -3px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(1px, -5px) rotate(-3deg);
+  }
+  30% {
+    transform: translate(1px, -7px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -9px) rotate(1deg);
+  }
+  50% {
+    transform: translate(1px, -11px) rotate(3deg);
+  }
+  60% {
+    transform: translate(1px, -9px) rotate(0deg);
+  }
+  70% {
+    transform: translate(1px, -7px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(1px, -5px) rotate(-3deg);
+  }
+  90% {
+    transform: translate(1px, -3px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -1px) rotate(-1deg);
+  }
+}
+
+@keyframes reveal {
+  0% {
+    clip-path: inset(0 0 0 100%);
+  }
+
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+/* -------------------------------------------------------------------------- */
+/*                                   NAVBAR                                   */
+/* -------------------------------------------------------------------------- */
+.myNavbar {
+  background-color: var(--green-mid);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+  direction: rtl;
+}
+
+.myNavbar div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#myNavbar-logo svg {
+  padding: 0.6rem 0;
+}
+
+:is(#myNavbar-logo svg:hover) :is(path, circle) {
+  fill: var(--yellow-light);
+}
+
+.myNavbar div button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.iconify {
+  color: var(--white-color);
+}
+
+.iconify:hover {
+  color: var(--yellow-light);
+}
+
+.myNavbar-contents {
+  position: fixed;
+  inset: 60px auto auto 0px;
+  width: 5%;
+  min-height: 100vh;
+  background-color: var(--green-light);
+  z-index: 2;
+  display: none;
+}
+
+.myNavbar-contents ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  min-height: 60vh;
+  margin-top: 1rem;
+}
+
+.myNavbar-contents li {
+  list-style: none;
+}
+
+.myNavbar-contents li:hover .iconify {
+  transform: scale(1.2);
+}
+
+.myNavbar-item a {
+  position: relative;
+}
+
+.myNavbar-item p {
+  display: none;
+  background-color: var(--grey-dark);
+  color: var(--white-color);
+  position: absolute;
+  left: 20px;
+  font-family: "Shabnam-L";
+  white-space: nowrap;
+}
+
+.myNavbar-contents li:hover p {
+  display: block;
+}
+
+.extNav-container {
+  min-height: 10vh;
+}
+/* -------------------------------------------------------------------------- */
+/*                                   FOOTER                                   */
+/* -------------------------------------------------------------------------- */
+
+.google-map iframe {
+  display: block;
+  width: 100%;
+}
+footer {
+  font-family: "Shabnam-DG-N";
+  direction: rtl;
+  min-height: 40vh;
+  background-color: var(--green-mid);
+  padding: 2rem;
+  color: var(--white-color);
+  /* height: 20vh; */
+}
+.myFooter-container {
+  padding: 1rem;
+  display: grid;
+  grid-template-rows: auto 0.5fr auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  text-align: center;
+  align-items: center;
+}
+
+.myFooter-header {
+  grid-template-columns: 1/2;
+  grid-row: 1/4;
+}
+.myFooter-header img {
+  width: 120px;
+  margin-bottom: 1rem;
+}
+
+.myFooter-copyRight {
+  grid-template-columns: 1/2;
+  grid-row: 3/4;
+}
+
+.myFooter-socialMedias .iconify,
+footer a, footer h2 {
+  color: var(--white-color);
+}
+
+footer .iconify {
+  color: var(--yellow-light);
+  margin: auto 0.3rem;
+}
+
+.myFooter-socialMedias .iconify:hover,
+footer a:hover {
+  color: var(--yellow-light);
+}
+footer h5 {
+  grid-row: 1/2;
+  font-size: 25px;
+  position: relative;
+  margin-bottom: 1rem;
+  white-space: nowrap;
+}
+
+.myFooter-container p {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.myFooter-phones,
+.myFooter-socialMedias {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  justify-content: space-evenly;
+}
+.myFooter-socialMedias {
+  grid-row: 3/4;
+}
+
+.myFooter-address {
+  display: block;
+  grid-row: 2/3;
+  grid-column: 3/4;
+}
+.myFooter-emailAddress {
+  grid-row: 3/4;
+  grid-column: 3/4;
+  display: none;
+}
+
+.myFooter-socialMedias {
+  display: flex;
+  justify-content: center;
+  align-self: flex-end;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 RESPONSIVE                                 */
+/* -------------------------------------------------------------------------- */
+@media only screen and (max-width: 900px) {
+  .myNavbar-contents {
+    width: 8%;
+  }
+}
+@media only screen and (max-width: 700px) {
+
+  .outerPart{
+    padding: 4rem 4rem;
+  }
+
+}
+
+
+@media only screen and (max-width: 600px) {
+  .myFooter-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .myFooter-emailAddress {
+    display: none;
+  }
+  .myFooter-emailIcone {
+    display: block;
+  }
+  .myFooter-container p {
+    order: -1;
+  }
+  .myFooter-container h5:nth-of-type(2) {
+    order: -1;
+  }
+  .myFooter-header {
+    order: -1;
+  }
+  .myFooter-copyRight {
+    order: 1;
+  }
+  .myFooter-socialMedias {
+    width: 100%;
+  }
+  .outerPart {
+    padding: 4rem 2rem;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .myNavbar-contents {
+    width: 100%;
+  }
+  .myNavbar-contents ul {
+    width: 100%;
+    min-height: 80vh;
+    z-index: 10;
+  }
+  .myNavbar-item {
+    text-align: center;
+  }
+  .myNavbar-item p {
+    display: block;
+    position: static;
+    text-align: center;
+    background-color: transparent;
+  }
+  .myNavbar-item:hover p, .myNavbar-item:hover .iconify{
+color: var(--yellow-light);
+  }
+
+  .myNavbar-contents li {
+    list-style: none;
+    border-bottom: 1px grey solid;
+    width: 35%;
+}
+
+.myNavbar-contents li:hover  {
+  border-bottom: 1px var(--yellow-light) solid;
+  width: 50%;
+  transition: all ease-in-out .5s;
+}
+}
+@media only screen and (max-width: 375px) {
+  footer {
+    padding: 0;
+  }
+  .myFooter-container p {
+    width: 100%;
+  }
+  .outerPart {
+    padding: 4rem 1rem;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  #myNavbar-logo svg {
+    width: 80%;
+  }
+  .myNavbar button svg {
+    width: 80%;
+  }
+}

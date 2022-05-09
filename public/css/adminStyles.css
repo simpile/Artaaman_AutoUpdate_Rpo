@@ -1,0 +1,250 @@
+@font-face {
+    font-family: "Shabnam-Normal";
+    src: url("../fonts/Shabnam.eot"), url("../fonts/Shabnam.woff") format("woff"),
+      url("../fonts/Shabnam.ttf") format("truetype");
+    font-weight: normal;
+  }
+  
+  @font-face {
+    font-family: "Shabnam-Bold";
+    src: url("../fonts/Shabnam-Bold.eot"),
+      url("../fonts/Shabnam-Bold.woff") format("woff"),
+      url("../fonts/Shabnam-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-weight: 500;
+  }
+
+  body {
+      font-family: "Shabnam-Normal" ;
+      text-align: right;
+        position: relative;
+
+  }
+
+
+#clicked {
+    display: inline-block;
+}
+
+#close {
+  display: none;
+}
+
+.editArticle, .addNewArticle {
+  width: 100%;
+  /* min-height: 70vh; */
+    position: fixed;
+    top: 0;
+    right: 0;
+   /*  bottom: 20px;
+    right: 80px;
+    left: 80px; */
+    /* overflow: auto; */
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s;
+    z-index: 1;
+    display: none;
+    background: #e3ecec !important;
+    direction: rtl;
+    box-shadow: 0px 0px 20px -3px;
+    margin:auto;
+}
+.addNewArticle{
+  /* width: 100%; */
+  /* position: absolute;
+    top: 0px; */
+}
+ form{
+   /* max-width: 80%; */
+   max-height: 70%;
+padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+textarea, .ck-blurred{
+  min-height: 50vh;
+
+}
+textarea, .ck.ck-editor {
+
+  width: 100% !important;
+}
+.closeTab {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.eachArticle-wrapper{
+  display: flex; 
+  flex-wrap: wrap;
+   width: 100%;
+
+
+}
+
+.eachArticle {
+  border-radius: 10px;
+  width: 90%;
+max-height: 35vh;
+/* overflow: hidden; */
+  margin-bottom: 6rem;
+  margin-left: auto;
+  margin-right: auto;
+  /* position: relative; */
+  display: flex;
+  justify-content: space-between;
+flex-wrap: wrap;
+
+border: 1.5px solid #febf50;
+
+}
+/* .newForm{
+  width: 80%;
+  max-height: 50%;
+  margin: auto;
+} */
+.articleContainer{
+width: 100%;
+ height: 100%;
+    display: flex;
+  justify-content: space-around;
+flex-wrap: wrap;
+
+}
+/* .title {
+  position: absolute;
+  top: 10px;
+  left: 200px;
+} */
+
+.article-info {
+  /* position: absolute;
+  top: 50px;
+  left: 150px; */
+  /* text-align: right; */
+width: 50%;
+  max-height: 100%;
+  overflow: hidden ;
+}
+
+.addNewOne {
+  position: sticky;
+  top: 0;
+  background-color: #214E43;
+  text-align: center;
+  z-index: 1;
+}
+
+.articleImg {
+  /* height: auto; */
+min-width:200px;
+max-height: 100%;
+overflow: hidden;
+
+  /* position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0; */
+  border-radius: 0 10px 10px 0;
+}
+
+.btn-container{
+  /* min-width: 100px; */
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  gap:1rem;
+}
+.deleteBtn {
+  /* position: absolute;
+  bottom: 5px;
+  left: 5px; */
+  /* border-radius: 10px;
+  background-color: red;
+  color: white; */
+}
+
+.editBtn {
+  /* position: absolute;
+  top: 5px;
+  left: 5px; */
+  /* border-radius: 10px;
+
+  color: white;
+  background-color: #214E43; */
+}
+
+.addBtn {
+  background: #214E43;
+}
+
+#title, #editedTitle{
+  width: 100%;
+}
+#desc, #editedDisc{
+/* min-height: 90vh !important; */
+}
+
+@media screen and (max-width: 447px) {
+  .eachArticle {
+    max-height:50vh;
+  }
+  /* .desc {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    width: 250px;
+    height: 100px;
+    overflow: hidden;
+  }
+  .title {
+    position: absolute;
+    top: 10px;
+    left: 150px;
+  } */
+  .decs-wrapper{
+    flex-direction: column;
+  }
+  .article-info {
+    max-height: 80%;
+    overflow: hidden;
+  }
+  .articleImg {
+    /* height: auto; */
+  /* min-width:200px; */
+  max-height: 20%;}
+
+  .btn-container{
+  justify-content: center;
+  }
+}
+
+@-webkit-keyframes animatezoom {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+  
+@keyframes animatezoom {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: rgb(179, 175, 175); 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b6969; 
+}

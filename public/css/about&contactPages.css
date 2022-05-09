@@ -1,0 +1,191 @@
+/* -------------------------------------------------------------------------- */
+/*                                 BOTH-PAGES                                 */
+/* -------------------------------------------------------------------------- */
+
+.myArticle {
+  text-align: right;
+  background-color: var(--white-color);
+  box-shadow: 1px 1px 3px rgb(210 208 208);
+  padding: 3rem 4rem;
+  margin: 1rem;
+  border-radius: 25px;
+  width: 80%;
+  margin: 1rem auto;
+}
+.myArticle:last-of-type {
+  margin-bottom: 3rem;
+}
+.myAlignIcon {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.mySection {
+  margin-top: 1rem;
+  border-right: var(--yellow-dark) 2px solid;
+  padding-right: 2rem;
+  padding-bottom: 0.5rem;
+}
+.mySectionRow {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.mySectionCol {
+  display: flex;
+  flex-direction: column;
+}
+.mySection p a:visited{
+  color: var(--green-dark);
+}
+.mySection p a{
+  font-weight: bold;
+  color: var(--green-light);
+}
+.mySection p a:active{
+  color: var(--green-mid);
+}
+.mySection p a:hover{
+  color: var(--yellow-dark);
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                               CONTACT-US-PAGE                              */
+/* -------------------------------------------------------------------------- */
+.myContentPage h3,
+.myContentPage strong {
+  color: var(--grey-dark);
+}
+.myContentPage .iconify,
+.myContentPage h4 {
+  color: var(--yellow-light);
+}
+
+.myContentPage .myArticle a,
+.myContentPage .mySection a {
+  color: var(--green-light);
+  white-space: nowrap;
+  font-family: "Shabnam-DG-B";
+}
+.myContentPage .myArticle a:visited {
+  color: var(--green-dark);
+}
+.myContentPage .myArticle a:hover {
+  color: var(--yellow-dark);
+}
+
+.myArticle h3 {
+  margin-right: 2rem;
+  white-space: nowrap;
+  padding-bottom: 2rem;
+}
+
+.myContentPage h4 {
+  margin: 1rem 0;
+  width: 100%;
+}
+.myContentPage .mySection p {
+  padding-top: 0.5rem;
+  color: var(--green-mid);
+}
+.myContentPage .myArticle .mySectionDetails p,
+.myContentPage .myArticle .mySectionDetails {
+  color: var(--grey-mid);
+}
+.myContentPage .mySectionCol {
+  align-items: center;
+  padding-bottom: 1rem;
+}
+.mySociallink {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+/* -------------------------------------------------------------------------- */
+/*                                 RESPONSIVE                                 */
+/* -------------------------------------------------------------------------- */
+@media only screen and (max-width: 768px) {
+  .myArticle {
+    width: 90%;
+    padding: 1.5rem 2rem;
+
+  }
+}
+
+@media only screen and (max-width: 700px) {
+
+
+  .myArticle{
+    width: 100%;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+
+ 
+ 
+
+
+   .myArticle h3{
+    padding-bottom: 1rem;
+  
+  }
+}
+
+
+
+@media only screen and (max-width: 375px) {
+
+
+  .myArticle {
+    text-align: center;
+  }
+  .mySection{
+padding-right: 0;
+border-right: none;
+border-top: var(--yallow-mid) 2px solid;
+padding-top: .5rem;
+text-align: center;
+margin-top: 0;
+  }
+  .myArticle h3{ margin-right: 0;}
+  .myContentPage .mySectionCol{
+    width: 100%;
+    text-align: center;
+  }
+  .myContentPage .myAlignIcon{
+    width: 100%;
+    justify-content: center;
+  }
+
+}
+
+
+@media only screen and (max-width: 305px) {
+ 
+  .myArticle {
+    /* padding: .5rem 1rem; */
+    width: 100%;
+  
+  }
+  .mySection{
+    /* width: 90%; */
+    margin: auto 0;
+    padding: auto 0;
+  }
+
+    
+
+}
+
+@media only screen and (max-width: 200px) {
+  
+  .myArticle{
+    padding: 0;
+  }
+
+}
