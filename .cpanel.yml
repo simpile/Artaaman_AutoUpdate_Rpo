@@ -2,5 +2,5 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/artaaman/myProject
-    - /bin/cp * $DEPLOYPATH
+    - /bin/cp -R $DEPLOYPATH
  
