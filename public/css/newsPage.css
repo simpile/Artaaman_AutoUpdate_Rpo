@@ -24,6 +24,7 @@ padding-top: 6rem;
   flex: 1;
   min-width: 290px;
   box-shadow: 1px 1px 3px rgb(210 208 208);
+  max-height: 50vh;
 }
 
 
