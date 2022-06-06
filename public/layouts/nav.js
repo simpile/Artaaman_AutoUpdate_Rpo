@@ -37,7 +37,13 @@ document.write(
       <p>خانه</p>
     </a>
   </li>
+  <li class="myNavbar-item">
+  <a disabled href="#"  >
+  <span class="iconify" data-icon="bytesize:cart" data-width="25" ></span>
   
+    <p> (به زودی)فروشگاه<span style="color:red">*</span></p>
+  </a>
+</li>  
   <li class="myNavbar-item">
     <a href="/gallery">
       <span class="iconify" data-width="20" data-icon="grommet-icons:gallery"></span>       
@@ -63,6 +69,7 @@ document.write(
       <p>درباره‌ی ما</p>
     </a>
   </li>
+ 
  
 
 </ul>
