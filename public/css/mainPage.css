@@ -110,6 +110,10 @@ abbr{
     margin-bottom: 3rem;
     box-shadow: 2.1px 4.2px 4.2px hsl(0deg 0% 0% / 0.44);
   }
+  .myWhyUs-item p{
+    text-align: right;
+
+  }
   .myWhyUs-item:hover {
     filter: none;
   }
