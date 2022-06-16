@@ -150,7 +150,10 @@ abbr{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    font-family: "Shabnam-DG-N";
   }
+  .myWhyUs-contents  a:hover{color: var(--green-dark);}
+  .myWhyUs-contents  a{color: var(--yellow-dark);}
   .myWhyUs-title {
     margin: 3rem 0;
   }
