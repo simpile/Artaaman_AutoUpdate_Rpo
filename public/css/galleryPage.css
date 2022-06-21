@@ -1,6 +1,7 @@
 a:hover{
   text-decoration: none;
 }
+
 .myNavbar-contents {
   inset: 55px auto auto 0px;
 }
@@ -50,7 +51,7 @@ direction: rtl !important;
   margin: 0 auto .2rem !important;
 }
 .glightbox-clean .gslide-desc{
-     font-family: 'Shabnam-Normal'!important;
+     font-family: 'Shabnam-DG-B'!important;
 
 }
 
