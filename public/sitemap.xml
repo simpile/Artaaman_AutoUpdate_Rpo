@@ -9,27 +9,47 @@
 
 <url>
   <loc>https://artaaman.com/</loc>
-  <lastmod>2022-02-19T16:55:47+00:00</lastmod>
+  <lastmod>2022-06-23T15:21:22+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
+  <loc>https://artaaman.com/contact</loc>
+  <lastmod>2022-06-23T15:21:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
   <loc>https://artaaman.com/gallery</loc>
-  <lastmod>2022-02-19T16:55:47+00:00</lastmod>
+  <lastmod>2022-06-23T15:21:22+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://artaaman.com/about</loc>
-  <lastmod>2022-02-19T16:55:47+00:00</lastmod>
+  <lastmod>2022-06-23T15:21:22+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://artaaman.com/contact</loc>
-  <lastmod>2022-02-19T16:55:47+00:00</lastmod>
+  <loc>https://artaaman.com/news/62b477090e4219bb06332ea9</loc>
+  <lastmod>2022-06-23T15:21:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://artaaman.com/news/62915650a342ce04540f89d2</loc>
+  <lastmod>2022-06-23T15:21:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://artaaman.com/news/62914438cc67ddcc6bbcf721</loc>
+  <lastmod>2022-06-23T15:21:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://artaaman.com/news/627b9e8c7df1170ad594d06e</loc>
+  <lastmod>2022-06-23T15:21:22+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://artaaman.com/news</loc>
-  <lastmod>2022-02-19T16:55:47+00:00</lastmod>
+  <lastmod>2022-06-23T15:21:22+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
