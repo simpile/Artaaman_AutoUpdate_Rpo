@@ -46,8 +46,8 @@ var swiper = new Swiper(".mySwiper", {
   $("#newsSlideShow").owlCarousel({
     rtl: true,
     loop: true,
-    autoplayHoverPause: true,
-    autoplay: true,
+    // autoplayHoverPause: true,
+    // autoplay: true,
     margin: 20,
     merge: true,
     responsiveClass: true,
