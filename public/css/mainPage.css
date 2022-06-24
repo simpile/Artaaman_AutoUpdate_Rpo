@@ -844,9 +844,10 @@ color: var(--yallow-mid);  }
     right: 10px;
   }
 
-  .myWhyUs-item{
+  /* .myWhyUs-item{
     width: 11em;
-  }
+  } */
+
   }
 
   
@@ -859,9 +860,7 @@ color: var(--yallow-mid);  }
    .myHeader-contents button {
     padding: 0.3rem 1.8rem;
   }
-  .myWhyUs-item{
-    width: 10em;
-  }
+ 
   .myWhyUs-wrapper {
     margin: 4rem auto 0;}
   [data-title]:after {
