@@ -1,4 +1,4 @@
-strong {
+strong:not(.myFooter-header strong) {
   color: var(--green-light);
 }
 
