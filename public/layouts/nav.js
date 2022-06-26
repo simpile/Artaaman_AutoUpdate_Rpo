@@ -1,14 +1,5 @@
 document.write(
  `
- 
- <div class="preloader"> 
- <div class="preloader-iconWrapper">
-   <img class="preloader-icon" src="/images/pointsIcon-01.svg" alt="My Site Preloader">
-   <img class="preloader-icon" src="/images/pointsIcon-03.svg" alt="My Site Preloader">
-   <img class="preloader-icon" src="/images/pointsIcon-04.svg" alt="My Site Preloader">
- </div>
-</div>
-
  <nav class="myNavbar">
  <div class="mainWrapper">
    <a href="/" id="myNavbar-logo">
