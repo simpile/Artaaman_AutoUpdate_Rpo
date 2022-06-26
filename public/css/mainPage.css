@@ -851,8 +851,11 @@ color: var(--yallow-mid);  }
   }
 
   
-
+  
 @media only screen and (max-width: 425px) {
+  .myHeader {
+    background-size: 30vw, 30vw;
+}
   .myHeader-contents h1 {
     font-size: 1rem;
     margin: 1rem auto 2rem;
