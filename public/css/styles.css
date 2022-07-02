@@ -79,7 +79,7 @@
 
 body {
   font-family: "Shabnam-Normal";
-  font-display: swap;
+  font-display: fallback;
   margin: 0;
   padding: 0;
 }
