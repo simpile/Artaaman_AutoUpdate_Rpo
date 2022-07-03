@@ -3,6 +3,7 @@
   src: url("../fonts/Shabnam.eot"), url("../fonts/Shabnam.woff") format("woff"),
     url("../fonts/Shabnam.ttf") format("truetype");
   font-weight: normal;
+  font-display:swap;
 }
 
 @font-face {
@@ -12,12 +13,14 @@
     url("../fonts/Shabnam-Bold.ttf") format("truetype");
   font-weight: bold;
   font-weight: 500;
+  font-display:swap;
 }
 
 @font-face {
   font-family: "Shabnam-S";
   src: url("../fonts/Shabnam.eot"), url("../fonts/Shabnam.woff") format("woff");
   font-weight: 100;
+  font-display:swap;
 }
 
 @font-face {
@@ -26,21 +29,25 @@
     url("../fonts/Shabnam-Light.woff") format("woff"),
     url("../fonts/Shabnam-Light.ttf") format("truetype");
   font-weight: 300;
+  font-display:swap;
 }
 
 @font-face {
   font-family: "Shabnam-DG-N";
   src: url(../fonts/Shabnam-FD.woff) format("woff");
+  font-display:swap;
 }
 
 @font-face {
   font-family: "Shabnam-DG-B";
   src: url(../fonts/Shabnam-Bold-FD.woff) format("woff");
+  font-display:swap;
 }
 
 @font-face {
   font-family: "Shabnam-DG-L";
   src: url(../fonts/Shabnam-Light-FD.woff) format("woff");
+  font-display:swap;
 }
 
 /* -------------------------------------------------------------------------- */
