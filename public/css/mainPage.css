@@ -109,7 +109,7 @@ a:focus {
 }
 
 h1 {
-  font-family: "Shabnam-Bold";
+  /* font-family: "Shabnam-Bold"; */
   
 }
 
@@ -1303,7 +1303,7 @@ color: var(--yallow-mid);  }
   .accordion:after {
     content: "\002B";
     color: var(--green-mid);
-    font-weight: bold;
+    /* font-weight: bold; */
     float: left;
     margin-left: 5px;
   }
