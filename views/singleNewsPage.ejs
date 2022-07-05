@@ -8,10 +8,13 @@
 
   <meta property="title" content="   <%= article.title %>" />
   <meta property="url" content="https://www.artaaman.com/news/" />
-  <meta property="description" content="<%= article.desc %>">
+  <meta property="subject" content="<%= article.title %>">
+  <link rel='fluid-icon' type='image/jpg' href='/fluid-icon.png'>
   <meta property="og:image" content="https://artaaman.com<%= article.img %>">
   <meta property="type" content="article" />
+  <meta name = "revised" content = "  <%= formatDate(article.createdAt) %>  " />
 
+  <meta property="og:image" content="https://artaaman.com<%= article.img %>">
 
 
 
