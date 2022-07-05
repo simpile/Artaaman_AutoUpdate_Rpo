@@ -1,3 +1,10 @@
+var iconiFy = document.createElement('script');  
+iconiFy.setAttribute('src','https://code.iconify.design/2/2.1.0/iconify.min.js');
+document.head.appendChild(iconiFy)
+var owlCar = document.createElement('script');  
+owlCar.setAttribute('src','https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js');
+document.head.appendChild(owlCar)
+
 /* -------------------------------------------------------------------------- */
 /*                                  PRELOADER                                 */
 /* -------------------------------------------------------------------------- */
