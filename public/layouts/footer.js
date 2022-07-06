@@ -17,13 +17,13 @@ document.write(`
     آدرس
   </h5>
   <div class="myFooter-phones">
-    <a href="tel:00982637850451">
-      026-37850451
-    </a>
-    <br>
-    <a href="tel:00982637850452">
-      026-37850452
-    </a>
+  <a href="tel:00989909890646">
+  0990-9860646
+</a>
+<br>
+<a href="tel:009891099465940">
+  0910-9465940
+</a>
   </div>
   <div class="myFooter-socialMedias">
     <a title="تلگرام" target="_blank" href="https://t.me/artaman_co">
