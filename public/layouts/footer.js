@@ -17,11 +17,11 @@ document.write(`
     آدرس
   </h5>
   <div class="myFooter-phones">
-  <a href="tel:00989909890646">
+  <a href="tel:09909890646">
   0990-9860646
 </a>
 <br>
-<a href="tel:009891099465940">
+<a href="tel:09109465940">
   0910-9465940
 </a>
   </div>
