@@ -1551,9 +1551,9 @@ margin-bottom: 0;
   .myGallery-container {
     min-height:110em;
   }
-  .myFqa-wrapper{
-    /* margin: 6rem 0; */
-  }
+  /* .myFqa-wrapper{
+    margin: 6rem 0;
+  } */
   .myFqa-container {
     padding: 0.5rem;
   }
