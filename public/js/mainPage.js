@@ -67,7 +67,7 @@ var swiper = new Swiper(".mySwiper", {
     slidesPerView: 4,
     freeMode: true,
     watchSlidesProgress: true,
-    rtl: true,
+    rtl: true
   });
   var swiper2 = new Swiper(".mySwiper2", {
     loop: true,
@@ -78,7 +78,7 @@ var swiper = new Swiper(".mySwiper", {
     },
     thumbs: {
       swiper: swiper,
-    },
+    }
   });
   
   /* -------------------------------------------------------------------------- */
@@ -119,7 +119,7 @@ var swiper = new Swiper(".mySwiper", {
       },
       900: {
         items: 3,
-      },
-    },
+      }
+    }
   });
   
