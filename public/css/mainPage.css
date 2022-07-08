@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: "Shabnam-Normal";
   src: url("../fonts/Shabnam.eot"), url("../fonts/Shabnam.woff") format("woff"),
     url("../fonts/Shabnam.ttf") format("truetype");
@@ -32,7 +32,7 @@
     url("../fonts/Shabnam-Light.ttf") format("truetype");
   font-weight: 300;
   
-}
+ } */
 
 @font-face {
   font-family: "Shabnam-DG-N";
@@ -40,7 +40,7 @@
   
 }
 
-@font-face {
+/*@font-face {
   font-family: "Shabnam-DG-B";
   src: url(../fonts/Shabnam-Bold-FD.woff) format("woff");
   
@@ -50,7 +50,7 @@
   font-family: "Shabnam-DG-L";
   src: url(../fonts/Shabnam-Light-FD.woff) format("woff");
   
-}
+} */
 
 /* -------------------------------------------------------------------------- */
 /*                                  GENERALS                                  */
@@ -87,7 +87,8 @@
 }
 
 body {
-  font-family: "Shabnam-Normal";
+  /* font-family: "Shabnam-Normal"; */
+  font-family: "Shabnam";
   /* font-display: swap; */
   margin: 0;
   padding: 0;
@@ -109,8 +110,7 @@ a:focus {
 }
 
 h1 {
-  font-family: "Shabnam-Bold";
-  
+  /* font-family: "Shabnam-Bold"; */
 }
 
 
@@ -152,7 +152,7 @@ strong {
   background-color: var(--yellow-light);
   color: var(--black-color);
 }
-
+/* 
 .outerPart {
   background-color: var(--grey-light);
   min-height: 70vh;
@@ -160,7 +160,7 @@ strong {
   text-align: center;
   direction: rtl;
   font-family: "Shabnam-DG-N";
-}
+} */
 .myMainTitle {
   margin-bottom: 2rem;
   padding-top: 4rem;
@@ -374,7 +374,7 @@ img{color: var(--green-mid);}
   color: var(--white-color);
   position: absolute;
   left: 20px;
-  font-family: "Shabnam-L";
+  /* font-family: "Shabnam-L"; */
   white-space: nowrap;
 }
 
@@ -659,7 +659,8 @@ abbr{
   border-radius: 50px;
   color: var(--green-mid);
   border: var(--green-mid) 2px solid;
-  font-family: "Shabnam-Normal";
+  /* font-family: "Shabnam-Normal"; */
+  font-family: "Shabnam";
 }
 
 .myHeader-contents button:hover {
@@ -1147,12 +1148,13 @@ abbr{
     overflow: hidden;
     box-shadow: 2.1px 4.2px 4.2px hsl(0deg 0% 0% / 0.44);
     font-family: 'Shabnam-DG-N';
+    /* font-family: 'Shabnam'; */
 
 
   }
   
   .mySlideShow-info small {
-    font-family: "Shabnam-L";
+    font-family: "Shabnam";
     color: var(--green-light);
     position: relative;
     top: 2px;
@@ -1296,7 +1298,9 @@ color: var(--yallow-mid);  }
     outline: none;
     font-size: 18px;
     transition: 0.4s;
-    font-family: "Shabnam-Bold";
+    /* font-family: "Shabnam-Bold"; */
+    font-family: "Shabnam";
+font-weight: bold;
     color: var(--grey-dark);
   }
   
