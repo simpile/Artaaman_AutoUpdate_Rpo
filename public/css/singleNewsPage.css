@@ -2,7 +2,7 @@ strong:not(.myFooter-header strong) {
   color: var(--green-light);
 }
 
-a {
+a{
   color: var(--yellow-light);
   cursor: pointer;
 }
@@ -303,3 +303,4 @@ aside h4 {
 
 }
 }
+
