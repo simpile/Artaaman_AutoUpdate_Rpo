@@ -1,3 +1,4 @@
+
 /* -------------------------------------------------------------------------- */
 /*                                GALLERY-PAGE                                */
 /* -------------------------------------------------------------------------- */
@@ -62,3 +63,8 @@ var lightboxDescription = GLightbox({
 
    slideImg.map((i) => i.style.display="none")
   }
+  function mapActive(){
+    console.log("hither")
+      var mapBtn=document.getElementById("map");
+      mapBtn.classList.add("active")
+    }
