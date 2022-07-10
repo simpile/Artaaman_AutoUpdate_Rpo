@@ -1,16 +1,15 @@
 strong:not(.myFooter-header strong) {
-  color: var(--green-light);
+  color: var(--grey-dark);
 }
 
 a{
-  color: var(--yellow-light);
+  color: var(--grey-light);
   cursor: pointer;
 }
-a:visited {
-  color: var(--yellow-dark);
-}
+
 a:hover {
-  color: var(--green-mid);
+  
+  color: var(--green-dark);
 }
 
 .refrence {
@@ -55,6 +54,8 @@ a:hover {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  line-height: 2;
+
 }
 .myNews-figure img {
   border-radius: 25px;
