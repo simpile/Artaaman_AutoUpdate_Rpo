@@ -3,7 +3,7 @@ strong:not(.myFooter-header strong) {
 }
 
 a{
-  color: var(--grey-light);
+  color: var(--yellow-dark);
   cursor: pointer;
 }
 
