@@ -771,7 +771,7 @@ abbr{
     margin: 0 auto;
     margin-bottom: 2rem;
     white-space: nowrap;
-    font-size: 30px;
+    font-size: 24px;
     /* color: var(--grey-mid); */
     padding: 1rem 0rem;
   }
@@ -965,7 +965,7 @@ abbr{
     margin: 0 auto;
     margin-bottom: 2rem;
     white-space: nowrap;
-    font-size: 30px;
+    font-size: 24px;
     padding: 1rem 0rem;
   }
   .myGallery-container {
@@ -1236,7 +1236,7 @@ height: auto;
   }
   
   .mySlideshow-wrapper h4 {
-    font-size: 30px;
+    font-size: 24px;
     text-align: center;
     margin: 2rem auto;
     white-space: nowrap;
@@ -1495,6 +1495,11 @@ font-weight: bold;
     min-height: 110em;
 }
 
+
+.owl-theme .owl-dots .owl-dot {
+  zoom: 0.5;
+}
+
 }
 @media only screen and (max-width: 375px) {
   .myHeader-contents img {
@@ -1511,9 +1516,7 @@ font-weight: bold;
   .myWhyUs-item p, .myWhyUs-item h3 {
     width: 100%;
   }
-  .owl-theme .owl-dots .owl-dot {
-    zoom: 0.8;
-  }
+
 
   .mySwiper-container {
     padding: 0 2rem;
