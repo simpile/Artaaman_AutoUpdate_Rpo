@@ -16,7 +16,7 @@ padding-top: 6rem;
 
 .news-card {
   direction: rtl;
-  border: 0px solid aqua;
+  /* border: 0px solid aqua; */
   margin: 0.5rem;
   position: relative;
   overflow: hidden;
@@ -39,6 +39,7 @@ padding-top: 6rem;
   background: 
     linear-gradient(to bottom, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.7) 90%);
   z-index: 0;
+  
 }
 
 .news-card__card-link {
@@ -48,6 +49,7 @@ padding-top: 6rem;
   width: 100%;
   height: 100%;
   z-index: 1;
+  
 }
 
 .news-card__image {
@@ -73,6 +75,7 @@ padding-top: 6rem;
   width: 100%;
   font-family: 'Shabnam-DG-N';
 
+
 }
 
 .news-card__title {
@@ -87,6 +90,7 @@ padding-top: 6rem;
   font-size: 0.7rem;
   margin-bottom: 0.5rem;
   color: #ccc;
+
 }
 
 .news-card__details-wrapper {
@@ -94,11 +98,13 @@ padding-top: 6rem;
   max-height: 0;
   opacity: 0;
   transition: max-height 1.5s ease, opacity 1s ease;
+  
 }
 .news-card__excerpt {
   font-weight: 300;
-max-height: 5vh;
+max-height:50px;
   overflow: hidden;
+  
 }
 
 .news-card__read-more {
@@ -118,6 +124,7 @@ max-height: 5vh;
   position: relative;
   z-index: 5;
   text-align: center;
+  
 }
 
 .news-card__read-more i {

@@ -887,7 +887,7 @@ abbr{
   .myAboutUs-wrapper {
     padding: 2rem;
     background-color: var(--grey-light);
-    margin: 4rem 0 5rem;
+    margin: 4rem 0;
 
   }
   
@@ -938,7 +938,13 @@ abbr{
     top: 10px;
     left: 10px;
   }
-  
+  #myAboutUs-v2 h2{
+    margin: auto;
+  }
+  #myAboutUs-v2 p{
+    margin: 0.5rem auto;
+    width: 58%;
+  }
   /* -------------------------------------------------------------------------- */
   /*                                 MAP-GALLERY                                */
   /* -------------------------------------------------------------------------- */
@@ -1519,7 +1525,7 @@ font-weight: bold;
 
 
   .mySwiper-container {
-    padding: 0 2rem;
+    padding: 4rem 2rem;
     width: 100%;
 }
 .mySwiper-container h2 {
