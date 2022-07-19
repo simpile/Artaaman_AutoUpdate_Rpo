@@ -299,7 +299,7 @@ gtag('config', 'G-RYCFE5NR8J');
       <% last.forEach(article => { %>
         <div class="mySlideshow-item mySlideShow-itemWrapper" data-aos="fade-up" >
           <a href="news/<%= article._id %>">
-          <img width="310" height="200" src="<%= article.img %> " alt="عکس <%= article.title %> ">
+          <img loading="lazy" width="310" height="200" src="<%= article.img %> " alt="عکس <%= article.title %> ">
           <div class="mySlideShow-info ">
             <small><%= article.label %> </small>
             <h3>
@@ -370,7 +370,7 @@ gtag('config', 'G-RYCFE5NR8J');
   <div class="google-map" data-aos="zoom-in">
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.684243167583!2d50.78254051526025!3d35.733983380182124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8da3861deec963%3A0x437b4bd18c3e6f5a!2z2q_YsdmI2Ycg2LXZhti52KrbjCDZvtuM2YTZhyDZiNix!5e0!3m2!1sen!2s!4v1644779718855!5m2!1sen!2s"
-      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      width="600" height="450" style="border:0;"loading="lazy"></iframe>
   </div>
 <!-- <script src="/layouts/footer.js"></script> -->
 <footer  class="myFooter-wrapper">
