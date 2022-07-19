@@ -14,7 +14,8 @@
 
     <title>Admin Panel</title>
     <script src="https://cdn.ckeditor.com/ckeditor5/32.0.0/classic/ckeditor.js"></script>
-    <!-- <script src="https://cdn.ckeditor.com/4.18.0/standard/ckeditor.js"></script> -->
+    
+
 
 
 </head>
@@ -127,7 +128,7 @@
                                         <label for="editedDesc">توضیحات مقاله</label>
                                         <textarea  class=" " id="editedDesc"
                                             name="desc">
-                                <%= article.desc %>
+                                <%- article.desc %>
                             </textarea>
                             </div>
                             <div style="display: flex; width: 100%;">
@@ -152,9 +153,7 @@
 
                     <script src="/js/editArticle.js"></script>
                     <script>
-                        
-                        // ClassicEditor
-                        //     .create(document.querySelector('#editedDesc'))
+                     
                         ClassicEditor
                             .create(document.querySelector('#desc'))
                             .catch(error => {
@@ -162,11 +161,10 @@
                             });
         
                     </script>
-                    <!-- <script>
-                        CKEDITOR.replace('desc', {
-                    filebrowserImageUploadUrl: '/images/'
-                });
-                </script> -->
+
+
+
+
 </body>
 
 </html>
