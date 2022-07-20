@@ -70,11 +70,14 @@ var lightboxDescription = GLightbox({
     }
 
     const Pagination=()=>{
-      const allImages =document.getElementsByTagName("img")
-   
-        for(var i=0; i>allImages.length; i++){
-if (i>5){
-  allImages[i].style.display==="none"
+      const allImages =document.querySelectorAll(".myFilterGallery img")
+        for(var i=0; i<=allImages.length; i++){
+if(i>10){
+// allImages[i].style.display=="hidden"
+allImages[i].setAttribute("style", "display:none;")
+
+
+// console.log(i)
 }
         }
      
