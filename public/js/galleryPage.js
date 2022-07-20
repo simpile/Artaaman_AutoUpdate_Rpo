@@ -68,3 +68,17 @@ var lightboxDescription = GLightbox({
       var mapBtn=document.getElementById("map");
       mapBtn.classList.add("active")
     }
+
+    const Pagination=()=>{
+      const allImages =document.getElementsByTagName("img")
+   
+        for(var i=0; i>allImages.length; i++){
+if (i>5){
+  allImages[i].style.display==="none"
+}
+        }
+     
+    }
+
+
+    Pagination();
