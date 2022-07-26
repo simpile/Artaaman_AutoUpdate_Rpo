@@ -56,32 +56,30 @@ var lightboxDescription = GLightbox({
             });
           }
   
-  function pagination()  {
-    var images = document.querySelectorAll(".glightbox");
-    let imgAr = Array.from(images);
-    let slideImg= imgAr.slice(5)
+  // function pagination()  {
+  //   var images = document.querySelectorAll(".glightbox");
+  //   let imgAr = Array.from(images);
+  //   let slideImg= imgAr.slice(5)
 
-   slideImg.map((i) => i.style.display="none")
-  }
-  function mapActive(){
-    console.log("hither")
-      var mapBtn=document.getElementById("map");
-      mapBtn.classList.add("active")
-    }
+  //  slideImg.map((i) => i.style.display="none")
+  // }
+  // function mapActive(){
+  //   console.log("hither")
+  //     var mapBtn=document.getElementById("map");
+  //     mapBtn.classList.add("active")
+  //   }
 
-    const Pagination=()=>{
-      const allImages =document.querySelectorAll(".myFilterGallery img")
-        for(var i=0; i<=allImages.length; i++){
-if(i>10){
-// allImages[i].style.display=="hidden"
-allImages[i].setAttribute("style", "display:none;")
+//     const Pagination=()=>{
+//       const allImages =document.querySelectorAll(".myFilterGallery img")
+//         for(var i=0; i<=allImages.length; i++){
+// if(i>10){
+// allImages[i].setAttribute("style", "display:none;")
 
 
-// console.log(i)
-}
-        }
+// }
+//         }
      
-    }
+//     }
+//     Pagination();
 
-
-    Pagination();
+    
