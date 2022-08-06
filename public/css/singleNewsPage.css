@@ -55,6 +55,7 @@ a:hover {
   flex-wrap: wrap;
   justify-content: space-around;
   line-height: 2;
+  text-align: justify;
 
 }
 .myNews-figure img {
