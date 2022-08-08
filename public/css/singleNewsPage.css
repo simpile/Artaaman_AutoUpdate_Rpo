@@ -55,7 +55,7 @@ a:hover {
   flex-wrap: wrap;
   justify-content: space-around;
   line-height: 2;
-  text-align: justify;
+  /* text-align: center; */
 
 }
 .myNews-figure img {
@@ -81,6 +81,9 @@ a:hover {
 }
 .shareIcones .iconify:hover {
   color: var(--yallow-mid);
+}
+.myNews-figureCapion img{
+  margin: 1rem auto;
 }
 /* -------------------------------------------------------------------------- */
 /*                                RELATED-NEWS                                */
@@ -273,10 +276,15 @@ aside h4 {
   .myNews-header h1 {
     font-size: 30px;
   }
+  .myNews-figureCapion {
+    padding: .5rem;
+    text-align: justify;
+font-size: 18px;
+line-height: 2.5em;
+  }
 }
 @media (max-width: 600px) {
   .myNews-figureCapion {
-    column-count: 1;
     padding: 1rem;
     width: 100%;
   }
