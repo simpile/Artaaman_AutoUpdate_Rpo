@@ -1574,6 +1574,9 @@ margin-bottom: 0;
   .myFqa-container {
     padding: 0.5rem;
   }
+  .google-map{
+    display: none;
+  }
 }
 
 
