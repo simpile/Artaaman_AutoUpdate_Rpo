@@ -3,7 +3,8 @@
   src: url("../fonts/Shabnam.eot"), url("../fonts/Shabnam.woff") format("woff"),
     url("../fonts/Shabnam.ttf") format("truetype");
   font-weight: normal;
-  font-display: fallback;
+  font-display: swap;
+  
   
 }
 
@@ -920,6 +921,7 @@ abbr{
     width: 50%;
     z-index: 2;
     font-family: 'Shabnam-DG-N';
+    line-height: 2em;
   }
   
   .myAboutUs-container img {
