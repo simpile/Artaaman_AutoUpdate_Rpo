@@ -1392,8 +1392,8 @@ font-weight: bold;
 }
 .myAboutUs-container {
   width: 100%;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
   
@@ -1405,7 +1405,7 @@ font-weight: bold;
   width: 78%;}
   .myGallery-wrapper {
     height: 100vh;
-    margin: 1rem ayto;
+    margin: 1rem auto;
   }
   .myAboutUs-container p {
     margin: 0 auto;
