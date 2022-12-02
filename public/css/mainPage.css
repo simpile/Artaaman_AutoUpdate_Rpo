@@ -1128,6 +1128,10 @@ abbr{
   
   .myFqa-wrapper {
     min-height: 80vh;
+background-color: #febf50;
+    background: url(../images/headearBg-right-edit.svg) right bottom no-repeat,
+      url(../images/headearBg-left-edit.svg) left bottom no-repeat;
+    background-size: 200px, 200px;
   }
   .myFqa-wrapper a:hover{
 color: var(--yellow-dark);  }
@@ -1229,6 +1233,13 @@ font-weight: bold;
       background: url(../images/headearBg-right-edit.svg) right top no-repeat,
         url(../images/headearBg-left-edit.svg) left top no-repeat;
       background-size: 20vw, 20vw;
+    }
+    .myFqa-wrapper{
+      margin-top:0 ;
+        background: url(../images/headearBg-right-edit.svg) right bottom no-repeat,
+        url(../images/headearBg-left-edit.svg) left bottom no-repeat;
+      background-size: 20vw, 20vw;
+
     }
   
   }
@@ -1434,6 +1445,11 @@ margin-bottom: 0;
   }
   .google-map{
     display: none;
+  }
+  .myFqa-wrapper{
+    
+    background-size: 30vw, 30vw;
+
   }
 }
 
