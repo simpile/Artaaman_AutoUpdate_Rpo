@@ -72,6 +72,10 @@
                                         <label for="image">افزودن عکس</label>
                                             <input class=" " type="file" id="image" name="image">
                                         </div>
+                                        <div style="display: flex; ">
+                                        <label for="alt">افزودن alt</label>
+                                            <input type="txt" id="alt" name="alt">
+                                        </div>
         
                                     <button class="btn text-warning addBtn  " type="submit"> افزودن مقاله</button>
                                 </form>
@@ -92,7 +96,7 @@
                             <div class="eachArticle">
                                 <div class="articleContainer">
 
-                                    <img class="articleImg" src="<%= article.img %>">
+                                    <img class="articleImg" src="<%= article.img %>" alt="<%= article.alt %>">
                                     <div class="article-info">
                                         <h3 class="title">
                                             <%= article.title %>
@@ -140,6 +144,10 @@
                                         <label for="image">افزودن عکس</label>
                                         <input class=" " type="file" id="image" name="image">
                                         </div>
+                                        <div style="display: flex; ">
+                                            <label for="alt">افزودن alt</label>
+                                                <input type="txt" id="alt" name="alt">
+                                            </div>
                                         <button class="btn text-warning addBtn " type="submit"> ویرایش</button>
                                     </form>
                                 </div>

@@ -83,7 +83,7 @@
       </header>
 
       <figure class="myNews-figure">
-        <img src="<%= article.img %>" alt="<%= article.title %>">
+        <img src="<%= article.img %>" alt="<%= article.alt %>">
         <figcaption class="myNews-figureCapion">
           <%- article.desc %>
         </figcaption>
@@ -104,7 +104,7 @@
             <div class="myCardItem" id="newsItem">
               <!-- ITEM START -->
               <a href="/news/<%= related._id %>">
-                <img src="<%= related.img %> " alt="<%= article.title %>">
+                <img src="<%= related.img %> " alt="<%= article.alt %>">
                 <div class="myCardDetails">
                   <small>
                     <%= formatDate(related.createdAt) %>
