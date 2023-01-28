@@ -30,7 +30,7 @@
   display: none;
 }
 
-.editArticle, .addNewArticle {
+.editArticle, .addNewArticle, .addNewImg {
   width: 100%;
   /* min-height: 70vh; */
     position: fixed;
