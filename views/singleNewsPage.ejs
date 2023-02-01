@@ -83,7 +83,7 @@
       </header>
 
       <figure class="myNews-figure">
-        <img src="<%= article.img %>" alt="<%= article.alt %>">
+        <img src="<%= article.img %>" alt="<%= article.alt || article.title %>">
         <figcaption class="myNews-figureCapion">
           <%- article.desc %>
         </figcaption>
