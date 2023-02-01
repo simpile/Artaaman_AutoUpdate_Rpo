@@ -104,7 +104,7 @@
             <div class="myCardItem" id="newsItem">
               <!-- ITEM START -->
               <a href="/news/<%= related._id %>">
-                <img src="<%= related.img %> " alt="<%= article.alt %>">
+                <img src="<%= related.img %> " alt="<%= article.alt || article.title %>">
                 <div class="myCardDetails">
                   <small>
                     <%= formatDate(related.createdAt) %>
