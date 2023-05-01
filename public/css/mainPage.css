@@ -127,16 +127,16 @@ strong {
 .myMore {
   margin: 1rem auto;
   color: var(--white-color);
-  background-color: var(--grey-mid);
-  font-size: 12px;
-  /* border: 1px var(--green-dark) solid; */
-  padding: 0 1rem;
+  background-color: var(--green-light);
+  font-size: 14px;
+  border-bottom: 1px var(--black-color) solid;
+  padding: .4rem 1.2rem;
   border-radius: 15px;
   box-shadow: 1px 1px 3px rgb(210 208 208);
 }
 
 .myMore:hover {
-  background-color: var(--yellow-light);
+  background-color: var(--green-dark);
   /* box-shadow: 0px -1px 3px rgb(210 208 208); */
 }
 .myMore:active {
@@ -755,7 +755,7 @@ abbr{
   /* -------------------------------------------------------------------------- */
   
   .mySwiper-container {
-    width: 55%;
+    width: 70%;
     flex-direction: column;
     margin: 3rem auto;
     padding: 2rem;
@@ -820,7 +820,7 @@ abbr{
   
   .swiper-slide img {
     display: block;
-    max-height: 40vh;
+    /* max-height: 80vh; */
     object-fit: contain;
     /* object-fit: cover; */
     border-radius: 5px;
@@ -840,10 +840,10 @@ abbr{
   }
   
   .mySwiper {
-    height: 10vh;
+    height: 15vh;
     box-sizing: border-box;
     border-radius: 25px;
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
     
   }
   
@@ -863,7 +863,7 @@ abbr{
   
   .mySwiper-thumbImg {
     object-fit: cover !important;
-    min-height: 10vh;
+    /* height: 20vh; */
   }
   
   /* .swiper-button-next,
