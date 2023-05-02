@@ -765,6 +765,7 @@ abbr{
   .mySwiper-container div {
     position: relative;
     width: 100%;
+    height: initial;
     text-align: center;
   }
   
@@ -816,16 +817,18 @@ abbr{
     align-items: center;
     /* border-radius: 25px; */
     background-color: var(--grey-light);
+    max-height: 600px;
   }
   
   .swiper-slide img {
     display: block;
-    /* max-height: 80vh; */
-    object-fit: contain;
-    /* object-fit: cover; */
+    height: 100%;
+    /* object-fit: contain; */
+    object-fit: cover;
     border-radius: 5px;
     /* border-radius: 25px; */
     margin: 0 auto;
+    /* object-position: 10px 20px; */
   }
   
   .swiper-slide {
@@ -837,10 +840,11 @@ abbr{
     border-radius: 25px;
     box-shadow: 2.1px 4.2px 4.2px hsl(0deg 0% 0% / 0.44);
     margin-bottom: 1rem;
+    
   }
   
   .mySwiper {
-    height: 15vh;
+    /* height: 15vh; */
     box-sizing: border-box;
     border-radius: 25px;
     /* margin-top: 2rem; */
@@ -862,7 +866,7 @@ abbr{
   }
   
   .mySwiper-thumbImg {
-    object-fit: cover !important;
+    /* object-fit: cover !important; */
     /* height: 20vh; */
   }
   
@@ -1271,11 +1275,12 @@ font-weight: bold;
 
   @media only screen and (max-width: 700px) {
     .swiper-slide img {
-      min-height: 40vh;
+      /* min-height: 40vh; */
+      object-fit: cover;
     }
     .mySwiper-container {
-      width: 80%;
-      margin: 0 auto;
+      /* width: 80%;
+      margin: 0 auto; */
     }
     
     .myFqa-container {
