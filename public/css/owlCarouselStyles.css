@@ -140,7 +140,7 @@ height: auto;
 .owl-item img {
   display: block;
   width: 100%;
-  object-fit: contain;}
+  object-fit: cover;}
 
   @media only screen and (max-width: 425px) {
 .owl-theme .owl-dots .owl-dot {
