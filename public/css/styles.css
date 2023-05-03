@@ -392,8 +392,8 @@ img{color: var(--green-mid);}
 .google-map iframe {
   display: block;
   width: 100%;
-  background: url(../images/map.png) center;
-  background-size: cover;
+  /* background: url(../images/map.png) center; */
+  /* background-size: cover; */
 }
 footer {
   font-family: "Shabnam-DG-N";
@@ -479,7 +479,7 @@ footer h5 {
 
 .myFooter-socialMedias {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-self: flex-end;
 }
 
