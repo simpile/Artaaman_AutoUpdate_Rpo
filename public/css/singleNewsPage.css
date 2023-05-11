@@ -315,3 +315,79 @@ line-height: 2.5em;
 }
 }
 
+/* -------------------------------------------------------------------------- */
+/*                                     FQA                                    */
+/* -------------------------------------------------------------------------- */
+
+.myFqa-wrapper {
+  min-height: 80vh;
+
+  background-size: 200px, 200px;
+}
+.myFqa-wrapper a:hover{
+color: var(--yellow-dark);  }
+.myFqa-wrapper a{
+color: var(--yallow-mid);  }
+
+
+.myFqa-container h2 {
+  margin-bottom: 1rem;
+}
+
+.myFqa-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  padding:6rem 0;
+}
+.myAcordian-wrapper {
+  background-color: var(--grey-light);
+  border-radius: 25px;
+  width: 100%;
+}
+.accordion {
+  background-color: transparent;
+  cursor: pointer;
+  padding: 1.5rem;
+  width: 100%;
+  border: none;
+  text-align: right;
+  outline: none;
+  font-size: 18px;
+  transition: 0.4s;
+  font-family: "Shabnam-Bold";
+font-weight: bold;
+  color: var(--grey-dark);
+}
+
+.accordion:after {
+  content: "\002B";
+  color: var(--green-mid);
+  font-weight: bold;
+  float: left;
+  margin-left: 5px;
+}
+
+.acordActive:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 5px 18px;
+  background-color: transparent;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.2s ease-out;
+  font-size: 17px;
+  color: var(--black-color);
+}
+.panel p {
+  direction: rtl;
+  padding: 3px;
+}
+@media only screen and (max-width: 425px) {
+.accordion {
+  font-size: 16px;
+}
+}
