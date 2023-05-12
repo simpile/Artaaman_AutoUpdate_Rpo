@@ -1,4 +1,5 @@
 const newsModel = require('../model/newsModel');
+// const imgModel = require('../model/imageModel');
 const passport = require('passport');
 const {formatDate} = require('../utils/jalali');
 // const imageModel = require('../model/imageModel');
@@ -37,7 +38,7 @@ exports.handleAdminLogin = (req, res) => {
 //? sending news 
 
 exports.handleNews = async (req, res) => {
-    const {title, desc, alt, label} = req.body;
+    const {title, desc, alt, keywords, label} = req.body;
 
     if(!title || !desc) {
         req.flash('error', 'عنوان و توضیحات مقاله را وارد کنید')
@@ -52,6 +53,7 @@ exports.handleNews = async (req, res) => {
         title, 
         desc, 
         alt,
+        keywords,
         label: label.trim(),
         
     }
@@ -84,7 +86,7 @@ exports.handleNews = async (req, res) => {
 exports.handleLoadingNews = async (req, res) => {
     try {
         const article = await newsModel.findOne({_id: req.params.id});
-        const related = await newsModel.find({label: article.label});
+        const related = await newsModel.find({label:article.label});
         const reletedExIt = related.filter(ar => ar._id != article.id);
         console.log(related)
         res.render('singleNewsPage', {

@@ -15,7 +15,8 @@
   <meta name = "revised" content = "  <%= formatDate(article.createdAt) %>  " />
 
   <meta property="og:image" content="https://artaaman.com<%= article.img %>">
-
+  <meta name="keywords"
+  content="<%= article.keywords %> , آرماتور استاپ‌موشن">
 
   <!-- <link rel="stylesheet" href="/css/mainPage.css"> -->
 
@@ -28,7 +29,7 @@
   <link rel="icon" type="image/x-icon" href="/images/favicon.svg">
 
   <title>
-    <%= article.title %>
+    <%=article.title %>
   </title>
 
 </head>

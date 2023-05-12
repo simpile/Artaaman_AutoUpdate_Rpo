@@ -6,7 +6,8 @@ const newsSchema = mongoose.Schema({
     label: String,
     img: String,
     alt:String,
-    createdAt: {
+    keywords:String,
+        createdAt: {
         type: Date,
         default: Date.now()
     },
