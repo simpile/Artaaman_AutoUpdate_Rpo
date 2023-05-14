@@ -45,11 +45,19 @@
   <!--                               ARTICLE                               -->
   <!-- ----------------------------------------------------------------------- -->
   <main class="myNews-outerPart">
-    <article class="myNews-myArticle">
-      <header class="myNews-header">
+        <article class="myNews-myArticle">
+        <header class="myNews-header">
+          <div id="breadcrumbWrapper">
+            <ul class="breadcrumb">
+              <li><a href="/">خانه</a></li>
+              <li><a href="/news">مقالات</a></li>
+              <li><%= article.title %></li>
+            </ul>
+          </div>
         <h1>
           <%= article.title %>
         </h1>
+        
         <div>
           <span>
             <%= formatDate(article.createdAt) %>
@@ -82,6 +90,7 @@
             </ul>
           </button>
         </div>
+        
       </header>
 
       <figure class="myNews-figure">
