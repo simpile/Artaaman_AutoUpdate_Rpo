@@ -20,7 +20,7 @@ exports.getNews = async (req, res) => {
     try {
         const news = await newsModel.find();
         res.render('newsPage', {
-            news: news,
+            news: news.reverse(),
             error: req.flash('err'),
             formatDate,
         })
