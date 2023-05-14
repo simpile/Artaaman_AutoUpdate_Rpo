@@ -248,3 +248,6 @@ overflow: hidden;
 ::-webkit-scrollbar-thumb:hover {
   background: #6b6969; 
 }
+.ck-editor__editable {
+  max-height: 300px;
+}
