@@ -36,7 +36,7 @@ document.write(`  <footer class="myFooter-wrapper">
     </a>
   </div>
   <div class="myFooter-socialMedias">
-    <a title="تلگرام" target="_blank" href="https://t.me/artaman_co">
+    <a title="تلگرام" target="_blank" href="https://t.me/artaaman_co">
       <!-- <span class="iconify" data-icon="iconoir:telegram-circled" data-width="25"></span> -->
       <svg class="iconify" xmlns="http://www.w3.org/2000/svg" width="25" height="25"
         preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
@@ -46,7 +46,7 @@ document.write(`  <footer class="myFooter-wrapper">
         </g>
       </svg>
     </a>
-    <a title="اینستاگرام" target="_blank" href="https://www.instagram.com/artaman_co/">
+    <a title="اینستاگرام" target="_blank" href="https://www.instagram.com/artaaman/">
       <!-- <span  data-icon="lucide:instagram" data-width="25"></span> -->
       <svg class="iconify" xmlns="http://www.w3.org/2000/svg" width="25" height="25"
         preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
