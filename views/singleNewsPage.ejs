@@ -8,7 +8,8 @@
 
   <meta property="title" content="   <%= article.title %>" />
   <meta property="url" content="https://www.artaaman.com/news/" />
-  <meta property="subject" content="<%= article.title %>">
+
+  <meta property="subject" content="<%= article.subj||article.title  %>">
   <link rel='fluid-icon' type='image/jpg' href='/fluid-icon.png'>
   <meta property="og:image" content="https://artaaman.com<%= article.img %>">
   <meta property="type" content="article" />

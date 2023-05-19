@@ -80,6 +80,10 @@
                                         <label for="keywords">افزودن keywords</label>
                                             <input type="txt" id="keywords" name="keywords">
                                         </div>
+                                        <div style="display: flex; ">
+                                        <label for="subj">افزودن subj</label>
+                                            <input type="txt" id="subj" name="subj">
+                                        </div>
                                    
         
                                     <button class="btn text-warning addBtn  " type="submit"> افزودن مقاله</button>
@@ -108,6 +112,7 @@
                                         </h3>
                                         <h4> <%= article.label %></h4>
                                         <h5> <%= article.keywords %></h5>
+                                        <!-- <h5> <%= article.subj %></h5> -->
                                         <div class="desc">
                                             <%- article.desc %>
                                         </div>
@@ -158,6 +163,10 @@
                                         <div style="display: flex; ">
                                             <label for="keywords">افزودن keywords</label>
                                                 <input   value="<%= article.keywords %> " type="txt" id="keywords" name="keywords">
+                                            </div>
+                                        <div style="display: flex; ">
+                                            <label for="subj">افزودن subj</label>
+                                                <input   value="<%= article.subj %> " type="txt" id="subj" name="subj">
                                             </div>
                                       
                                             

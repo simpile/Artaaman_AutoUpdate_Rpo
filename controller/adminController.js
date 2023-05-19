@@ -38,7 +38,7 @@ exports.handleAdminLogin = (req, res) => {
 //? sending news 
 
 exports.handleNews = async (req, res) => {
-    const {title, desc, alt, keywords, label} = req.body;
+    const {title, desc, alt, keywords, subj, label} = req.body;
 
     if(!title || !desc) {
         req.flash('error', 'عنوان و توضیحات مقاله را وارد کنید')
@@ -54,6 +54,7 @@ exports.handleNews = async (req, res) => {
         desc, 
         alt,
         keywords,
+         subj,
         label: label.trim(),
         
     }
