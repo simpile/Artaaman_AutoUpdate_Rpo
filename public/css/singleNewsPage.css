@@ -387,18 +387,12 @@ font-weight: bold;
   padding: 3px;
 }
 @media only screen and (max-width: 425px) {
-.accordion {
-  font-size: 14px;
-}
+
 .myMore-center {
     margin-top: 1rem;
 
 }
-
-.panel p {
-  padding: 0px;
-  font-size: 12px;
-}}
+}
 /* -------------------------------------------------------------------------- */
 /*                                 BREADCRUMP                                 */
 /* -------------------------------------------------------------------------- */
