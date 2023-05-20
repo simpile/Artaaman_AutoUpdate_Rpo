@@ -392,6 +392,15 @@ font-weight: bold;
     margin-top: 1rem;
 
 }
+
+.accordion {
+
+  padding: .5rem;
+  font-size: 15px;
+}
+.panel{
+  font-size: 14px;
+}
 }
 /* -------------------------------------------------------------------------- */
 /*                                 BREADCRUMP                                 */
