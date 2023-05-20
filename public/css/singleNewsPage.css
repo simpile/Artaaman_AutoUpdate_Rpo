@@ -394,6 +394,10 @@ font-weight: bold;
     margin-top: 1rem;
 
 }
+
+.panel p {
+  padding: 0px;
+  font-size: 12px;
 }
 /* -------------------------------------------------------------------------- */
 /*                                 BREADCRUMP                                 */
