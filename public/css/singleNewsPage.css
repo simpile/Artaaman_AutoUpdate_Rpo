@@ -388,7 +388,7 @@ font-weight: bold;
 }
 @media only screen and (max-width: 425px) {
 .accordion {
-  font-size: 12px;
+  font-size: 14px;
 }
 .myMore-center {
     margin-top: 1rem;
@@ -398,7 +398,7 @@ font-weight: bold;
 .panel p {
   padding: 0px;
   font-size: 12px;
-}
+}}
 /* -------------------------------------------------------------------------- */
 /*                                 BREADCRUMP                                 */
 /* -------------------------------------------------------------------------- */
