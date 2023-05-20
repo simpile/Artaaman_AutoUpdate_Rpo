@@ -113,12 +113,17 @@ var swiper = new Swiper(".mySwiper", {
     responsive: {
       0: {
         items: 1,
+        dots: false,
+        autoplayHoverPause: true,
+    autoplay: true,
+
       },
      425: {
         items: 2,
       },
       900: {
         items: 3,
+        
       }
     }
   });
