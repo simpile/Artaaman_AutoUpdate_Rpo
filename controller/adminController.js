@@ -93,7 +93,7 @@ exports.handleLoadingNews = async (req, res) => {
         res.render('singleNewsPage', {
            article,
            formatDate,
-           related: reletedExIt
+           related: reletedExIt.reverse()
         });
     } catch (err) {
         console.log(err);
