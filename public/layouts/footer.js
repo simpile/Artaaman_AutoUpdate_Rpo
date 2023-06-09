@@ -27,13 +27,10 @@ document.write(`  <footer class="myFooter-wrapper">
   </h5>
   <div class="myFooter-phones">
     <a href="tel:09909890646">
-     خرید آنلاین:09909890646
+     09909890646
     </a>
     <br>
-    <br>
-    <a href="tel:09398706081">
-      خرید حضوری:09398706081
-    </a>
+ 
   </div>
   <div class="myFooter-socialMedias">
     <a title="تلگرام" target="_blank" href="https://t.me/artaaman_co">

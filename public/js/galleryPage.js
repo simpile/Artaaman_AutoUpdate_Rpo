@@ -91,4 +91,19 @@ var lightboxDescription = GLightbox({
 //     }
 //     Pagination();
 
-    
+    // preloader
+// var images = document.querySelectorAll("img");
+// console.log(images)
+//   images.onload=function(){
+//     for(let img of images){
+// img.style.backgroundColor="red"}
+// }
+    // image.onload = function(){ document.querySelectorAll("img").style.backgroundColor = "red"; }
+ 
+    //   var images = document.querySelectorAll('img');
+    // for(let img of images){if(!img.complete && img.naturalWidth == 0){
+    //     img.style.backgroundColor='red';
+    //   }
+      
+    //   }
+

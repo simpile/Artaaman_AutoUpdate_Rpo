@@ -111,11 +111,6 @@ a:focus {
   text-decoration: none;
 }
 
-/* h1 {
-  font-family: "Shabnam-Bold";
-} */
-
-
 strong {
   color: var(--yellow-dark);
 }
@@ -137,7 +132,6 @@ strong {
 
 .myMore:hover {
   background-color: var(--green-dark);
-  /* box-shadow: 0px -1px 3px rgb(210 208 208); */
 }
 .myMore:active {
   box-shadow: none;
@@ -154,15 +148,7 @@ strong {
   background-color: var(--yellow-light);
   color: var(--black-color);
 }
-/* 
-.outerPart {
-  background-color: var(--grey-light);
-  min-height: 70vh;
-  padding: 4rem 6rem;
-  text-align: center;
-  direction: rtl;
-  font-family: "Shabnam-DG-N";
-} */
+
 .myMainTitle {
   margin-bottom: 2rem;
   padding-top: 4rem;
@@ -174,7 +160,10 @@ strong {
   justify-content: center;
 }
 img{color: var(--green-mid);}
-/* Ripple In */
+
+/* -------------------------------------------------------------------------- */
+/*                                 HOVER EFFECTS                               */
+/* -------------------------------------------------------------------------- */
 @-webkit-keyframes hvr-ripple-in {
   100% {
     inset: 0 0 0 0;
@@ -214,46 +203,7 @@ img{color: var(--green-mid);}
   -webkit-animation-name: hvr-ripple-in;
   animation-name: hvr-ripple-in;
 }
-/* -------------------------------------------------------------------------- */
-/*                                  PRELODER                                  */
-/* -------------------------------------------------------------------------- */
 
-
-
-
-.preloader {
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  background: var(--grey-light);
-  z-index: 9999;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--grey-dark);
-  font-size: 12px;
-}
-.preloader-iconWrapper {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: reveal 3s ease-out ;
-}
-.preloader-icon {
-  width: 100px;
-    animation: shake 2s ease-out infinite;
-}
-
-
-.preloader p {
-  background-color: var(--white-color);
-  margin-top: 0.4rem;
-  padding: 0.2rem;
-  border-radius: 25px;
-  animation: reveal 3s forwards;
-}
 @keyframes shake {
   0% {
     transform: translate(1px, -1px) rotate(0deg);
@@ -299,6 +249,21 @@ img{color: var(--green-mid);}
     clip-path: inset(0 0 0 0);
   }
 }
+@keyframes iconeMover {
+  0% {
+    transform: rotate(3deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-3deg);
+  }
+  100% {
+    transform: rotate(-5deg);
+  }
+}
+
 /* -------------------------------------------------------------------------- */
 /*                                   NAVBAR                                   */
 /* -------------------------------------------------------------------------- */
@@ -402,7 +367,6 @@ footer {
   background-color: var(--green-mid);
   padding: 2rem;
   color: var(--white-color);
-  /* height: 20vh; */
 }
 .myFooter-container {
   padding: 1rem;
@@ -484,109 +448,6 @@ footer h5 {
 }
 
 /* -------------------------------------------------------------------------- */
-/*                                 RESPONSIVE                                 */
-/* -------------------------------------------------------------------------- */
-@media only screen and (max-width: 900px) {
-  .myNavbar-contents {
-    width: 8%;
-  }
-}
-@media only screen and (max-width: 700px) {
-
-  .outerPart{
-    padding: 4rem 4rem;
-  }
-
-}
-
-
-@media only screen and (max-width: 600px) {
-  .myFooter-container {
-    display: flex;
-    flex-direction: column;
-  }
-  .myFooter-emailAddress {
-    display: none;
-  }
-  .myFooter-emailIcone {
-    display: block;
-  }
-  .myFooter-container p {
-    order: -1;
-  }
-  .myFooter-container h5:nth-of-type(2) {
-    order: -1;
-  }
-  .myFooter-header {
-    order: -1;
-  }
-  .myFooter-copyRight {
-    order: 1;
-  }
-  .myFooter-socialMedias {
-    width: 100%;
-  }
-  .outerPart {
-    padding: 4rem 2rem;
-  }
-}
-
-@media only screen and (max-width: 425px) {
-  .myNavbar-contents {
-    width: 100%;
-  }
-  .myNavbar-contents ul {
-    width: 100%;
-    min-height: 80vh;
-    z-index: 10;
-  }
-  .myNavbar-item {
-    text-align: center;
-  }
-  .myNavbar-item p {
-    display: block;
-    position: static;
-    text-align: center;
-    background-color: transparent;
-  }
-  .myNavbar-item:hover p, .myNavbar-item:hover .iconify{
-color: var(--yellow-light);
-  }
-
-  .myNavbar-contents li {
-    list-style: none;
-    border-bottom: 1px grey solid;
-    width: 35%;
-}
-
-.myNavbar-contents li:hover  {
-  border-bottom: 1px var(--yellow-light) solid;
-  width: 50%;
-  transition: all ease-in-out .5s;
-}
-}
-@media only screen and (max-width: 375px) {
-  footer {
-    padding: 0;
-  }
-  .myFooter-container p {
-    width: 100%;
-  }
-  .outerPart {
-    padding: 4rem 1rem;
-  }
-}
-
-@media only screen and (max-width: 300px) {
-  #myNavbar-logo svg {
-    width: 80%;
-  }
-  .myNavbar button svg {
-    width: 80%;
-  }
-}
-
-/* -------------------------------------------------------------------------- */
 /*                                   HEADER                                   */
 /* -------------------------------------------------------------------------- */
 
@@ -606,19 +467,13 @@ abbr{
   content: attr(data-title);
   background-color: var(--yallow-mid);
   color: var(--grey-mid);
-  /* color: #111; */
   font-size: 1rem;
   position: absolute;
-  /* padding: 1px 5px 2px 5px; */
   bottom: -1.6em;
-  /* right: 50%; */
   left: 10%;
   white-space: nowrap;
-  /* box-shadow: 1px 1px 3px #222222; */
   opacity: 0;
-  /* border: 1px solid #111111; */
-  /* z-index: 99999; */
-  visibility: hidden;
+   visibility: hidden;
 }
 [data-title] {
   position: relative;
@@ -644,7 +499,6 @@ abbr{
 
 .myHeader-contents img {
   width: 400px;
-  /* padding: .2rem; */
 }
 
 .myHeader-contents h1 {
@@ -661,7 +515,6 @@ abbr{
   border-radius: 50px;
   color: var(--green-mid);
   border: var(--green-mid) 2px solid;
-  /* font-family: "Shabnam-Normal"; */
   font-family: "Shabnam";
 }
 
@@ -705,20 +558,7 @@ abbr{
   .myWhyUs-item:hover {
     filter: none;
   }
-  @keyframes iconeMover {
-    0% {
-      transform: rotate(3deg);
-    }
-    25% {
-      transform: rotate(5deg);
-    }
-    50% {
-      transform: rotate(-3deg);
-    }
-    100% {
-      transform: rotate(-5deg);
-    }
-  }
+ 
   .myWhyUs-item img:hover,
   .mySlogan-contentsItem img:hover {
     animation-name: iconeMover;
@@ -775,32 +615,13 @@ abbr{
     margin-bottom: 2rem;
     white-space: nowrap;
     font-size: 24px;
-    /* color: var(--grey-mid); */
     padding: 1rem 0rem;
   }
-  /* .mySwiper-container h2 a{
-    color: var(--grey-mid);
-    border-bottom: 2px var(--yellow-light) solid;
-  } */
+ 
   .mySwiper-container h2 a:hover {
     color: var(--green-dark);
   }
-  /* .mySwiper-container a {
-    border-radius: 20px;
-    width: 100%;
-    text-align: center;
-    color: var(--green-dark);
-    font-size: 16px;
-    font-weight: bold;
-    padding: 0.2rem 1rem;
-    margin-top: 1rem;
-    box-shadow: 2.1px 4.2px 4.2px rgba(161, 161, 161, 0.44);
-  }
-  .mySwiper-container a:hover {
-    color: var(--yellow-light);
-    background-color: var(--green-light);
-  } */
-  
+    
   .swiper-slide {
     text-align: center;
     display: -webkit-box;
@@ -815,7 +636,6 @@ abbr{
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
-    /* border-radius: 25px; */
     background-color: var(--grey-light);
     max-height: 600px;
   }
@@ -823,12 +643,9 @@ abbr{
   .swiper-slide img {
     display: block;
     height: 100%;
-    /* object-fit: contain; */
     object-fit: cover;
     border-radius: 5px;
-    /* border-radius: 25px; */
     margin: 0 auto;
-    /* object-position: 10px 20px; */
   }
   
   .swiper-slide {
@@ -844,11 +661,8 @@ abbr{
   }
   
   .mySwiper {
-    /* height: 15vh; */
     box-sizing: border-box;
-    border-radius: 25px;
-    /* margin-top: 2rem; */
-    
+    border-radius: 25px;  
   }
   
   .mySwiper .swiper-slide {
@@ -864,28 +678,7 @@ abbr{
     width: 100%;
     height: 100%;
   }
-  
-  .mySwiper-thumbImg {
-    /* object-fit: cover !important; */
-    /* height: 20vh; */
-  }
-  
-  /* .swiper-button-next,
-  .swiper-button-prev {
-    width: 100%;
-    transform: scale(0.7);
-    background: var(--green-mid);
-    width: 40px;
-    border-radius: 50px;
-    color: var(--white-color);
-    padding: 2rem;
-  }
-  
-  .swiper-button-next:hover,
-  .swiper-button-prev:hover {
-    background: var(--green-dark);
-  } */
-  
+    
   /* -------------------------------------------------------------------------- */
   /*                                  ABOUT-US                                  */
   /* -------------------------------------------------------------------------- */
@@ -902,10 +695,6 @@ abbr{
     margin: auto;
     box-shadow: 2.1px 4.2px 4.2px hsl(0deg 0% 0% / 0.44);
     border-radius: 25px;
-    /* background: url(../images/pointsIcon-05.svg), url(../images/pointsIcon-02.svg);
-    background-repeat: no-repeat;
-    background-size: 5em, 3em;
-    background-position: bottom 10px right 10px, top 10px left 10px; */
     background-color: var(--white-color);
     flex-direction: column;
     justify-content: center;
@@ -995,7 +784,6 @@ abbr{
   }
   
   .mySlogan-contents {
-    /* max-width: 100%; */
     display: flex;
     margin-top: 2rem;
     justify-content: space-evenly;
@@ -1045,15 +833,7 @@ color: var(--yallow-mid);  }
   .myFqa-container h2 {
     margin-bottom: 3rem;
   }
-  /* .myFqa-container h2 a{
-    color: var(--grey-mid);
-    border-bottom: var(--yallow-mid) 2px solid;
-    
-  }
-  .myFqa-container h2 a:hover{
-    color: var(--green-dark);
-    
-  } */
+  
   .myFqa-container {
     display: flex;
     flex-direction: column;
@@ -1110,14 +890,6 @@ font-weight: bold;
   /* -------------------------------------------------------------------------- */
   /*                                 RESPONSIVE                                 */
   /* -------------------------------------------------------------------------- */
-
-  @media only screen and (max-width: 1024px) {
-    .myWhyUs-item{
-      width: 20em;
-    }
-
-  }
-
   @media only screen and (max-width: 1066px) {
     .myWhyUs-contents {
       width: 100%;
@@ -1131,11 +903,22 @@ font-weight: bold;
     }
     
   }
+  @media only screen and (max-width: 1024px) {
+    .myWhyUs-item{
+      width: 20em;
+    }
+
+  }
+
+  
   @media only screen and (max-width: 900px) {
     .myHeader {
       background: url(../images/headearBg-right-edit.svg) right top no-repeat,
         url(../images/headearBg-left-edit.svg) left top no-repeat;
       background-size: 20vw, 20vw;
+    }
+    .myNavbar-contents {
+      width: 8%;
     }
     .myFqa-wrapper{
       margin-top:0 ;
@@ -1148,9 +931,7 @@ font-weight: bold;
   }
   @media only screen and (max-width: 768px) {
     .myHeader-contents img {
-  
-  
-      width: 300px;
+        width: 300px;
     }
     .myWhyUs-wrapper {
       margin: 4rem auto 0;}
@@ -1170,26 +951,20 @@ font-weight: bold;
   }
 
   @media only screen and (max-width: 700px) {
-    .swiper-slide img {
-      /* min-height: 40vh; */
-      object-fit: cover;
-    }
-    .mySwiper-container {
-      /* width: 80%;
-      margin: 0 auto; */
+    .outerPart{
+      padding: 4rem 4rem;
     }
     
+    .swiper-slide img {
+      object-fit: cover;
+    }
+  
     .myFqa-container {
       padding: 3rem;
     }
     .myAboutUs-container p,.myAboutUs-container h2{
       width: 80%;
     }
-    /* .myAboutUs-container img:last-child {
-      width: 2em;
-    }
-    .myAboutUs-container img:first-of-type {
-      width: 3.5em;} */
       .myAboutUs-container img:last-child {
         top: -20px;
         left: -7px;
@@ -1206,25 +981,78 @@ font-weight: bold;
   }
 
   @media only screen and (max-width: 600px) {
+    .myFooter-container {
+      display: flex;
+      flex-direction: column;
+    }
+    .myFooter-emailAddress {
+      display: none;
+    }
+    .myFooter-emailIcone {
+      display: block;
+    }
+    .myFooter-container p {
+      order: -1;
+    }
+    .myFooter-container h5:nth-of-type(2) {
+      order: -1;
+    }
+    .myFooter-header {
+      order: -1;
+    }
+    .myFooter-copyRight {
+      order: 1;
+    }
+    .myFooter-socialMedias {
+      width: 100%;
+    }
+    .outerPart {
+      padding: 4rem 2rem;
+    }
     .myFqa-container {
       margin: 3rem auto;
       padding: 1rem;
     } 
  
 
-  .mySlideShow-info{
+   .mySlideShow-info{
     right: 10px;
+   }
   }
 
-  /* .myWhyUs-item{
-    width: 11em;
-  } */
-
-  }
-
-  
-  
 @media only screen and (max-width: 425px) {
+  .myNavbar-contents {
+    width: 100%;
+  }
+  .myNavbar-contents ul {
+    width: 100%;
+    min-height: 80vh;
+    z-index: 10;
+  }
+  .myNavbar-item {
+    text-align: center;
+  }
+  .myNavbar-item p {
+    display: block;
+    position: static;
+    text-align: center;
+    background-color: transparent;
+  }
+  .myNavbar-item:hover p, .myNavbar-item:hover .iconify{
+color: var(--yellow-light);
+  }
+
+  .myNavbar-contents li {
+    list-style: none;
+    border-bottom: 1px grey solid;
+    width: 35%;
+}
+
+.myNavbar-contents li:hover  {
+  border-bottom: 1px var(--yellow-light) solid;
+  width: 50%;
+  transition: all ease-in-out .5s;
+}
   .myHeader {
     background-size: 30vw, 30vw;
 }
@@ -1244,11 +1072,6 @@ font-weight: bold;
   .accordion {
     font-size: 16px;
   }
-
-  /* .mySlogan-container {
-    padding: 2rem;
-  } */
-
   .mySwiper-container {
     width: 100%;
   }
@@ -1271,16 +1094,20 @@ font-weight: bold;
   .mySlogan-contents div {
     margin-bottom: auto;
   }
-
-
-
 }
 @media only screen and (max-width: 375px) {
-  .myHeader-contents img {
-  
-    width: 200px;
+  footer {
+    padding: 0;
   }
-  
+  .myFooter-container p {
+    width: 100%;
+  }
+  .outerPart {
+    padding: 4rem 1rem;
+  }
+  .myHeader-contents img {
+    width: 200px;
+  } 
   .myWhyUs-wrapper{
     margin: auto;
   }
@@ -1290,8 +1117,6 @@ font-weight: bold;
   .myWhyUs-item p, .myWhyUs-item h3 {
     width: 100%;
   }
-
-
   .mySwiper-container {
     padding: 4rem 2rem;
     width: 100%;
@@ -1303,9 +1128,7 @@ font-weight: bold;
   width: 100%;
   padding-top: 3rem;
   padding-bottom: 3rem;
-}
-
-  
+}  
 .myAboutUs-wrapper{
   margin: 2rem 0;
 }
@@ -1317,20 +1140,16 @@ font-weight: bold;
     margin: 0 auto;
     width: 80%;
     z-index: 2;
-}
-.myAboutUs-container img:last-child {
+  }
+  .myAboutUs-container img:last-child {
   top: -20px;
   left: -7px;
-}
-.myAboutUs-container img:first-of-type {
+  }
+  .myAboutUs-container img:first-of-type {
   right: -20px;
   bottom: -20px;
-}
- 
-  /* .myFqa-wrapper{
-    margin: 6rem 0;
-  } */
-  .myFqa-container {
+  }
+   .myFqa-container {
     padding: 0.5rem;
   }
   .google-map{
@@ -1348,7 +1167,12 @@ font-weight: bold;
 
 @media only screen and (max-width: 300px) {
 
-
+  #myNavbar-logo svg {
+    width: 80%;
+  }
+  .myNavbar button svg {
+    width: 80%;
+  }
   .myAboutUs-container {
     width: 100%;
     background-size: 4em, 2em;
