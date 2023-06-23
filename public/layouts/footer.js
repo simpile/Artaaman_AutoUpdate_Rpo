@@ -1,4 +1,5 @@
-document.write(`  <footer class="myFooter-wrapper">
+document.write(`  
+<footer class="myFooter-wrapper">
 <section class="myFooter-container mainWrapper ">
   <div class="myFooter-header">
     <img src="/images/logo-grey.svg" alt="Artaman's logo">
@@ -26,11 +27,13 @@ document.write(`  <footer class="myFooter-wrapper">
     آدرس
   </h5>
   <div class="myFooter-phones">
-    <a href="tel:09909890646">
+    <p>در تیم پشتیبانی آرتامن ۲۴ ساعته، ۷ روز هفته پاسخگوی شما عزیزانیم</p>   
+    <br>
+         <a href="tel:09909890646">
      09909890646
     </a>
-    <br>
- 
+
+
   </div>
   <div class="myFooter-socialMedias">
     <a title="تلگرام" target="_blank" href="https://t.me/artaaman_co">
@@ -71,8 +74,12 @@ document.write(`  <footer class="myFooter-wrapper">
     </a>
   </div>
   <p class="myFooter-address">
-    دفتر فروش: تهران، شادآباد، خیابان 17 شهریور، خیابان عزیزی، بازار رضا، پلاک 13    <br>
+    دفتر فروش: تهران، شادآباد، خیابان 17 شهریور، خیابان عزیزی، بازار رضا، پلاک 13
+    <a href="tel:09398706081">
+     تلفن:09398706081
+    </a>
     <br>
+            <br>
     
     کارخانه: کرج، ماهدشت، شهرک صنعتی پیام، خیابان سرداران، خیابان ششم شمالی، پلاک 16
     
