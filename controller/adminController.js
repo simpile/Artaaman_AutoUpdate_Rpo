@@ -84,22 +84,31 @@ exports.handleNews = async (req, res) => {
 
 //? handle loading news
 
+// exports.handleLoadingNews = async (req, res) => {
+//     try {
+//         const article = await newsModel.findOne({_id: req.params.id});
+//         const related = await newsModel.find({label:article.label.split(/\s*,\s*/)});
+//         const reletedExIt = related.filter(ar => ar._id != article.id);
+//         res.render('singleNewsPage', {
+//            article,
+//            formatDate,
+//            related: reletedExIt.reverse()
+//         });
+//     } catch (err) {
+//         console.log(err);
+//     }
+// }
 exports.handleLoadingNews = async (req, res) => {
     try {
-        const article = await newsModel.findOne({_id: req.params.id});
-        const related = await newsModel.find({label:article.label});
-        const reletedExIt = related.filter(ar => ar._id != article.id);
-        console.log(related)
-        res.render('singleNewsPage', {
-           article,
-           formatDate,
-           related: reletedExIt.reverse()
-        });
+      const article = await newsModel.findOne({ _id: req.params.id });
+      const relatedLabels = article.label.split(/\s*,\s*/);
+      const regexLabels = relatedLabels.map(label => new RegExp(label, 'i'));
+      const related = await newsModel.find({ label: { $in: regexLabels }, _id: { $ne: article._id } });
+      res.render('singleNewsPage', { article, formatDate, related: related.reverse() });
     } catch (err) {
-        console.log(err);
+      console.log(err);
     }
-}
-
+  }
 //? delete article
 
 exports.deleteArticle = async (req, res) => {
