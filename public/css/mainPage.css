@@ -929,7 +929,16 @@ font-weight: bold;
     }
   
   }
+  
+  @media only screen and (min-width: 800px) {
+    .myAcordian-wrapper{
+      width: 80%;
+    }
+    .accordion, .panel p{padding:1rem 3rem;}
+
+  }
   @media only screen and (max-width: 768px) {
+
     .myHeader-contents img {
         width: 300px;
     }
