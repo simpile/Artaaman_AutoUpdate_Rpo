@@ -52,7 +52,7 @@
             <ul class="breadcrumb">
               <li><a href="/">خانه</a></li>
               <li><a href="/news">مقالات</a></li>
-              <li><%= article.label %></li>
+              <!-- <li><%= article.label %></li> -->
               <li><%= article.title %></li>
             </ul>
           </div>
@@ -149,7 +149,32 @@
   <!-- ----------------------------------------------------------------------- -->
   <!--                                 SCRIPTS                                 -->
   <!-- ----------------------------------------------------------------------- -->
+  <script type="application/ld+json">
 
+    {
+      "@context": "http://schema.org",
+      "@type": "Article",
+      "headline": "<%= article.title %>",
+      "image": "<%= article.img %>",
+      "datePublished": "<%= formatDate(article.createdAt) %>",
+      "dateModified": "<%= formatDate(article.updatedAt) %>",
+      "author": {
+        "@type": "Person",
+        "name": "<%= article.author %>"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "<%= article.publisher %>",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "<%= article.publisherLogo %>"
+        }
+      },
+      "description": "<%= article.desc %>",
+      "mainEntityOfPage": "<%= article.url %>",
+      "url": "<%= article.url %>"
+    }
+</script>
   <!-- Swiper JS -->
   <script src="/js/jquery.min.js"></script>
   <script src="/js/aos.js"></script>
