@@ -885,6 +885,8 @@ font-weight: bold;
   .panel p {
     direction: rtl;
     padding: 3px;
+    line-height: 1.6rem;
+
   }
 
   /* -------------------------------------------------------------------------- */

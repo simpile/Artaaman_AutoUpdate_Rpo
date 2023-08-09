@@ -5,8 +5,8 @@ document.write(`
     <img src="/images/logo-grey.svg" alt="Artaman's logo">
     <h2> <strong> خلاقیت</strong> را با ما تجربه کنید</h2>
   </div>
-  <a class="myFooter-copyRight" target="_blank" href="https://github.com/simpile">
-    copyright by artaman
+  <a class="myFooter-copyRight">
+    copyright by artaaman
   </a>
   <h5 class="myFooter-titles">
     <!-- <span class="iconify" data-icon="ant-design:phone-filled" data-width="25"></span> -->
