@@ -17,7 +17,7 @@ padding-top: 6rem;
 .news-card {
   direction: rtl;
   /* border: 0px solid aqua; */
-  margin: 0.5rem;
+  margin: 0.8rem;
   position: relative;
   overflow: hidden;
   border-radius: 0.5rem;
@@ -81,6 +81,7 @@ padding-top: 6rem;
 .news-card__title {
   transition: color 1s ease;
   margin-bottom: 0.5rem;
+  font-size: 1.3rem;
   /* font-family: 'Shabnam-DG-N'; */
 
 
@@ -168,3 +169,8 @@ max-height:50px;
 
 }
 
+@media (max-width: 768px) {
+.news-card__excerpt, .news-card__read-more{
+  display: none;
+}
+}

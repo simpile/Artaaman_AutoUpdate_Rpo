@@ -53,6 +53,7 @@
   
     <% if(news.length > 0) { %> 
       <% news.forEach(article => { %>
+
         <div class="news-card" id="newsCard-1" >
           <a href="/news/<%= article._id %> " class="news-card__card-link"></a>
           <img src="<%= article.img %>"  alt="<%= article.alt || article.title %>" class="news-card__image">
@@ -60,7 +61,7 @@
             <h2 class="news-card__title"><%= article.title %> </h2>
             <div class="news-card__post-date"><%= formatDate(article.createdAt) %> </div>
             <div class="news-card__details-wrapper">
-              <div class="news-card__excerpt"><%- article.desc %></div>
+              <div class="news-card__excerpt"><%- article.subj %></div>
               <a href="/news/<%= article._id %> " class="news-card__read-more">بیشتر <i class="fas fa-long-arrow-alt-left"></i></a>
             </div>
           </div>
