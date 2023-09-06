@@ -52,7 +52,7 @@
             <ul class="breadcrumb">
               <li><a href="/">خانه</a></li>
               <li><a href="/news">مقالات</a></li>
-              <!-- <li><%= article.label %></li> -->
+              <li><%= article.label.split(',')[0] %></li>
               <li><%= article.title %></li>
             </ul>
           </div>
@@ -124,7 +124,7 @@
                     <%= related.title %>
                   </h3>
                   <p>
-                    <%- related.desc %>
+                    <%- related.label %>
                   </p>
                 </div>
               </a>
