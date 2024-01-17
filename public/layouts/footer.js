@@ -3,11 +3,11 @@ document.write(`
   <!--                                 FOOTER                                  -->
   <!-- ----------------------------------------------------------------------- -->
  
-  <link rel="stylesheet" href="https://unpkg.com/bootstrap@4.1.3/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/css/styles.css">
+  <!-- BOOTSTRAP -->
+  
 
 
-  <footer class=" myFooter mt-5" >
+  <footer class=" myFooter" >
     <div class="myFooter-imgWrap">
       <img src="/images/lineleft.svg" alt="artaaman logo" class="img-fluid">
     </div>
@@ -119,6 +119,5 @@ document.write(`
     </div>
 
   </footer>
-  <script src="https://unpkg.com/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 
 `)
