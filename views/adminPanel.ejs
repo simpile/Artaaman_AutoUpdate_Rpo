@@ -1,3 +1,4 @@
+<!-- adminPanel.ejs  -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +11,7 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/adminStyles.css">
 
-    <link rel="icon" type="image/x-icon" href="/images/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
 
     <title>Admin Panel</title>
     <script src="https://cdn.ckeditor.com/ckeditor5/32.0.0/classic/ckeditor.js"></script>
@@ -48,6 +49,7 @@
                         <button class="btn btn-outline-warning "
                             onclick="document.getElementById('addNewArticle').style.display='block'">افزودن مقاله
                             جدید</button>
+                            <a href="/supportMessages" class="btn btn-outline-info">نمایش پیام‌های ساپورت</a>
 
                             <div id="addNewArticle" class="addNewArticle ">
                                 <button onclick="document.getElementById('addNewArticle').style.display='none'"
@@ -177,10 +179,12 @@
                             </div>
                             <% }) %>
                     </div>
+                    <div id="supportResult"></div>
 
                     <!-- *************************************************************** -->
                     <!-- *************************** SCRIPTS *************************** -->
                     <!-- *************************************************************** -->
+                    <!-- <script src="/js/mainPage Copy.js"></script> -->
 
                     <script src="/js/editArticle.js"></script>
                     <script>
@@ -192,7 +196,6 @@
                             });
         
                     </script>
-
 
 
 

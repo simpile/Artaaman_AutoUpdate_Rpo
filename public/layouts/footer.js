@@ -1,9 +1,7 @@
 document.write(`  
-<!-- ----------------------------------------------------------------------- -->
-  <!--                                 FOOTER                                  -->
-  <!-- ----------------------------------------------------------------------- -->
+
  
-  <!-- BOOTSTRAP -->
+
   
 
 
@@ -11,7 +9,7 @@ document.write(`
     <div class="myFooter-imgWrap">
       <img src="/images/lineleft.svg" alt="artaaman logo" class="img-fluid">
     </div>
-    <div class="container relative px-5">
+    <div class="container relative">
 
 
       <div class="myFooter-colWrap row g-5 mb-3">
@@ -50,7 +48,7 @@ document.write(`
               دفتر فروش: تهران، شادآباد، خیابان 17 شهریور، خیابان عزیزی، بازار رضا، پلاک13
               <br>
               <br>
-              کارخانه: کرج، ماهدشت، شهرک صنعتی پیام، خیابان سرداران، خیابان ششم شمالی، پلاک 16
+              کارخانه: کرج، ماهدشت، شهرک صنعتی خوارزمی، خیابان ششم شمالی، پلاک 16
             </p>
             <ul class="list-unstyled custom-social pt-3" >
               <li data-aos="fade-up" data-aos-delay="100">

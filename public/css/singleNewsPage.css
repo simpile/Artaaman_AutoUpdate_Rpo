@@ -1,3 +1,6 @@
+
+
+
 strong:not(.myFooter-header strong) {
   color: var(--grey-dark);
 }
@@ -143,6 +146,8 @@ aside h4 {
 
 .myCardDetails h3 {
   color: var(--green-dark);
+  font-size: 1.2rem;
+  line-height: 2rem;
   margin: 1.5rem 0;
 }
 
@@ -412,6 +417,9 @@ font-weight: bold;
 margin: 2rem 0;
 text-align: right;
   
+}
+.breadcrumb{
+  background-color: white;
 }
 ul.breadcrumb li {
 display: inline;

@@ -1,6 +1,8 @@
 .myMainTitle{
 padding-top: 6rem;
 }
+.myMainTitle h1{
+  font-size: 32px;}
 
 .content-wrapper {
   margin: 0 auto;
@@ -76,6 +78,9 @@ padding-top: 6rem;
   font-family: 'Shabnam-DG-N';
 
 
+}
+.news-card__text-wrapper h2{
+  color: white;
 }
 
 .news-card__title {

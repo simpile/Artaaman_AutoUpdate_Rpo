@@ -1,6 +1,40 @@
 /* -------------------------------------------------------------------------- */
 /*                                 BOTH-PAGES                                 */
 /* -------------------------------------------------------------------------- */
+body {
+  /* background-color: var(--grey-light); */
+  background: #fff
+    linear-gradient(to right, transparent, var(--white-bg), transparent);
+}
+h1 {
+  font-size: 32px;
+}
+h3 {
+  font-size: 18.75px;
+  font-weight: 500px;
+  font-weight: bold;
+}
+
+.outerPart {
+  width: 100%;
+  min-height: 70vh;
+  padding: 4rem 6rem;
+  text-align: center;
+  direction: rtl;
+  font-family: "Shabnam-DG-N";
+  position: relative;
+}
+.outerPart::after {
+  content: "";
+  position: absolute;
+  background-image: url("/images/lineTop.svg");
+  width: 200px;
+  height: 217px;
+  top: 0;
+  right: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 
 .myArticle {
   text-align: right;
@@ -19,11 +53,13 @@
   display: flex;
   align-items: center;
   gap: 5px;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .mySection {
   margin-top: 1rem;
-  border-right: var(--yellow-dark) 2px solid;
+  border-right: var(--yallow-mid) 2px solid;
   padding-right: 2rem;
   padding-bottom: 0.5rem;
 }
@@ -36,21 +72,19 @@
   display: flex;
   flex-direction: column;
 }
-.mySection p a:visited{
+.mySection p a:visited {
   color: var(--green-dark);
 }
-.mySection p a{
+.mySection p a {
   font-weight: bold;
   color: var(--green-light);
 }
-.mySection p a:active{
+.mySection p a:active {
   color: var(--green-mid);
 }
-.mySection p a:hover{
+.mySection p a:hover {
   color: var(--yellow-dark);
 }
-
-
 
 /* -------------------------------------------------------------------------- */
 /*                               CONTACT-US-PAGE                              */
@@ -61,7 +95,7 @@
 }
 .myContentPage .iconify,
 .myContentPage h4 {
-  color: var(--yellow-light);
+  color: var(--green-new);
 }
 
 .myContentPage .myArticle a,
@@ -111,81 +145,70 @@
   .myArticle {
     width: 90%;
     padding: 1.5rem 2rem;
-
   }
 }
 
 @media only screen and (max-width: 700px) {
-
-
-  .myArticle{
+  .myArticle {
     width: 100%;
   }
 }
 
-
 @media only screen and (max-width: 600px) {
-
- 
- 
-
-
-   .myArticle h3{
+  .myArticle h3 {
     padding-bottom: 1rem;
-  
   }
 }
 
-
-
-@media only screen and (max-width: 375px) {
-
+@media only screen and (max-width: 425px) {
+  .outerPart {
+    padding: 4rem 2rem;
+  }
 
   .myArticle {
     text-align: center;
   }
-  .mySection{
-padding-right: 0;
-border-right: none;
-border-top: var(--yallow-mid) 2px solid;
-padding-top: .5rem;
-text-align: center;
-margin-top: 0;
+  .mySection {
+    padding-right: 0;
+    border-right: none;
+    border-top: var(--yallow-mid) 2px solid;
+    padding-top: 0.5rem;
+    text-align: center;
+    margin-top: 0;
   }
-  .myArticle h3{ margin-right: 0;}
-  .myContentPage .mySectionCol{
+  .myArticle h3 {
+    margin-right: 0;
+  }
+  .myContentPage .mySectionCol {
     width: 100%;
     text-align: center;
   }
-  .myContentPage .myAlignIcon{
+  .myContentPage .myAlignIcon {
     width: 100%;
     justify-content: center;
   }
-
 }
 
-
 @media only screen and (max-width: 305px) {
- 
   .myArticle {
     /* padding: .5rem 1rem; */
     width: 100%;
-  
   }
-  .mySection{
+  .mySection {
     /* width: 90%; */
     margin: auto 0;
     padding: auto 0;
   }
-
-    
-
 }
 
 @media only screen and (max-width: 200px) {
-  
-  .myArticle{
+  .myArticle {
     padding: 0;
   }
+}
 
+@media only screen and (max-width: 425px) {
+  .outerPart::after {
+    width: 143px;
+  }
 }

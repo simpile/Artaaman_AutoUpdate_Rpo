@@ -53,167 +53,6 @@
 }
 
 /* -------------------------------------------------------------------------- */
-/*                                  GENERALS                                  */
-/* -------------------------------------------------------------------------- */
-:root {
-  --yellow-light: #febf50;
-  --yallow-mid: #ffb724;
-  --yellow-dark: #fba100;
-  --green-light: #2b6859;
-  --green-mid: #214e43;
-  --green-dark: #1b3c34;
-  --grey-light: #ecebeb;
-  --grey-mid: #797979;
-  --grey-dark: #1a1818;
-  --black-color: #000000;
-  --white-color: #ffffff;
-  --white-bg: #ffffff86;
-  --green-bg: #2b68599a;
-}
-
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-*::before,
-*::after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Shabnam-Normal";
-  /* font-display: swap; */
-  margin: 0;
-  padding: 0;
-}
-
-::selection {
-  color: white;
-  background: var(--green-light);
-}
-
-a {
-  text-decoration: none;
-}
-
-a:hover,
-a:active,
-a:focus {
-  text-decoration: none;
-}
-
-h1 {
-  font-family: "Shabnam-Bold";
-  
-}
-
-
-strong {
-  color: var(--yellow-dark);
-}
-.mainWrapper {
-  max-width: 90%;
-  margin: 0 auto;
-}
-
-.myMore {
-  margin: 1rem auto;
-  color: var(--white-color);
-  background-color: var(--grey-mid);
-  font-size: 12px;
-  /* border: 1px var(--green-dark) solid; */
-  padding: 0 1rem;
-  border-radius: 15px;
-  box-shadow: 1px 1px 3px rgb(210 208 208);
-}
-
-.myMore:hover {
-  background-color: var(--yellow-light);
-  /* box-shadow: 0px -1px 3px rgb(210 208 208); */
-}
-.myMore:active {
-  box-shadow: none;
-}
-.myBackBtn {
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  background-color: var(--grey-mid);
-  color: var(--white-color)!important;
-  white-space: nowrap;
-  cursor: pointer;
-}
-.myBackBtn:hover {
-  background-color: var(--yellow-light);
-  color: var(--black-color);
-}
-
-.outerPart {
-  background-color: var(--grey-light);
-  min-height: 70vh;
-  padding: 4rem 6rem;
-  text-align: center;
-  direction: rtl;
-  font-family: "Shabnam-DG-N";
-}
-.myMainTitle {
-  margin-bottom: 2rem;
-  padding-top: 4rem;
-  text-align: center;
-}
-
-.backBtnWrapper {
-  display: flex;
-  justify-content: center;
-}
-img{color: var(--green-mid);}
-/* Ripple In */
-@-webkit-keyframes hvr-ripple-in {
-  100% {
-    inset: 0 0 0 0;
-    opacity: 0.8;
-  }
-}
-@keyframes hvr-ripple-in {
-  100% {
-    inset: 0 0 0 0;
-    opacity: 0.8;
-  }
-}
-.hvr-ripple-in {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  position: relative;
-}
-.hvr-ripple-in:before {
-  content: "";
-  position: absolute;
-  border: var(--yallow-mid) solid 1px;
-  border-radius: 25px;
-  top: -12px;
-  right: -12px;
-  bottom: -12px;
-  left: -12px;
-  opacity: 0;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-}
-.hvr-ripple-in:hover:before,
-.hvr-ripple-in:focus:before,
-.hvr-ripple-in:active:before {
-  -webkit-animation-name: hvr-ripple-in;
-  animation-name: hvr-ripple-in;
-}
-
-/* -------------------------------------------------------------------------- */
 /*                                  GENERALS(new)                                  */
 /* -------------------------------------------------------------------------- */
 @font-face {
@@ -282,6 +121,8 @@ body {
 h1, h2, h3, h4, h5, h6{color: var(--text-dark);}
 p{color: var(--text-light);}
 
+h1{font-size: 32px;}
+h3{font-size: 18.75px; font-weight: 500px;   font-weight: bold;}
 h2{font-size: 30px;}
 @media only screen and (max-width: 768px) {
   h2{font-size: 28px;}
@@ -304,114 +145,127 @@ a:focus {
 strong {
   color: var(--green-new);
 }
+
 .mainWrapper {
   max-width: 90%;
   margin: 0 auto;
 }
 
+.mainWrapper {
+  max-width: 90%;
+  margin: 0 auto;
+}
+.myMainTitle {
+  margin-bottom: 2rem;
+  padding-top: 4rem;
+  text-align: center;
+}
+
+
+
 
 /* -------------------------------------------------------------------------- */
-/*                                   NAVBAR                                   */
+/*                                    btns                                    */
 /* -------------------------------------------------------------------------- */
-/* .myNavbar {
+
+.myBtn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  outline: none;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.myBtn:focus,
+.myBtn:active {
+  outline: solid 2px var(--green-bg);
+}
+
+.myBtn-green {
   background-color: var(--green-mid);
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 3;
-  direction: rtl;
+  color: var(--white-color);
+}
+.myBtn-green:hover,
+.myBtn-green:focus,
+.myBtn-green:active {
+  background-color: var(--green-dark);
+  color: var(--white-color);
+}
+.myBtn-greenN {
+  background-color: var(--green-new);
+  color: var(--white-color);
+}
+.myBtn-greenN:hover,
+.myBtn-greenN:focus,
+.myBtn-greenN:active {
+  background-color: var(--blue-dark);
+  color: var(--white-color);
 }
 
-.myNavbar div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.myBtn-yellow {
+  background-color: var(--yellow-light);
+  color: var(--grey-dark) !important;
+}
+.myBtn-yellow:hover {
+  background-color: var(--yallow-mid);
+  color: var(--black-color) !important;
 }
 
-#myNavbar-logo svg {
-  padding: 0.6rem 0;
+.myBtn-greenOut{
+  color: var(--green-new);
+  border-color: 1px solid var(--green-new);
 }
-
-:is(#myNavbar-logo svg:hover) :is(path, circle) {
-  fill: var(--yellow-light);
+.myBtn-greenOut:hover{
+  background-color: var(--green-new);
+color: white;
 }
-
-.myNavbar div button {
-  background-color: transparent;
-  border: none;
+.myBtn-greyOut{
+  color: var(--text-light);
+  font-weight: 600;
+  border:2px var(--text-light) solid;
+}
+.myBtn-greyOut:hover{
+ border-color: var(--green-new);
+}
+.myBackBtn {
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  background-color: var(--green-new);
+  color: var(--white-color)!important;
+  white-space: nowrap;
   cursor: pointer;
 }
-
-.iconify {
-  color: var(--white-color);
+.myBackBtn:hover {
+  background-color: var(--green-dark);
+  /* color: var(--black-color); */
 }
 
-.iconify:hover {
-  color: var(--yellow-light);
-}
-
-.myNavbar-contents {
-  position: fixed;
-  inset: 60px auto auto 0px;
-  width: 5%;
-  min-height: 100vh;
-  background-color: var(--green-light);
-  z-index: 2;
-  display: none;
-}
-
-.myNavbar-contents ul {
+.backBtnWrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  min-height: 60vh;
-  margin-top: 1rem;
+  justify-content: center;
 }
-
-.myNavbar-contents li {
-  list-style: none;
-}
-
-.myNavbar-contents li:hover .iconify {
-  transform: scale(1.2);
-}
-
-.myNavbar-item a {
-  position: relative;
-}
-
-.myNavbar-item p {
-  display: none;
-  background-color: var(--grey-dark);
-  color: var(--white-color);
-  position: absolute;
-  left: 20px;
-  font-family: "Shabnam-L";
-  white-space: nowrap;
-}
-
-.myNavbar-contents li:hover p {
-  display: block;
-}
-
-.extNav-container {
-  min-height: 10vh;
-} */
-/* 
--------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
 /*                                   NAVBAR                                   */
 /* -------------------------------------------------------------------------- */
 
-#myNavbar{
-  transition: all .5s;
+#myNavbar {
+  transition: all 0.5s;
 }
 .myNavbar-logos {
   background-color: transparent;
   position: fixed;
   width: 100%;
   z-index: 4;
-  
 }
 .myNavbar-logos *:focus {
   outline: 0;
@@ -422,242 +276,393 @@ strong {
   align-items: center;
 }
 .st0 {
-  fill: #1B6D6D;
+  fill: #1b6d6d;
 }
- .hide {
-  /* display: none !important; */
-}
+
 .myNavbar-logos div a,
-  .myNavbar-logos div button {
-    margin: 0;
-    padding: 0;
-    width: 50px;
-    height: 50px;
-  }
-  
-   .myNavbar-logos div a svg,
-  .myNavbar-logos div button svg {
-    background-color: var(--blue-dark);
-    width: 100%;
-    height: 100%;
-    border-radius: 25px;
-    
-  }
-  .myNavbar-logos {
-    top: 0;
-  }
- 
-  .myNavbar-logos div button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-  }
+.myNavbar-logos div button {
+  margin: 0;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+}
 
-  
-  .myNavbar-logos div button .iconify {
-    padding: 11px;
-  }
-  .myNavbar-logos{
-    margin-top: .25rem;
-    background-color: transparent;
-  }
- 
-  .st0 {
-    fill: var(--white-bg);
-  }
-  .close {
-    color: white;
-    display: none;
-  } 
-  .myNavbar-logos div button {
-    color: var(--white-bg) !important;
-  }
+.myNavbar-logos div a svg,
+.myNavbar-logos div button svg {
+  background-color: var(--blue-dark);
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+}
+.myNavbar-logos {
+  top: 0;
+}
 
-  .myNavbar-logos div a:hover .st0{
+.myNavbar-logos div button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
 
-    fill: var(--white-color);
-  }
-  .myNavbar-logos div button:hover .iconify {
-    color: var(--white-color) !important;
-  } 
- 
+.myNavbar-logos div button .iconify {
+  padding: 11px;
+}
+.myNavbar-logos {
+  margin-top: 0.25rem;
+  background-color: transparent;
+}
+
+.st0 {
+  fill: var(--white-bg);
+}
+.close {
+  color: white;
+  display: none;
+}
+.myNavbar-logos div button {
+  color: var(--white-bg) !important;
+}
+
+.myNavbar-logos div a:hover .st0 {
+  fill: var(--white-color);
+}
+.myNavbar-logos div button:hover .iconify {
+  color: var(--white-color) !important;
+}
+
 .myNavbar-contents {
   position: fixed;
   z-index: 3;
   display: none;
-
-
 }
 .myNavbar-contents ul {
   display: flex;
   flex-direction: column;
   align-items: center;
   align-items: end;
-
-
 }
 .myNavbar-contents li {
   list-style: none;
-
 }
 .myNavbar-item a {
   width: 100%;
   height: 100%;
   display: flex;
-
 }
 
-
-@media only screen and (min-width: 426px) {
-
-  .myNavbar-contents {
-    inset: 60px auto auto 0px;
-    width: 5%;
-    min-height: 100vh;
-    z-index: 3;
-    margin-top: 0;
-
-  }
-
-  .myNavbar-contents ul {
-    min-height: 60vh;
-    margin-top: 1rem;
-
-    
-  }
-
-  .myNavbar-contents li {
-    height: 50px;
-    margin-bottom: 10px;
-    margin-left: 1rem;
-
-  }
-
-  .myNavbar-contents .iconify {
-    width: 50px;
-    color: var(--blue-light);
-    color: var(--white-bg);
-  }
-
-  .myNavbar-item a {
-    flex-direction: row-reverse;
-    align-items: center;
-    flex-direction: row-reverse;
-    width: 50px;
-    overflow: hidden;
-    border-radius: 25px;
-
-    justify-content: space-between;
-    animation: openNav 2s 50ms;
-transition: all 1s;
-  }
-  .myNavbar-item a div {
-    width: 50px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    background-color: #1f434963;
-    border-radius: 25px;
-    filter: drop-shadow(76px 52px 50px var(--blue-dark));
-    
-  }
-  
-  .myNavbar-item p {
-    margin-top: 1rem;
-    margin-right: 1rem;
-    color: var(--blue-dark);
-    white-space: nowrap;
-    font-size: 1rem;
-  }
-  .myNavbar-item:hover a {
-width: 180px;
-background-color: var(--blue-dark);
-transition: width .5s;
-filter: drop-shadow(0 1px 1px var(--blue-dark));
-
-
+.myNavbar-contents {
+  inset: 60px auto auto 0px;
+  width: 5%;
+  min-height: 100vh;
+  z-index: 3;
+  margin-top: 0;
 }
-  .myNavbar-item:hover a div {
-    background-color: var(--blue-dark);
-    filter: drop-shadow(76px 52px 50px var(--black-color));
-  }
-  .myNavbar-item:hover .iconify {
-    color: var(--white-color);
-  }
-  .myNavbar-item:hover p {
-    color: var(--white-color);
-  }
 
-  @keyframes openNav {
-    0% {
-      width: 50px;
-    }
-    25% {
-      background-color: var(--white-bg);
-      /* width: 180px; */
-    }
-    50% {
-      /* background-color: var(--white-bg); */
-      width: 180px;
-    }
-    75% {
-      background-color: var(--white-bg);
-      /* width: 180px; */
-    }
-    100% {
-      width: 50px;
-    }
+.myNavbar-contents ul {
+  min-height: 60vh;
+  margin-top: 1rem;
+}
+
+.myNavbar-contents li {
+  height: 50px;
+  margin-bottom: 10px;
+  margin-left: 1rem;
+}
+
+.myNavbar-contents .iconify {
+  width: 50px;
+  color: var(--blue-light);
+  color: var(--white-bg);
+}
+
+.myNavbar-item a {
+  flex-direction: row-reverse;
+  align-items: center;
+  flex-direction: row-reverse;
+  width: 50px;
+  overflow: hidden;
+  border-radius: 25px;
+  justify-content: space-between;
+  animation: openNav 2s 50ms;
+  transition: all 1s;
+}
+.myNavbar-item a div {
+  width: 50px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #1f434963;
+  border-radius: 25px;
+  filter: drop-shadow(76px 52px 50px var(--blue-dark));
+}
+
+.myNavbar-item p {
+  margin-top: 1rem;
+  margin-right: 1rem;
+  color: var(--blue-dark);
+  white-space: nowrap;
+  font-size: 1rem;
+}
+
+.myNavbar-item:hover a {
+  width: 180px;
+  background-color: var(--blue-dark);
+  transition: width 0.5s;
+  filter: drop-shadow(0 1px 1px var(--blue-dark));
+}
+.myNavbar-item:hover a div {
+  background-color: var(--blue-dark);
+  filter: drop-shadow(76px 52px 50px var(--black-color));
+}
+.myNavbar-item:hover .iconify {
+  color: var(--white-color);
+}
+.myNavbar-item:hover p {
+  color: var(--white-color);
+}
+
+@keyframes openNav {
+  0% {
+    width: 50px;
+  }
+  25% {
+    background-color: var(--white-bg);
+  }
+  50% {
+    width: 180px;
+  }
+  75% {
+    background-color: var(--white-bg);
+  }
+  100% {
+    width: 50px;
   }
 }
+
 @media only screen and (max-width: 425px) {
-  .myNavbar-logos .mainWrapper{
+  .myNavbar-item a {
+    width: 180px;
+    animation: none;
+    background-color: #1f434963;
+    transition: width 0.5s;
+    filter: drop-shadow(0 1px 1px var(--blue-dark));
+  }
+  .myNavbar-logos .mainWrapper {
     max-width: 95%;
   }
-  .myNavbar-logos div a, .myNavbar-logos div button {
-    width: 40px;
-    height: 40px;
-}
-
-  .myNavbar-contents {
-    width: 100%;
-    background: var(--blue-dark);
-    inset: 0;
-    
-    
-  }
-  .myNavbar-contents ul {
-    height: 70%;
-    justify-content: space-around;
-    margin-top: 5rem;
-  }
-
   .myNavbar-contents .iconify,
   .myNavbar-contents a,
   .myNavbar-contents a p {
     color: var(--white-color) !important;
   }
-
-  .myNavbar-item {
-    width: 100%;
+  .myNavbar-contents li {
+    margin-left: 0;
   }
-  .myNavbar-item a {
-    min-width: 100%;
-    justify-content: space-between;
-    padding-inline: 3rem;
-    flex-direction: row-reverse;
+  .myNavbar-item a div {
+    background-color: transparent;
   }
-  
-  .myNavbar-item:last-child a svg {
-    margin: -9px;
-  }
-  .myNavbar-item:hover,
-  .myNavbar-item:active,
-  .myNavbar-item:focus {
-    background-color: var(--blue-light);
-  }
-
+}
+/* -------------------------------------------------------------------------- */
+/*                                 newsletter                                 */
+/* -------------------------------------------------------------------------- */
+.mySubscribe-formWrap {
+  margin-bottom: 80px;
+  position: relative;
+  z-index: 2;
 }
 
+
+.mySubscribe-formWrap h3 {
+font-size: 18px;
+font-weight: 500;
+color: #3b5d50;
+}
+.mySubscribe-formItem{
+width: 25%;
+padding-left: 1rem !important; 
+}
+.mySubscribe-formWrap .form-control {
+height: 50px;
+border-radius: 10px;
+font-family: "Inter", sans-serif;
+}
+
+.mySubscribe-formWrap .form-control:active,
+.mySubscribe-formWrap .form-control:focus {
+outline: none;
+-webkit-box-shadow: none;
+box-shadow: none;
+border-color: #3b5d50;
+-webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.mySubscribe-formWrap .btn {
+border-radius: 10px !important;
+}
+@media (max-width: 515px) {
+.mySubscribe-formItem{
+  width: 40%;
+}
+}
+/* -------------------------------------------------------------------------- */
+/*                                   SUPORT                                   */
+/* -------------------------------------------------------------------------- */
+
+    .mySupport-btnFloat{
+        position:fixed;
+        bottom:15px;
+        right:15px;
+        border-radius:50px;
+        text-align:center;
+      font-size:30px;
+      z-index:100;
+    }
+    .mySupport-btnFloat::after{
+    content: "چطور میتونم کمکتون کنم؟ ";
+    
+    color: var(--text-dark);
+    padding:.1rem .5rem;
+    font-size: 14px;
+    background: var(--white-bg);
+    border-radius: 25px 25px 0;
+    margin-bottom: 10px;
+        box-shadow: 1px 1px 0px #999;
+    
+    }
+    .mySupport-btnFloat .iconify{
+      color: var(--yellow-dark);
+      background-color: transparent;
+      filter: drop-shadow(1px 0px 1px var(--blue-dark));    
+      animation: wiggle 6s ease infinite; /* Adjust the duration as needed */
+      animation-fill-mode: forwards;
+      animation-delay: 5s;
+    
+    
+    }
+    @keyframes wiggle {
+      0% {
+        transform: rotate(-3deg);
+      }
+      20% {
+        transform: rotate(20deg);
+      }
+      40% {
+        transform: rotate(-15deg);
+      }
+      60% {
+        transform: rotate(5deg);
+      }
+      90% {
+        transform: rotate(-1deg);
+      }
+      100% {
+        transform: rotate(0);
+        
+      }
+    }
+    /* Modal customization */
+    .modal {
+      background: var(--white-bg);
+      background: url(../images/line001shadow.svg) no-repeat 100% 0;
+    }
+    .modal:before {
+      position: absolute;
+      content: "";
+      width: 50%;
+      height: 217px;
+      background-image: url("../images/dots-yellow.svg");
+      /* background-image: url("../images/line003.svg"); */
+      background-repeat: no-repeat;
+      background-size: contain;
+      transform: translate(-45%, 90%);
+    
+      z-index: -1;
+    }
+    .modal-content {
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    .modal-header {
+      background-color: var(--blue-dark);
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      padding: 15px;
+    }
+    
+    .modal-header p {
+      font-size: 18px;
+      color: var(--white-color) !important;
+    
+    }
+    
+    .modal-body {
+      padding: 20px;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    /* Form input styling */
+    .form-control {
+      border-radius: 8px;
+      border: 1px solid var(--grey-light);
+    }
+    
+    
+    
+    /* Additional styling if needed */
+    
+    @media only screen and (max-width: 425px) {
+      .mySupport-btnFloat svg{
+        width: 40px;
+      }
+     
+    }
+    .modal-contact-info{
+      color: var(--text-dark);
+    }
+    .mySupport .custom-social li {
+      width: 35px;
+      height: 35px;
+      background-color: var(--grey-light);
+      border-radius: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .contact-number{
+      align-items: center;
+    }
+    .contact-number span{
+      background-color: var(--grey-light);
+      border-radius: 25px;
+      width: 35px;
+      height: 35px;
+      padding: 4px;
+      
+    }
+    .mySupport .custom-social li:hover, .contact-number:hover span{
+      opacity: 1;
+      transform: scale(1.05);
+    
+      transition: all 1s;
+    }
+    .mySupport .custom-social li a{
+      color: var(--grey-mid);
+      opacity: .9;
+    }
+    .contact-number p span{  color: var(--grey-mid);
+      opacity: .9;
+    
+    }
+    .contact-number p{
+      font-size: 18px;
+    }
+    
 /* -------------------------------------------------------------------------- */
 /*                                   FOOTER                                   */
 /* -------------------------------------------------------------------------- */
