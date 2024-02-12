@@ -62,8 +62,8 @@ var mySwiper = new Swiper('.mySwiper', {
     // effect: 'coverflow',
     // effect: 'cube',
     mousewheel: true,
-    // loop: true,
-  slidesPerView: 1,
+    loop: true,
+  // slidesPerView: 1,
   // spaceBetween: 20, // فاصله بین اسلایدها
   autoplay: {
     delay: 2500,
@@ -113,7 +113,7 @@ function addSlides() {
 }
 
 // اجرای تابع برای افزودن اسلایدها
-// addSlides();
+addSlides();
 
   /* -------------------------------------------------------------------------- */
   /*                            ACCORDIAN/ QUESTIOMS                            */
