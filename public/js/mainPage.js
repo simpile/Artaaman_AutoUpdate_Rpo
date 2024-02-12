@@ -61,8 +61,8 @@ var mySwiper = new Swiper('.mySwiper', {
     effect: 'cards',
     // effect: 'coverflow',
     // effect: 'cube',
-    // mousewheel: true,
-    // loop: true,
+    mousewheel: true,
+    loop: true,
   // slidesPerView: 1,
   // spaceBetween: 20, // فاصله بین اسلایدها
   autoplay: {
