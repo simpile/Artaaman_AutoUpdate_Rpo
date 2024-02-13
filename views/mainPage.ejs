@@ -553,8 +553,7 @@
     </h2>
     <div class="owl-carousel owl-theme mainWrapper myNews-slider" id="newsSlideShow" data-aos="fade-up">
       <% last.forEach((article, index)=>{ %>
-        <div class="myNews-item" data-aos="fade-up" >
-          <!-- data-aos-delay="<%= 100 + index * 100 %>" -->
+        <div class="myNews-item" data-aos="fade-up" data-aos-delay="<%= 100 + index * 100 %>">
           <a href="news/<%= article._id %>">
             <img loading="lazy" width="310" height="200" src="<%= article.img %> "
               alt="<%= article.alt || article.title %> ">
