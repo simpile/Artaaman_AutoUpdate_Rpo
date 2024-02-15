@@ -1,12 +1,13 @@
-@font-face {
-  font-family: "Shabnam-DG-N";
-  src: url(../fonts/Shabnam-FD.woff) format("woff");
-  font-display: swap;
-}
 
 /* -------------------------------------------------------------------------- */
 /*                                  GENERALS                                  */
 /* -------------------------------------------------------------------------- */
+@font-face {
+  font-family: "Shabnam-DG-N";
+  src: url(../fonts/Shabnam-FD.woff) format("woff");
+  font-display: swap;
+} 
+
 :root {
   --yellow-light: #febf50;
   --yallow-mid: #ffb724;
@@ -210,20 +211,25 @@ strong {
   fill: #1b6d6d;
 }
 
-.myNavbar-logos div a,
-.myNavbar-logos div button {
+.mainLogos {
   margin: 0;
   padding: 0;
   width: 50px;
   height: 50px;
+  
 }
 
 .myNavbar-logos div a svg,
-.myNavbar-logos div button svg {
+.myNavbar-logos div button svg,
+.myNavbar-logos div button span  {
   background-color: var(--blue-dark);
   width: 100%;
   height: 100%;
   border-radius: 25px;
+}
+
+.myNavbar-logos div button span{
+  font-size: 30px;
 }
 .myNavbar-logos {
   top: 0;

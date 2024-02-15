@@ -37,9 +37,7 @@ document.write(
            <path fill="currentColor" d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" />
 
          </svg>
-         <span class="iconify close" id="closeIcn
-         " data-icon="mingcute:close-fill"></span>
-         <!-- <span class="close">X</span> -->
+         <span class="iconify close" id="closeIcn">&#xd7;</span>
        </button>
      </div>
    </div>
