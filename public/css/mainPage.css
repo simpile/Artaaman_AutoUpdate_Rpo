@@ -1038,7 +1038,7 @@ strong {
   height: 100vh;
   display: flex;
   align-items: center;
-  margin: 5rem 0;
+  /* margin: 5rem 0; */
 }
 .mySlider-imgWrap {
   max-height: 100%;
@@ -1047,6 +1047,11 @@ strong {
   .tempaltemo-carousel .h1 {
     font-size: 1em !important;
   }
+  .mySlider {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    }
 }
 
 
