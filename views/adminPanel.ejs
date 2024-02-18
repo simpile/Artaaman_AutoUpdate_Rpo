@@ -49,8 +49,7 @@
                         <button class="btn btn-outline-warning "
                             onclick="document.getElementById('addNewArticle').style.display='block'">افزودن مقاله
                             جدید</button>
-                            <a href="/supportMessages" class="btn btn-outline-info">نمایش پیام‌های ساپورت</a>
-
+                            <button onclick="showSupportMessages()" class="btn btn-outline-info">نمایش پیام‌های ساپورت</button>
                             <div id="addNewArticle" class="addNewArticle ">
                                 <button onclick="document.getElementById('addNewArticle').style.display='none'"
                                     class="btn btn-outline-danger closeTab">بستن</button>
@@ -94,10 +93,163 @@
                             </div>
                         <h1 style="background-color: rgb(255, 255, 255);">لیست مقالات</h1>
                     </div>
-                    <!-- <div style=" display: flex; flex-wrap: wrap; width: 100%; height: 100%; "> -->
 
+                    <style>
+                        .message-summary {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.details {
+    margin-top: 10px;
+}
+
+.show-all-btn {
+    margin-top: 10px;
+}
+                    </style>
                 
+                    <!-- <div id="supportMessages" style="display: none;">
+                        <div class="summary">
+                            <% supportMessages.forEach(message => { %>
+                                <div class="message-summary">
+                                    <p><strong>نام:</strong> <%= message.name %></p>
+                                    <p><strong>متن پیام:</strong> <%- message.message %></p>
 
+                                    <button class="show-details-btn">نمایش جزئیات</button>
+                                    <div class="details" style="display: none;">
+                                        <p><strong>تلفن:</strong> <%= message.phone %></p>
+                                        <p><strong>ایمیل:</strong> <%= message.email %></p>
+                                        <p><strong>نحوه تماس:</strong> <%= message.method %></p>
+
+                                    </div>
+                                </div>
+                            <% }) %>
+                        </div>
+                        <button id="showAllBtn">نمایش همه</button>
+                    </div> -->
+<!--                     
+                        <script>
+                            function showSupportMessages() {
+                                var supportMessagesContainer = document.getElementById("supportMessages");
+                                if (supportMessagesContainer.style.display === "none") {
+                                    supportMessagesContainer.style.display = "block";
+                                } else {
+                                    supportMessagesContainer.style.display = "none";
+                                }
+                            }
+                            document.addEventListener("DOMContentLoaded", function () {
+        var messages = document.querySelectorAll(".message-summary");
+        var showAllBtn = document.getElementById("showAllBtn");
+
+        messages.forEach(function (message, index) {
+            var details = message.querySelector(".details");
+            var showDetailsBtn = message.querySelector(".show-details-btn");
+
+            showDetailsBtn.addEventListener("click", function () {
+                if (details.style.display === "none") {
+                    details.style.display = "block";
+                    showDetailsBtn.textContent = "مخفی کردن جزئیات";
+                } else {
+                    details.style.display = "none";
+                    showDetailsBtn.textContent = "نمایش جزئیات";
+                }
+            });
+        });
+
+        showAllBtn.addEventListener("click", function () {
+            messages.forEach(function (message, index) {
+                if (index >= 5) {
+                    message.style.display = "block";
+                }
+            });
+            showAllBtn.style.display = "none";
+        });
+    });
+
+
+                        </script> -->
+                        <div id="supportMessages" style="display: none;">
+                            <div class="summary">
+                                <% 
+                                // Reverse the array to display the latest messages first
+                                supportMessages.slice().reverse().forEach(message => { %>
+                                    <div class="message-summary">
+                                        <p><strong>نام:</strong> <%= message.name %></p>
+                                        <p><strong>متن پیام:</strong> <%- message.message %></p>
+                                        <button class="show-details-btn">نمایش جزئیات</button>
+                                        <div class="details" style="display: none;">
+                                            <p><strong>تلفن:</strong> <%= message.phone %></p>
+                                            <p><strong>ایمیل:</strong> <%= message.email %></p>
+                                            <p><strong>نحوه تماس:</strong> <%= message.method %></p>
+                                        </div>
+                                    </div>
+                                <% }) %>
+                            </div>
+                            <button id="showAllBtn">نمایش همه</button>
+                        </div>
+                        
+                        <script>
+                            function showSupportMessages() {
+                                var supportMessagesContainer = document.getElementById("supportMessages");
+                                if (supportMessagesContainer.style.display === "none") {
+                                    supportMessagesContainer.style.display = "block";
+                                } else {
+                                    supportMessagesContainer.style.display = "none";
+                                }
+                            }
+                        
+                            document.addEventListener("DOMContentLoaded", function () {
+                                var messages = document.querySelectorAll(".message-summary");
+                                var showAllBtn = document.getElementById("showAllBtn");
+                        
+                                // مخفی کردن پیام‌های بیشتر از 5
+                                for (var i = messages.length - 1; i >= 5; i--) {
+                                    messages[i].style.display = "none";
+                                }
+                        
+                                showAllBtn.addEventListener("click", function () {
+                                    messages.forEach(function (message) {
+                                        message.style.display = "block";
+                                    });
+                                    showAllBtn.style.display = "none";
+                                });
+                        
+                                for (var i = messages.length - 1; i >= 0; i--) {
+                                    var details = messages[i].querySelector(".details");
+                                    var showDetailsBtn = messages[i].querySelector(".show-details-btn");
+                        
+                                    showDetailsBtn.addEventListener("click", function () {
+                                        if (details.style.display === "none") {
+                                            details.style.display = "block";
+                                            showDetailsBtn.textContent = "مخفی کردن جزئیات";
+                                        } else {
+                                            details.style.display = "none";
+                                            showDetailsBtn.textContent = "نمایش جزئیات";
+                                        }
+                                    });
+                                }
+                            });
+                        </script>
+                        <script>
+                            document.addEventListener("DOMContentLoaded", function () {
+                                var messages = document.querySelectorAll(".message-summary");
+                                var showAllBtn = document.getElementById("showAllBtn");
+                        
+                                for (var i = messages.length - 1; i >= 5; i--) {
+                                    messages[i].style.display = "none";
+                                }
+                        
+                                showAllBtn.addEventListener("click", function () {
+                                    messages.forEach(function (message) {
+                                        message.style.display = "block";
+                                    });
+                                    showAllBtn.style.display = "none";
+                                });
+                            });
+                        </script>
+                        
                     <!-- *************************************************************** -->
                     <!-- ************************ ARTICLES LIST ************************ -->
                     <!-- *************************************************************** -->

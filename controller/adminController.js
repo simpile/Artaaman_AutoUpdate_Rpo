@@ -1,8 +1,8 @@
 const newsModel = require('../model/newsModel');
-// const imgModel = require('../model/imageModel');
+const supportModel = require('../model/supportModel');
 const passport = require('passport');
 const {formatDate} = require('../utils/jalali');
-// const imageModel = require('../model/imageModel');
+
 
 //? loading admin login page
 
@@ -16,10 +16,14 @@ exports.getAdminLogin = (req, res) => {
 
 exports.getAdminPanel = async (req, res) => {
     const news = await newsModel.find();
+    const supportMessages = await supportModel.find(); // خواندن پیام‌های ساپورت
+
     if(req.isAuthenticated()) return res.render('adminPanel', {
         news: news.reverse(),
         error: req.flash('error'),
         success: req.flash('success'),
+        supportMessages: supportMessages, // ارسال پیام‌های ساپورت به صفحه
+
     });
     return res.redirect('/adminlogin');
 }
