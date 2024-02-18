@@ -643,7 +643,9 @@ strong {
   position: absolute;
   width: 35px;
   height: 35px;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: var(--text-dark);
   bottom: 15px;
   left: 50%;
