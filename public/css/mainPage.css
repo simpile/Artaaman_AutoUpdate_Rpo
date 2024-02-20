@@ -1045,7 +1045,7 @@ strong {
 .mySlider-imgWrap {
   max-height: 100%;
 }
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   .tempaltemo-carousel .h1 {
     font-size: 1em !important;
   }
