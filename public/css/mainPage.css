@@ -232,6 +232,7 @@ strong {
   font-size: 30px;
 }
 .myNavbar-logos {
+  margin-top: 1rem;
   top: 0;
 }
 
@@ -1040,7 +1041,6 @@ strong {
   height: 100vh;
   display: flex;
   align-items: center;
-  /* margin: 5rem 0; */
 }
 .mySlider-imgWrap {
   max-height: 100%;
