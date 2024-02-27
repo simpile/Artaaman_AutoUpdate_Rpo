@@ -163,7 +163,44 @@
       "description": "<%= article.desc %>",
       "mainEntityOfPage": "<%= article._id %>",
       "url": "<%= article._id %>"
+    },
+    "category": "<%= article.label %>",
+  "keywords": [
+    "<%= article.keywords %>"
+  ],
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "WebPage",
+            "@id": "https://artaaman.com/",
+            "name": "صفحه اصلی"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "WebPage",
+            "@id": "https://artaaman.com/news",
+            "name": "اخبار و مقالات"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "WebPage",
+            "@id": "https://artaaman.com/news/<%= article.title %>",
+            "name": "<%= article.title %>"
+          }
+        }
+      ]
     }
+    
 </script>
 
   <!-- Swiper JS -->
