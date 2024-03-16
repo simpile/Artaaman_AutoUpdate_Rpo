@@ -25,9 +25,9 @@ document.write(`
               <a href="tel:09909890646" class="d-flex justify-content-between m-auto">
                 پشتیبانی و فروش:<span>09909890646</span>
               </a>
-              <a href="tel:09398706081" class="d-flex justify-content-between m-auto">
-                دفتر تهران:<span>09398706081</span>
-              </a>
+              <a href="tel:02634993137" class="d-flex justify-content-between m-auto">
+              دفتر فروش:<span>02634993137</span>
+            </a>
               <a href="tel:02637305173" class="d-flex justify-content-between m-auto">
                 کارخانه:<span>02637305173</span>
               </a>
@@ -45,8 +45,8 @@ document.write(`
 
           <div class="w-75 m-auto pt-4">
             <p class="myFooter-address  text-justify" data-aos="fade-up" data-aos-delay="400">
-              دفتر فروش: تهران، شادآباد، خیابان 17 شهریور، خیابان عزیزی، بازار رضا، پلاک13
-              <br>
+            دفتر فروش: کرج، مهرشهر، بلوار شهرداری، خیابان 112، مجتمع باغ گلها
+            <br>
               <br>
               کارخانه: کرج، ماهدشت، شهرک صنعتی خوارزمی، خیابان ششم شمالی، پلاک 16
             </p>
