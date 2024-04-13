@@ -45,10 +45,8 @@ document.write(`
 
           <div class="w-75 m-auto pt-4">
             <p class="myFooter-address  text-justify" data-aos="fade-up" data-aos-delay="400">
-            دفتر فروش: کرج، مهرشهر، بلوار شهرداری، خیابان 112، مجتمع باغ گلها
-            <br>
-              <br>
-              کارخانه: کرج، ماهدشت، شهرک صنعتی خوارزمی، خیابان ششم شمالی، پلاک 16
+         
+              کارخانه: کرج، ماهدشت، شهرک صنعتی خوارزمی، خیابان ششم شمالی، پلاک 16، گروه صنعتی GSP
             </p>
             <ul class="list-unstyled custom-social pt-3" >
               <li data-aos="fade-up" data-aos-delay="100">
