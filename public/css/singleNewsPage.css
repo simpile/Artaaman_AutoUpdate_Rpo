@@ -280,6 +280,7 @@ aside h4 {
 @media (max-width: 425px) {
   .myNews-header h1 {
     font-size: 25px;
+    line-height: 2rem;
   }
   
   .myNews-figureCapion,  .myNews-figureCapion h2, .myNews-figureCapion h3 {
