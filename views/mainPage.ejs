@@ -543,12 +543,12 @@ type="text/css" />
             </div>
             <div class="mySlider-context col-md-7 mb-0 d-flex align-items-center justify-content-center ">
               <div class="text-center text-md-right ">
-                <h2 class="mb-4"><span style="color: #7a2182;">تخفیف استثنایی</span> محصولات آرتامن
+                <h2 class="mb-4">در<span style="color: #7a2182;">سیزدهمین جشنواره دوسالانه تهران</span> چه گذشت؟
                 </h2>
                 <p class="mb-3">
-                  در هشتمین بازارملی پویانمایی تهران منتظر حضور گرمتان هستیم
+هشتمین بازار ملی پویانمایی با حضور بزرگترین اساتید صنعت انیمیشن
                 </p>
-                <strong>13 تا 17 اسفندماه 1402</strong>
+                <strong>تصاویر بازارچه و ورکشاپ‌های آموزشی انیمیشن</strong>
                 <br>
                 <br>
                 <a class=" myBtn myBtn-yellow "
@@ -580,7 +580,9 @@ type="text/css" />
   <section class="myNews py-5">
     <h2 data-aos="fade-left" data-aos-delay="200">
       اخبار و مقالات
+      
     </h2>
+
     <div class="owl-carousel owl-theme mainWrapper myNews-slider" id="newsSlideShow" data-aos="fade-up">
       <% last.forEach((article, index)=>{ %>
         <div class="myNews-item" data-aos="fade-up" data-aos-delay="<%= 100 + index * 100 %>">
@@ -596,11 +598,17 @@ type="text/css" />
                   <%= article.title %>
                 </span>
                 <span class="iconify myNews-infoIcon" data-icon="dashicons:arrow-left-alt2"></span>
+              </h3>
           </a>
-          </h3>
         </div>
-    </div>
-    <% }) %>
+        
+      </div>
+      <% }) %>
+      
+      <div class="myMore-container">
+        <a href="/news" class="myBtn myBtn-yellow" id="myMore" data-aos="fade-up" data-aos-delay="300">مشاهده تمام مقالات</a>
+      </div>
+
   </section>
 
 

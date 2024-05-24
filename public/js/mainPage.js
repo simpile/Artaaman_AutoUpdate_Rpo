@@ -138,7 +138,7 @@ addSlides();
   /* -------------------------------------------------------------------------- */
   $("#newsSlideShow").owlCarousel({
     rtl: true,
-    loop: true,
+    loop: false,
     // autoplayHoverPause: true,
     // autoplay: true,
     margin: 0,
