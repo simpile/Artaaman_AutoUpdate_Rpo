@@ -1228,8 +1228,6 @@ strong {
 #myMore {
   display: inline-block;
   padding: 1rem 2rem;
-  background-color: var(--blue-light);
-  color: var(--white-color);
   border-radius: 10px;
   font-weight: bold;
   text-decoration: none;
