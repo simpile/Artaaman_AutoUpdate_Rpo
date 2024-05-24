@@ -1220,20 +1220,20 @@ strong {
   width: 100%;
   object-fit: cover;
 }
-.myMore-container {
+/* .myMore-container {
   text-align: center;
-  margin-top: 3rem;
-}
+  margin-top: 2rem;
+} */
 
-#myMore {
+/* #myMore {
   display: inline-block;
   padding: 1rem 2rem;
-  /* background-color: var(--blue-light);
-  color: var(--white-color); */
+  background-color: var(--blue-light);
+  color: var(--white-color);
   border-radius: 10px;
   font-weight: bold;
   text-decoration: none;
-}
+} */
 
 
 @media only screen and (max-width: 425px) {
