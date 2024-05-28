@@ -62,29 +62,4 @@ waCurrentPage = function () {
     });
   }
          
-  const mongoose = require('mongoose');
-const newsModel = require('./model/newsModel'); // مسیر صحیح به مدل خود را وارد کنید
-
-const updateArticles = async () => {
-    try {
-        await mongoose.connect('mongodb://localhost:27017/your_database_name', {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-        });
-
-        const articles = await newsModel.find({ updatedAt: { $exists: false } });
-
-        for (let article of articles) {
-            article.updatedAt = article.createdAt;
-            await article.save();
-        }
-
-        console.log('All articles have been updated');
-        mongoose.disconnect();
-    } catch (err) {
-        console.error('Error updating articles:', err);
-        mongoose.disconnect();
-    }
-};
-
-updateArticles();
+  
