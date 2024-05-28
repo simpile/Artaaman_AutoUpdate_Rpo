@@ -15,12 +15,6 @@ exports.getAdminLogin = (req, res) => {
 //? loading admin panel page
 
 exports.getAdminPanel = async (req, res) => {
-
-    await newsModel.updateMany(
-        { updatedAt: { $exists: true, $eq: null } },
-        { $set: { updatedAt: Date.now() } }
-    );
-
     const news = await newsModel.find();
     const supportMessages = await supportModel.find(); // خواندن پیام‌های ساپورت
 
