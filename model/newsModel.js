@@ -12,6 +12,25 @@ const newsSchema = mongoose.Schema({
         type: Date,
         default: Date.now()
     },
+    updatedAt: {
+        type: Date
+    }
+});
+// این hook برای تنظیم createdAt و updatedAt هنگام ایجاد و ویرایش مقاله است
+
+newsSchema.pre('save', function(next) {
+    if (this.isNew) {
+        this.createdAt = Date.now();
+    } else {
+        this.updatedAt = Date.now();
+    }
+    next();
+});
+// این hook برای تنظیم updatedAt هنگام ویرایش مقاله است
+
+newsSchema.pre('findOneAndUpdate', function(next) {
+    this._update.updatedAt = Date.now();
+    next();
 });
 
 const newsModel = mongoose.model('new', newsSchema);

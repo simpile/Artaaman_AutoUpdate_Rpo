@@ -64,9 +64,14 @@
         </h1>
         
         <div>
-          <span>
+          <!-- <span>
             <%= formatDate(article.createdAt) %>
-          </span>
+          </span> -->
+          <% if (article.updatedAt) { %>
+            <p>آخرین ویرایش: <%= formatDate(article.updatedAt) %></p>
+        <% } else { %>
+            <p>تاریخ ایجاد: <%= formatDate(article.createdAt) %></p>
+        <% } %>
           <!-- ------------------------------------SHARE-BTNS----------------------------------- -->
           <button class="btn-share">
             <span class="btn-text"> اشتراک‌گذاری</span>

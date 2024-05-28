@@ -86,22 +86,6 @@ exports.handleNews = async (req, res) => {
 
 
 
-//? handle loading news
-
-// exports.handleLoadingNews = async (req, res) => {
-//     try {
-//         const article = await newsModel.findOne({_id: req.params.id});
-//         const related = await newsModel.find({label:article.label.split(/\s*,\s*/)});
-//         const reletedExIt = related.filter(ar => ar._id != article.id);
-//         res.render('singleNewsPage', {
-//            article,
-//            formatDate,
-//            related: reletedExIt.reverse()
-//         });
-//     } catch (err) {
-//         console.log(err);
-//     }
-// }
 exports.handleLoadingNews = async (req, res) => {
     try {
       const article = await newsModel.findOne({ _id: req.params.id });
