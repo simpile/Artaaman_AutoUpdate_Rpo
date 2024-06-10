@@ -283,7 +283,14 @@ aside h4 {
     line-height: 2rem;
   }
   
-  .myNews-figureCapion,  .myNews-figureCapion h2, .myNews-figureCapion h3 {
+  .myNews-figureCapion, 
+  .myNews-figureCapion p, 
+  .myNews-figureCapion h1, 
+  .myNews-figureCapion h2,
+   .myNews-figureCapion h3, 
+   .myNews-figureCapion h4,
+   .myNews-figureCapion h5,
+   .myNews-figureCapion h6{
     /* padding: .5rem; */
     /* text-align: justify; */
 /* font-size: 18px; */
@@ -300,7 +307,23 @@ line-height: 2.5em;
     max-width: 100%;
   }
 }
-
+.product-caption{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.product-caption p{
+margin-bottom: 0;
+}
+.product-caption a{
+  text-decoration: underline;
+  color: var(--green-new);
+  transition: all .5s;
+}
+.product-caption a:hover{
+  color: var(--blue-dark);
+}
 /* -------------------------------------------------------------------------- */
 /*                               FESTIVAL FIGURE                              */
 /* -------------------------------------------------------------------------- */
@@ -321,6 +344,7 @@ line-height: 2.5em;
 
 }
 }
+
 
 /* -------------------------------------------------------------------------- */
 /*                                     FQA                                    */
