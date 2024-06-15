@@ -2,7 +2,7 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
  http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns:image="http://artaaman.com/sitemap-gallery/1.1"
     xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
-    <!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
+  
     <url>
         <loc>https://artaaman.com/</loc>
         <lastmod>2024-02-23T12:02:28+00:00</lastmod>
@@ -196,67 +196,67 @@
       <priority>1.0</priority>
       <image:image>
       <image:loc>https://artaaman.com/images/PHOTOS/pro+front.webp</image:loc>
-      <image:title>آرماتور انسانی مدل پروپلاس نمای روبرو >ثبت سفارش</a></image:title>
+      <image:title>آرماتور انسانی مدل پروپلاس نمای روبرو</image:title>
       <image:caption>2.500.000 تومان:قیمت</image:caption>
       </image:image>
       
       <image:image>
       <image:loc>https://artaaman.com/images/PHOTOS/pro+front.webp</image:loc>
-      <image:title>آرماتور انسانی مدل پروپلاس نمای پشت >ثبت سفارش</a></image:title>
+      <image:title>آرماتور انسانی مدل پروپلاس نمای پشت</image:title>
       <image:caption>2.500.000 تومان:قیمت</image:caption>
       </image:image>
       
       <image:image>
       <image:loc>https://artaaman.com/images/PHOTOS/pro%20front.webp</image:loc>
-      <image:title>آرماتور انسانی مدل استاندارد نمای روبرو >ثبت سفارش</a></image:title>
+      <image:title>آرماتور انسانی مدل استاندارد نمای روبرو</image:title>
       <image:caption>2.000.000 تومان:قیمت</image:caption>
       </image:image>
       
       <image:image>
       <image:loc>https://artaaman.com/images/PHOTOS/pro%20side.webp</image:loc>
-      <image:title>آرماتور انسانی مدل استاندارد نمای نیمرخ >ثبت سفارش</a></image:title>
+      <image:title>آرماتور انسانی مدل استاندارد نمای نیمرخ</image:title>
       <image:caption>2.000.000 تومان:قیمت</image:caption>
       </image:image>
       
       <image:image>
       <image:loc>https://artaaman.com/images/PHOTOS/pro%20back.webp</image:loc>
-      <image:title>آرماتور انسانی مدل استاندارد نمای پشت >ثبت سفارش</a></image:title>
+      <image:title>آرماتور انسانی مدل استاندارد نمای پشت</image:title>
       <image:caption>2.000.000 تومان:قیمت</image:caption>
       </image:image>
       
       <image:image>
       <image:loc>https://artaaman.com/images/PHOTOS/eco%20front.webp</image:loc>
-      <image:title>آرماتور انسانی مدل اکونومی نمای روبرو >ثبت سفارش</a></image:title>
+      <image:title>آرماتور انسانی مدل اکونومی نمای روبرو</image:title>
       <image:caption>1.500.000 تومان:قیمت</image:caption>
       </image:image>
       
       <image:image>
       <image:loc>https://artaaman.com/images/PHOTOS/eco%20side.webp</image:loc>
-      <image:title>آرماتور انسانی مدل اکونومی نمای نیمرخ >ثبت سفارش</a></image:title>
+      <image:title>آرماتور انسانی مدل اکونومی نمای نیمرخ</image:title>
       <image:caption>1.500.000 تومان:قیمت</image:caption>
       </image:image>
       
       <image:image>
       <image:loc>https://artaaman.com/images/PHOTOS/eco%20back.webp</image:loc>
-      <image:title>آرماتور انسانی مدل اکونومی نمای پشت >ثبت سفارش</a></image:title>
+      <image:title>آرماتور انسانی مدل اکونومی نمای پشت</image:title>
       <image:caption>1.500.000 تومان:قیمت</image:caption>
       </image:image>
       
       <image:image>
       <image:loc>https://artaaman.com/images/PHOTOS/2joints-rig.webp</image:loc>
-      <image:title>ریگ استاپ‌موشن 2بازویی نیمه سبک>ثبت سفارش</a></image:title>
+      <image:title>ریگ استاپ‌موشن 2بازویی نیمه سبک</image:title>
       <image:caption>4.000.000 تومان:قیمت</image:caption>
       </image:image>
       
       <image:image>
       <image:loc>https://artaaman.com/images/PHOTOS/3joints-rig.webp</image:loc>
-      <image:title>ریگ استاپ‌موشن 3بازویی سنگین>ثبت سفارش</a></image:title>
+      <image:title>ریگ استاپ‌موشن 3بازویی سنگین</image:title>
       <image:caption>5.000.000 تومان:قیمت</image:caption>
       </image:image>
       
       <image:image>
       <image:loc>https://artaaman.com/images/PHOTOS/magnet-rig.webp</image:loc>
-      <image:title>ریگ استاپ‌موشن مگنتی حرفه‌ای>ثبت سفارش</a></image:title>
+      <image:title>ریگ استاپ‌موشن مگنتی حرفه‌ای</image:title>
       <image:caption>6.000.000 تومان:قیمت</image:caption>
       </image:image>
       
