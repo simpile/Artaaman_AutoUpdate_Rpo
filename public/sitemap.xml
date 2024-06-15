@@ -1,365 +1,908 @@
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
-<url>
-  <loc>https://artaaman.com/</loc>
-  <lastmod>2024-02-23T12:02:28+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/</loc>
-  <lastmod>2024-02-23T12:02:28+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://artaaman.com/gallery</loc>
-  <lastmod>2024-02-23T12:02:28+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://artaaman.com/news</loc>
-  <lastmod>2024-02-23T12:02:28+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://artaaman.com/contact</loc>
-  <lastmod>2024-02-23T12:02:28+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://artaaman.com/about</loc>
-  <lastmod>2024-02-23T12:02:28+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+ http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns:image="http://artaaman.com/sitemap-gallery/1.1"
+    xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+    <!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
+    <url>
+        <loc>https://artaaman.com/</loc>
+        <lastmod>2024-02-23T12:02:28+00:00</lastmod>
+        <priority>1.00</priority>
+    </url>
+    <url>
+        <loc>https://shop.artaaman.com/</loc>
+        <lastmod>2024-02-23T12:02:28+00:00</lastmod>
+        <priority>1.00</priority>
+    </url>
+    <url>
+        <loc>https://artaaman.com/gallery</loc>
+        <lastmod>2024-02-23T12:02:28+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://artaaman.com/contact</loc>
+        <lastmod>2024-02-23T12:02:28+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://artaaman.com/about</loc>
+        <lastmod>2024-02-23T12:02:28+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://artaaman.com/news</loc>
+        <lastmod>2024-02-23T12:02:28+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://artaaman.com/news/663ba8319b4daa7f8a3914f4</loc>
+        <priority>1.0</priority>
+        <news:news>
+            <news:publication>
+                <news:name>Artaaman</news:name>
+                <news:language>fa</news:language>
+            </news:publication>
+            <news:publication_date>2024-02-23T12:02:28+00:00</news:publication_date>
+            <news:title>ریگ استاپ موشن چیست؟ راهنمای جامع انتخاب و استفاده</news:title>
+            <news:keywords>ریگ استاپ موشن, هولدر استاپ موشن</news:keywords>
+            <news:image_link>https://artaaman.com/images/NEWS/808a4c4c-ddc2-4bec-a9f1-159c4fddde79_moma-pinocchio2_800x.jpg</news:image_link>
+            <news:publication_date>2024-06-10T20:05:15+01:00</news:publication_date>
 
-<url>
-  <loc>https://artaaman.com/news/65d4cfb27d40e5cecc5ebdc1</loc>
-  <lastmod>2024-02-23T12:02:28+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://artaaman.com/news/646d4ef7576e9ce0d7b9b7dd</loc>
-  <lastmod>2024-02-23T12:02:28+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://artaaman.com/news/6468caf4188997368dd6de0b</loc>
-  <lastmod>2024-02-23T12:02:28+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://artaaman.com/news/645bff8be56996f251776a1f</loc>
-  <lastmod>2024-02-23T12:02:28+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://artaaman.com/news/63d020f41e08572f8385a29c</loc>
-  <lastmod>2024-02-23T12:02:28+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://artaaman.com/news/62e016d8ec53a1b904eb61ee</loc>
-  <lastmod>2024-02-23T12:02:28+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://artaaman.com/news/62caccc5e066f9ef559a0eb0</loc>
-  <lastmod>2024-02-23T12:02:28+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://artaaman.com/news/62c874415a4212c05e4b51d5</loc>
-  <lastmod>2024-02-23T12:02:28+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://artaaman.com/news/62c867c2a0985970c0d3b7ec</loc>
-  <lastmod>2024-02-23T12:02:28+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://artaaman.com/news/62b477090e4219bb06332ea9</loc>
-  <lastmod>2024-02-23T12:02:28+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://artaaman.com/news/62915650a342ce04540f89d2</loc>
-  <lastmod>2024-02-23T12:02:28+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://artaaman.com/news/62914438cc67ddcc6bbcf721</loc>
-  <lastmod>2024-02-23T12:02:28+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://artaaman.com/news/627b9e8c7df1170ad594d06e</loc>
-  <lastmod>2024-02-23T12:02:28+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/product/%d8%a2%d8%b1%d9%85%d8%a7%d8%aa%d9%88%d8%b1-%d8%a7%d9%86%d8%b3%d8%a7%d9%86-%d8%ad%d8%b1%d9%81%d9%87-%d8%a7%db%8c/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/product/%d8%a2%d8%b1%d9%85%d8%a7%d8%aa%d9%88%d8%b1-%d8%a2%d9%85%d9%88%d8%b2%d8%b4%db%8c-%d8%a7%d9%86%d8%b3%d8%a7%d9%86-%d8%b3%d8%a7%db%8c%d8%b2-%d8%a7%d8%b3%d8%aa%d8%a7%d9%86%d8%af%d8%a7%d8%b1%d8%af/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/product-category/products/stopmotion-armature/dog-armature/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/product/%d8%a2%d8%b1%d9%85%d8%a7%d8%aa%d9%88%d8%b1-%d8%ad%d8%b1%d9%81%d9%87-%d8%a7%db%8c-%d8%b3%da%af-%d8%b3%d8%a7%db%8c%d8%b2-%d8%a7%d8%b3%d8%aa%d8%a7%d9%86%d8%af%d8%a7%d8%b1%d8%af/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/product-category/products/stopmotion-armature/armature-kit/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/product/%da%a9%db%8c%d8%aa-%d8%a2%d8%b1%d9%85%d8%a7%d8%aa%d9%88%d8%b1-%d8%ad%d8%b1%d9%81%d9%87-%d8%a7%db%8c-%d8%a7%d9%86%d8%b3%d8%a7%d9%86-%d8%b3%d8%a7%db%8c%d8%b2-%d8%a7%d8%b3%d8%aa%d8%a7%d9%86%d8%af%d8%a7/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/product-category/products/stopmotion-armature/human-armature/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/product-category/products/stopmotion-holder/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/product-category/products/armature-parts/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/product-category/products/stopmotion-armature/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/shop/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/product/%d8%a2%d8%b1%d9%85%d8%a7%d8%aa%d9%88%d8%b1-%d8%a7%d9%86%d8%b3%d8%a7%d9%86-%d9%be%d8%b1%d9%88-%d9%be%d9%84%d8%a7%d8%b3-%d8%b3%d8%a7%db%8c%d8%b2-%d8%a7%d8%b3%d8%aa%d8%a7%d9%86%d8%af%d8%a7%d8%b1%d8%af/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/product/%D8%A2%D8%B1%D9%85%D8%A7%D8%AA%D9%88%D8%B1-%D8%A7%D9%86%D8%B3%D8%A7%D9%86-%D8%AD%D8%B1%D9%81%D9%87-%D8%A7%DB%8C/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/product/%d9%be%d8%a7%db%8c%d9%87-%d9%86%da%af%d9%87%d8%af%d8%a7%d8%b1%d9%86%d8%af%d9%87-%d9%85%da%af%d9%86%d8%aa%db%8c/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/product/%da%a9%db%8c%d8%aa-%d8%a2%d8%b1%d9%85%d8%a7%d8%aa%d9%88%d8%b1-%d8%a2%d9%85%d9%88%d8%b2%d8%b4%db%8c-%d8%a7%d9%86%d8%b3%d8%a7%d9%86-%d8%b3%d8%a7%db%8c%d8%b2-%d8%a7%d8%b3%d8%aa%d8%a7%d9%86%d8%af%d8%a7/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/product/%d8%a2%d8%b1%d9%85%d8%a7%d8%aa%d9%88%d8%b1-%da%a9%db%8c%d8%aa-%d8%a7%d9%86%d8%b3%d8%a7%d9%86-%d9%be%d8%b1%d9%88-%d9%be%d9%84%d8%a7%d8%b3-%d8%b3%d8%a7%db%8c%d8%b2-%d8%a7%d8%b3%d8%aa%d8%a7%d9%86%d8%af/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/product/%da%a9%db%8c%d8%aa-%d8%a2%d8%b1%d9%85%d8%a7%d8%aa%d9%88%d8%b1-%d8%ad%d8%b1%d9%81%d9%87-%d8%a7%db%8c-%d8%b3%da%af-%d8%b3%d8%a7%db%8c%d8%b2-%d8%a7%d8%b3%d8%aa%d8%a7%d9%86%d8%af%d8%a7%d8%b1%d8%af/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/my-account/edit-account/</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/my-account/reset-password/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/refund_returns/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/product-category/products/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/product-category/products/stopmotion-armature/armature-model/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/product-tag/%d8%a2%d8%b1%d9%85%d8%a7%d8%aa%d9%88%d8%b1-%d8%a2%d8%af%d9%85/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/product-tag/professional-armature/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/product-tag/%d8%a2%d8%b1%d9%85%d8%a7%d8%aa%d9%88%d8%b1-%d8%b3%d9%88%da%a9%d8%aa-%d8%a7%d9%86%d8%af-%d8%a8%d8%a7%d9%84/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/product-tag/%d8%a2%d8%b1%d9%85%d8%a7%d8%aa%d9%88%d8%b1-%d8%b9%d8%b1%d9%88%d8%b3%da%a9-%d8%a7%d8%b3%d8%aa%d8%a7%d9%be-%d9%85%d9%88%d8%b4%d9%86/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/product-tag/%d8%a2%d8%b1%d9%85%d8%a7%d8%aa%d9%88%d8%b1-%da%af%d9%88%db%8c-%d9%88-%da%a9%d8%a7%d8%b3%d9%87/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/product-tag/%d8%a7%d8%b3%da%a9%d9%84%d8%aa-%d9%81%d9%84%d8%b2%db%8c-%d8%b9%d8%b1%d9%88%d8%b3%da%a9-%d8%a7%d8%b3%d8%aa%d8%a7%d9%be-%d9%85%d9%88%d8%b4%d9%86/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/armature-type/assembled-armature/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/armature-model/professional/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/figure-type/human/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/%D9%8Earmature-size/22cm_normal_size/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/metal_ground/black/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/ground-size/25x10x1cm/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/allen-wrench/2/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/construction-plan/%d8%af%d8%a7%d8%b1%d8%af/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/product-tag/educational-armature/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/product-tag/%d8%a2%d8%b1%d9%85%d8%a7%d8%aa%d9%88%d8%b1-%d8%a7%d8%b1%d8%b2%d8%a7%d9%86/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/armature-model/educational/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/%D9%8Earmature-size/21cm_normal_size/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/metal_ground/%d8%af%d8%a7%d8%b1%d8%af/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/allen-wrench/1/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/figure-type/dog/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/allen-wrench/%d8%af%d8%a7%d8%b1%d8%af/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/armature-type/armature-kit/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/elementor-3797/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/product/%d9%be%d8%a7%db%8c%d9%87-%d9%86%da%af%d9%87%d8%af%d8%a7%d8%b1%d9%86%d8%af%d9%87-%d9%88%d8%b2%d9%86%d9%87%d8%a7%db%8c/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/shop/?e-page-404137d=2&amp;v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/product-tag/%d9%be%d8%a7%db%8c%d9%87/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/product-tag/%d8%b1%db%8c%da%af/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/product-tag/%d9%87%d9%88%d9%84%d8%af%d8%b1/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/product/%d9%82%d8%b7%d8%b9%d9%87-%d9%85%d9%81%d8%b5%d9%84%db%8c-%d8%af%d9%88-%d9%85%d8%ad%d9%88%d8%b1%d9%87/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://shop.artaaman.com/product-category/products/armature-parts/joint-parts/?v=c0a5d2d67475</loc>
-  <lastmod>2024-02-23T12:06:37+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
+        </news:news>
+    </url>
+    <url>
+        <loc>https://artaaman.com/news/65d4cfb27d40e5cecc5ebdc1</loc>
+        <priority>1.0</priority>
+        <news:news>
+            <news:publication>
+                <news:name>Artaaman</news:name>
+                <news:language>fa</news:language>
+            </news:publication>
+            <news:publication_date>2024-02-23T12:02:28+00:00</news:publication_date>
+            <news:title>سیزدهمین جشنواره بین‌المللی پویانمایی تهران (جشنواره دوسالانه انیمیشن)</news:title>
+            <news:keywords>جشنواره دوسالانه انیمیشن, سیزدهمین جشنواره بین‌المللی</news:keywords>
+            <news:image_link>https://artaaman.com/images/NEWS/c2b54dcc-d4d2-4d64-bc07-d83056fa6dc2_13th-animation.jpg</news:image_link>
+            <news:publication_date>2024-06-10T20:05:15+01:00</news:publication_date>
+
+        </news:news>
+    </url>
+
+    <url>
+        <loc>https://artaaman.com/news/646d4ef7576e9ce0d7b9b7dd</loc>
+        <lastmod>2024-02-23T12:02:28+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://artaaman.com/news/6468caf4188997368dd6de0b</loc>
+        <lastmod>2024-02-23T12:02:28+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://artaaman.com/news/645bff8be56996f251776a1f</loc>
+        <lastmod>2024-02-23T12:02:28+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://artaaman.com/news/63d020f41e08572f8385a29c</loc>
+        <lastmod>2024-02-23T12:02:28+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://artaaman.com/news/62e016d8ec53a1b904eb61ee</loc>
+        <lastmod>2024-02-23T12:02:28+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://artaaman.com/news/62caccc5e066f9ef559a0eb0</loc>
+        <lastmod>2024-02-23T12:02:28+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://artaaman.com/news/62c874415a4212c05e4b51d5</loc>
+        <lastmod>2024-02-23T12:02:28+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://artaaman.com/news/62c867c2a0985970c0d3b7ec</loc>
+        <lastmod>2024-02-23T12:02:28+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://artaaman.com/news/62b477090e4219bb06332ea9</loc>
+        <lastmod>2024-02-23T12:02:28+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://artaaman.com/news/62915650a342ce04540f89d2</loc>
+        <lastmod>2024-02-23T12:02:28+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
+    <url>
+        <loc>https://artaaman.com/news/62914438cc67ddcc6bbcf721</loc>
+        <lastmod>2024-02-23T12:02:28+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
+    <url>
+        <loc>https://artaaman.com/news/627b9e8c7df1170ad594d06e</loc>
+        <lastmod>2024-02-23T12:02:28+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
+    
+    <url>
+      <loc>https://shop.artaaman.com/product-category/products/stopmotion-armature</loc>
+      <lastmod>2024-02-23T12:06:37+00:00</lastmod>
+      <priority>1.0</priority>
+  </url>
+    <url>
+        <loc>https://shop.artaaman.com/product-category/products/stopmotion-armature/human-armature
+        </loc>
+        <lastmod>2024-02-23T12:06:37+00:00</lastmod>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://shop.artaaman.com/product-category/products/stopmotion-holder</loc>
+        <lastmod>2024-02-23T12:06:37+00:00</lastmod>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://shop.artaaman.com/product-category/products/armature-parts</loc>
+        <lastmod>2024-02-23T12:06:37+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+      <loc>https://shop.artaaman.com/product-category/products/stopmotion-armature/dog-armature</loc>
+      <lastmod>2024-02-23T12:06:37+00:00</lastmod>
+      <priority>0.80</priority>
+  </url>
+    <url>
+        <loc>https://shop.artaaman.com/product-category/products/stopmotion-armature/armature-kit</loc>
+        <lastmod>2024-02-23T12:06:37+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+
+    <url>
+        <loc>https://shop.artaaman.com/product/stopmotion-weight-rig-a </loc>
+        <lastmod>2024-02-23T12:06:37+00:00</lastmod>
+        <priority>0.90</priority>
+    </url>
+    <url>
+        <loc>https://shop.artaaman.com/product/stopmotion-weight-rig-b </loc>
+        <lastmod>2024-02-23T12:06:37+00:00</lastmod>
+        <priority>0.90</priority>
+    </url>
+    <url>
+        <loc>https://shop.artaaman.com/product/stopmotion-magnetic-rig</loc>
+        <lastmod>2024-02-23T12:06:37+00:00</lastmod>
+        <priority>0.90</priority>
+    </url>
+
+    <url>
+        <loc>https://shop.artaaman.com/product/standart-stopmotion-human-armature</loc>
+        <lastmod>2024-02-23T12:06:37+00:00</lastmod>
+        <priority>0.90</priority>
+    </url>
+    <url>
+        <loc>https://shop.artaaman.com/product/proplus-stopmotion-human-armature</loc>
+        <lastmod>2024-02-23T12:06:37+00:00</lastmod>
+        <priority>0.90</priority>
+    </url>
+    <url>
+        <loc>https://shop.artaaman.com/product/economy-stopmotion-human-armature</loc>
+        <lastmod>2024-02-23T12:06:37+00:00</lastmod>
+        <priority>0.90</priority>
+    </url>
+    <url>
+      <loc>https://artaaman.com/gallery</loc>
+      <lastmod>2024-06-10T20:05:15+01:00</lastmod>
+      <priority>1.0</priority>
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/pro+front.webp</image:loc>
+      <image:title>آرماتور انسانی مدل پروپلاس نمای روبرو >ثبت سفارش</a></image:title>
+      <image:caption>2.500.000 تومان:قیمت</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/pro+front.webp</image:loc>
+      <image:title>آرماتور انسانی مدل پروپلاس نمای پشت >ثبت سفارش</a></image:title>
+      <image:caption>2.500.000 تومان:قیمت</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/pro%20front.webp</image:loc>
+      <image:title>آرماتور انسانی مدل استاندارد نمای روبرو >ثبت سفارش</a></image:title>
+      <image:caption>2.000.000 تومان:قیمت</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/pro%20side.webp</image:loc>
+      <image:title>آرماتور انسانی مدل استاندارد نمای نیمرخ >ثبت سفارش</a></image:title>
+      <image:caption>2.000.000 تومان:قیمت</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/pro%20back.webp</image:loc>
+      <image:title>آرماتور انسانی مدل استاندارد نمای پشت >ثبت سفارش</a></image:title>
+      <image:caption>2.000.000 تومان:قیمت</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/eco%20front.webp</image:loc>
+      <image:title>آرماتور انسانی مدل اکونومی نمای روبرو >ثبت سفارش</a></image:title>
+      <image:caption>1.500.000 تومان:قیمت</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/eco%20side.webp</image:loc>
+      <image:title>آرماتور انسانی مدل اکونومی نمای نیمرخ >ثبت سفارش</a></image:title>
+      <image:caption>1.500.000 تومان:قیمت</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/eco%20back.webp</image:loc>
+      <image:title>آرماتور انسانی مدل اکونومی نمای پشت >ثبت سفارش</a></image:title>
+      <image:caption>1.500.000 تومان:قیمت</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/2joints-rig.webp</image:loc>
+      <image:title>ریگ استاپ‌موشن 2بازویی نیمه سبک>ثبت سفارش</a></image:title>
+      <image:caption>4.000.000 تومان:قیمت</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/3joints-rig.webp</image:loc>
+      <image:title>ریگ استاپ‌موشن 3بازویی سنگین>ثبت سفارش</a></image:title>
+      <image:caption>5.000.000 تومان:قیمت</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/magnet-rig.webp</image:loc>
+      <image:title>ریگ استاپ‌موشن مگنتی حرفه‌ای>ثبت سفارش</a></image:title>
+      <image:caption>6.000.000 تومان:قیمت</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/human&amp;dogArmatures-01.webp</image:loc>
+      <image:title>آرماتورهای حرفه‌ای مدل انسانی و سگ مخصوص ساخت استاپ موشن</image:title>
+      <image:caption>اتمام موجودی</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/humanArmature-01.webp</image:loc>
+      <image:title>آرماتور حرفه‌ای مدل انسانی سایز استاندارد (22سانت)</image:title>
+      <image:caption>جنس: آهن و آلیاژ کروم نیکل، قابل اتصال با مگنت، قابل اتصال به هولدر از دو ناحیه، قابلیت انیمیت و اتصال انگشتان پا، به همراه زمینه، آچار و پیچ مخصوص مناسب ساخت استاپ موشن.</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/humanArmature-02.webp</image:loc>
+      <image:title>آرماتور حرفه‌ای مدل انسانی سایز استاندارد (22سانت)</image:title>
+      <image:caption>جنس: آهن و آلیاژ کروم نیکل، قابل اتصال با مگنت، قابل اتصال به هولدر از دو ناحیه، قابلیت انیمیت و اتصال انگشتان پا، به همراه زمینه، آچار و پیچ مخصوص. مناسب ساخت استاپ موشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/humanArmature-03.webp</image:loc>
+      <image:title>آرماتور حرفه‌ای مدل انسانی سایز استاندارد (22سانت)</image:title>
+      <image:caption>جنس: آهن و آلیاژ کروم نیکل، قابل اتصال با مگنت، قابل اتصال به هولدر از دو ناحیه، قابلیت انیمیت و اتصال انگشتان پا، به همراه زمینه، آچار و پیچ مخصوص. مناسب ساخت استاپ موشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/humanArmature-04.webp</image:loc>
+      <image:title>آرماتور حرفه‌ای مدل انسانی سایز استاندارد (22سانت)</image:title>
+      <image:caption>جنس: آهن و آلیاژ کروم نیکل، قابل اتصال با مگنت، قابل اتصال به هولدر از دو ناحیه، قابلیت انیمیت و اتصال انگشتان پا، به همراه زمینه، آچار و پیچ مخصوص. مناسب ساخت استاپ موشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/humanArmature-05.webp</image:loc>
+      <image:title>آرماتور حرفه‌ای مدل انسانی سایز استاندارد (22سانت)</image:title>
+      <image:caption>جنس: آهن و آلیاژ کروم نیکل، قابل اتصال با مگنت، قابل اتصال به هولدر از دو ناحیه، قابلیت انیمیت و اتصال انگشتان پا، به همراه زمینه، آچار و پیچ مخصوص. مناسب ساخت استاپ موشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/dogArmature-01.webp</image:loc>
+      <image:title>آرماتور سگ</image:title>
+      <image:caption>اتمام موجودی</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/dogArmature-02.webp</image:loc>
+      <image:title>آرماتور سگ</image:title>
+      <image:caption>اتمام موجودی</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/cat-armatures.webp</image:loc>
+      <image:title>نمونه‌ی آرماتور مدل حیوانی آرتامن، سری گربه-سانان</image:title>
+      <image:caption>آرماتور استاپ موشن خاص</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/human-animal-armatures2.webp</image:loc>
+      <image:title>نمونه‌ی آرماتور مدل انسانی و حیوانی آرتامن</image:title>
+      <image:caption>آرماتور استاپ موشن خاص</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/human-animal-armatures.webp</image:loc>
+      <image:title>نمونه‌ی آرماتور مدل انسانی و حیوانی آرتامن</image:title>
+      <image:caption>آرماتور استاپ موشن خاص</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/pcs2.webp</image:loc>
+      <image:title>قطعات آرتامن</image:title>
+      <image:caption>قطعات مفصلی آرماتور‌های آرتامن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/pcs.webp</image:loc>
+      <image:title>قطعات آرتامن</image:title>
+      <image:caption>قطعات مفصلی آرماتور‌های آرتامن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/rig+armature%20(1).webp</image:loc>
+      <image:title>نمونه‌ی آرماتور انسانی 24سانتیمتری و هولدر 600 گرمی آرتامن</image:title>
+      <image:caption>اتمام موجودی</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/rig+armature%20(2).webp</image:loc>
+      <image:title>نمونه‌ی آرماتور انسانی 24سانتیمتری و هولدر 600 گرمی آرتامن</image:title>
+      <image:caption>اتمام موجودی</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/rig+armature%20(3).webp</image:loc>
+      <image:title>نمونه‌ی آرماتور انسانی 24سانتیمتری و هولدر 600 گرمی آرتامن</image:title>
+      <image:caption>اتمام موجودی</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/rig+armature%20(4).webp</image:loc>
+      <image:title>نمونه‌ی آرماتور انسانی 24سانتیمتری و هولدر 600 گرمی آرتامن</image:title>
+      <image:caption>اتمام موجودی</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/rig+armature%20(5).webp</image:loc>
+      <image:title>نمونه‌ی آرماتور انسانی 24سانتیمتری و هولدر 600 گرمی آرتامن</image:title>
+      <image:caption>اتمام موجودی</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/armaturekit%20(2).webp</image:loc>
+      <image:title>نمونه‌ی کیت آرماتور انسانی 25سانتیمتری آرتامن پس از مونتاژ قطعات</image:title>
+      <image:caption>این کیت تنها جهت فروش در دوازدهمین بازارچه‌ی جشنواره‌ی دوسالانه‌ی پویانمایی طراحی شده بود</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/MAP/exploded-view-01.webp</image:loc>
+      <image:title>نقشه ساخت آرماتور کیت مدل انسانی</image:title>
+      <image:caption>این نقشه مخصوص ساخت آرماتور کیت سایز 25سانت طراحی شده است</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/MAP/exploded-view-02.webp</image:loc>
+      <image:title>لیست قطعات آرماتور کیت مدل انسانی</image:title>
+      <image:caption>این لیست تعداد قطعات آرماتور کیت سایز 25سانت(مدل ویژه‌ی جشنواره‌‌ی 1401) را نمایش میدهد</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/MAP/stand%20(1).webp</image:loc>
+      <image:title>پوستر آرماتور مدل انسانی آرتامن</image:title>
+      <image:caption>این نقشه به صورت شماتیک به منظور چاپ روی استند تهیه شده است.</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/MAP/stand%20(2).webp</image:loc>
+      <image:title>پوسترآرماتور مدل سگسانان آرتامن</image:title>
+      <image:caption>این نقشه به صورت شماتیک به منظور چاپ روی استند تهیه شده است</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/MAP/stand%20(3).webp</image:loc>
+      <image:title>پوستر آرماتور مدل دایناسور آرتامن</image:title>
+      <image:caption>این نقشه به صورت شماتیک به منظور چاپ روی استند تهیه شده است</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/ball_socket_armature-model%20(1).webp</image:loc>
+      <image:title>نمونه‌ی آرماتور مدل انسانی آرتامن «پیش از آبکاری قطعات»</image:title>
+      <image:caption>این نمونه صرفاً جهت استفاده برای عکاسی آماده شده است، و با نمونه‌ی استاندارد موجود در محصول تفاوت دارد.</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/ball_socket_armature-model%20(2).webp</image:loc>
+      <image:title>نمونه‌ی آرماتور مدل انسانی آرتامن «پیش از آبکاری قطعات»</image:title>
+      <image:caption>این نمونه صرفاً جهت استفاده برای عکاسی آماده شده است، و با نمونه‌ی استاندارد موجود در محصول تفاوت دارد.</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/ball_socket_armature-model%20(3).webp</image:loc>
+      <image:title>نمونه‌ی آرماتور مدل انسانی آرتامن «پیش از آبکاری قطعات»</image:title>
+      <image:caption>این نمونه صرفاً جهت استفاده برای عکاسی آماده شده است، و با نمونه‌ی استاندارد موجود در محصول تفاوت دارد.</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/ball_socket_armature-model%20(4).webp</image:loc>
+      <image:title>نمونه‌ی آرماتور مدل انسانی آرتامن «پیش از آبکاری قطعات»</image:title>
+      <image:caption>این نمونه صرفاً جهت استفاده برای عکاسی آماده شده است، و با نمونه‌ی استاندارد موجود در محصول تفاوت دارد.</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/ball_socket_armature-model%20(5).webp</image:loc>
+      <image:title>نمونه‌ی آرماتور مدل انسانی آرتامن «پیش از آبکاری قطعات»</image:title>
+      <image:caption>این نمونه صرفاً جهت استفاده برای عکاسی آماده شده است، و با نمونه‌ی استاندارد موجود در محصول تفاوت دارد.</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/ball_socket_armature-model%20(6).webp</image:loc>
+      <image:title>نمونه‌ی آرماتور مدل انسانی آرتامن «پیش از آبکاری قطعات»</image:title>
+      <image:caption>این نمونه صرفاً جهت استفاده برای عکاسی آماده شده است، و با نمونه‌ی استاندارد موجود در محصول تفاوت دارد.</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/ball_socket_armature-model%20(7).webp</image:loc>
+      <image:title>نمونه‌ی آرماتور مدل انسانی آرتامن «پیش از آبکاری قطعات»</image:title>
+      <image:caption>این نمونه صرفاً جهت استفاده برای عکاسی آماده شده است، و با نمونه‌ی استاندارد موجود در محصول تفاوت دارد.</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/ball_socket_armature-model%20(8).webp</image:loc>
+      <image:title>نمونه‌ی آرماتور مدل انسانی آرتامن «پیش از آبکاری قطعات»</image:title>
+      <image:caption>این نمونه صرفاً جهت استفاده برای عکاسی آماده شده است، و با نمونه‌ی استاندارد موجود در محصول تفاوت دارد.</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/ball_socket_armature-model%20(9).webp</image:loc>
+      <image:title>نمونه‌ی آرماتور مدل انسانی آرتامن «پیش از آبکاری قطعات»</image:title>
+      <image:caption>این نمونه صرفاً جهت استفاده برای عکاسی آماده شده است، و با نمونه‌ی استاندارد موجود در محصول تفاوت دارد.</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/ball_socket_armature-model%20(10).webp</image:loc>
+      <image:title>نمونه‌ی آرماتور مدل انسانی آرتامن «پیش از آبکاری قطعات»</image:title>
+      <image:caption>این نمونه صرفاً جهت استفاده برای عکاسی آماده شده است، و با نمونه‌ی استاندارد موجود در محصول تفاوت دارد.</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/img0%20(0).webp</image:loc>
+      <image:title>تستهای ابتدایی ساخت قطعات</image:title>
+      <image:caption>تست محصول</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/img0%20(1).webp</image:loc>
+      <image:title>تستهای ابتدایی ساخت قطعات</image:title>
+      <image:caption>تست محصول</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/img0%20(2).webp</image:loc>
+      <image:title>تستهای ابتدایی ساخت قطعات</image:title>
+      <image:caption>تست محصول</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/img0%20(3).webp</image:loc>
+      <image:title>تستهای ابتدایی ساخت قطعات</image:title>
+      <image:caption>تست محصول</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/img0%20(4).webp</image:loc>
+      <image:title>تستهای ابتدایی ساخت قطعات</image:title>
+      <image:caption>تست محصول</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/img0%20(5).webp</image:loc>
+      <image:title>تستهای ابتدایی ساخت قطعات</image:title>
+      <image:caption>تست محصول</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/img0%20(8).webp</image:loc>
+      <image:title>تستهای ابتدایی ساخت قطعات</image:title>
+      <image:caption>تست محصول</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/img0%20(9).webp</image:loc>
+      <image:title>تستهای ابتدایی ساخت قطعات</image:title>
+      <image:caption>تست محصول</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/MAP/img1%20(1).webp</image:loc>
+      <image:title>نقشه‌ی اولیه‌ی تولید قطعات</image:title>
+      <image:caption>این نقشه‌ تنها برای مراحل پیش تولید آرماتورهای آرتامن طراحی شده‌است</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/MAP/img1%20(2).webp</image:loc>
+      <image:title>نقشه‌ی اولیه‌ی تولید قطعات</image:title>
+      <image:caption>این نقشه‌ تنها برای مراحل پیش تولید آرماتورهای آرتامن طراحی شده‌است</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/MAP/img1%20(3).webp</image:loc>
+      <image:title>نقشه‌ی اولیه‌ی تولید قطعات</image:title>
+      <image:caption>این نقشه‌ تنها برای مراحل پیش تولید آرماتورهای آرتامن طراحی شده‌است</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/MAP/img1%20(4).webp</image:loc>
+      <image:title>نقشه‌ی اولیه‌ی تولید قطعات</image:title>
+      <image:caption>این نقشه‌ تنها برای مراحل پیش تولید آرماتورهای آرتامن طراحی شده‌است</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-stars%20(1).webp</image:loc>
+      <image:title>آقایان حامد علامتی رئیس محترم کانون پرورشی فکری کودکان و غلامرضا کریمی صارمی دبیر جشنواره پویانمایی</image:title>
+      <image:caption>عکس از جناب آقای بهنام سامیان</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-stars-sahrayi.webp</image:loc>
+      <image:title>جناب آقای رضامراد صحرایی وزیر محترم آموزش پروش به همراه آقایان حامد علامتی رئیس کانون پرورشی فکری کودکان و محمدرضا کریمی صارمی دبیر جشنواره</image:title>
+      <image:caption>عکس از جناب آقای بهنام سامیان</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-stars-mohamadi.webp</image:loc>
+      <image:title>جناب آقای حمید محمدی تهیه‌کننده، کارگردان، انیماتور استاپ موشن واز برندگان دوازدهمین دوره جشنواره دوسالانه برای انیمیشن «گذشته»</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-stars-haghighi.webp</image:loc>
+      <image:title>جناب آقای استاد هرمز حقیقی از بنیانگذاران انیمیشن در ایران</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-stars-bezdude.webp</image:loc>
+      <image:title>جناب آقای استاد عادل بزدوده: کارگردان، طراح صحنه، نمایشنامه‌نویس، بازیگر، طراح و سازنده عروسک، عروسک‌گردان و خالق بیش از صدها عروسکی که خاطرات کودکی مارا شکل داده همچون:عروسکهای زیزیگولو، خانه مادربزرگه، شهر موشها و..</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-stars%20(2).webp</image:loc>
+      <image:title>اساتید هنر و انیمیشن</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-stars%20(3).webp</image:loc>
+      <image:title>اساتید هنر و انیمیشن</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-stars%20(4).webp</image:loc>
+      <image:title>آقای حامد زحمتکش (نویسنده ،طراح، کارگردان، بازیگر، عروسک گردان)</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-stars%20(5).webp</image:loc>
+      <image:title>آقای فرنوش عابدی نویسنده و کارگردان انیمیشن و از برندگان سیزدهمین دوره جشنواره پویانمایی برای انیمیشن «سمپاش»</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-stars%20(6).webp</image:loc>
+      <image:title>استاد حمید آقاربیع از پیشکسوتان طراحی و ساخت عروسک</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-stars%20(7).webp</image:loc>
+      <image:title>استاد حمید آقاربیع از پیشکسوتان طراحی و ساخت عروسک</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-stars%20(8).webp</image:loc>
+      <image:title>جناب آقای بهرام عظیمی از کارگردانان مطرح انیمیشن</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-stars%20(9).webp</image:loc>
+      <image:title>از سمت راست آقایان احسان مجیدی (کارگردان و تئاتر)، حامد زحمتکش (،طراح، کارگردان، بازیگر، عروسک گردان)، استاد عادل بزدوده(نویسنده، کارگردان نمایش عروسکی و عروسک‌ساز)، استاد علیرضاحسین‌پور( طراح و سازنده عروسک)</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-stars%20(10).webp</image:loc>
+      <image:title>جناب آقای شهرام خوارزمی از اساتید انیمیشن و از داوران سیزدهمین جشنواره پویانمایی تهران</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-stars%20(11).webp</image:loc>
+      <image:title>از سمت راست آقایان محمدامین همدانی (تهیه کننده انیمیشن پسر دلفینی)، مسعود حمزه‌ئی (تهیه کننده و کارگردان انیمیشن)، محمد خیراندیش (کارگردان و نویسنده انیمیشن پسر دلفینی)</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-stars%20(12).webp</image:loc>
+      <image:title>اساتید هنر و انیمیشن: خانم چیستا تاجور (استاد ساخت کچه)</image:title>
+      <image:caption>سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-stars%20(13).webp</image:loc>
+      <image:title>از سمت راست آقایان علیرضا اوجی (انیماتور، تصویرگر و مجسمه‌ساز)، محمودرضا معبودی(انیماتور، طراح کارکتر و مجسمه ساز)</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-stars%20(14).webp</image:loc>
+      <image:title>جناب آقای شهرام بیگی (تهیه کننده و کارگردان انیمیشن)</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-HoomerStoude-arts.webp</image:loc>
+      <image:title>عروسکهای استاپ موشن ساخته هومر ستوده</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-animmateWorkshop(4).webp</image:loc>
+      <image:title>ورکشاپ آزاد ساخت استاپ موشن: پرنیان فراهان‌پور</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-animmateWorkshop(5).webp</image:loc>
+      <image:title>ورکشاپ آزاد ساخت استاپ موشن</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-animmateWorkshop(6).webp</image:loc>
+      <image:title>ورکشاپ آزاد ساخت استاپ موشن</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-animmateWorkshop(7).webp</image:loc>
+      <image:title>ورکشاپ آزاد ساخت استاپ موشن</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-animmateWorkshop(8).webp</image:loc>
+      <image:title>ورکشاپ آزاد ساخت استاپ موشن</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-animmateWorkshop(9).webp</image:loc>
+      <image:title>ورکشاپ آزاد ساخت استاپ موشن</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-animmateWorkshop(10).webp</image:loc>
+      <image:title>ورکشاپ آزاد ساخت استاپ موشن</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-animmateWorkshop(11).webp</image:loc>
+      <image:title>ورکشاپ آزاد ساخت استاپ موشن</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-animmateWorkshop(12).webp</image:loc>
+      <image:title>ورکشاپ آزاد ساخت استاپ موشن</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-animmateWorkshop(13).webp</image:loc>
+      <image:title>ورکشاپ آزاد ساخت استاپ موشن</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-kids(1).webp</image:loc>
+      <image:title>آیندگان هنر ایران</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-kids(2).webp</image:loc>
+      <image:title>آیندگان هنر ایران</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-kids(3).webp</image:loc>
+      <image:title>آیندگان هنر ایران</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-kids(4).webp</image:loc>
+      <image:title>آیندگان هنر ایران:ساره</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-kids(5).webp</image:loc>
+      <image:title>آیندگان هنر ایران</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-kids(6).webp</image:loc>
+      <image:title>آیندگان هنر ایران</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-kids(7).webp</image:loc>
+      <image:title>آیندگان هنر ایران:آیلین وآوین</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-kids(8).webp</image:loc>
+      <image:title>آیندگان هنر ایران:نیل 6ساله</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-kids(9).webp</image:loc>
+      <image:title>آیندگان هنر ایران:سروین 5 ساله</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-kids(10).webp</image:loc>
+      <image:title>آیندگان هنر ایران</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-kids(11).webp</image:loc>
+      <image:title>آیندگان هنر ایران</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-kids(12).webp</image:loc>
+      <image:title>آیندگان هنر ایران</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-kids(13).webp</image:loc>
+      <image:title>آیندگان هنر ایران</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-kids(14).webp</image:loc>
+      <image:title>آیندگان هنر ایران:ژرفا زندی</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-kids(15).webp</image:loc>
+      <image:title>آیندگان هنر ایران:ژرفا زندی</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-friends%20(1).webp</image:loc>
+      <image:title>تصاویر یادگاری شما با آرتامن:آقای نیما نادری(هنرپیشه، فیلم‌نامه نویس، سازنده آرماتور) ، الهام و مائده عباسی(کارگردان و انیماتور)</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-friends%20(2).webp</image:loc>
+      <image:title>تصاویر یادگاری شما با آرتامن:زهرا نوروزی(هنرجو)</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-friends%20(3).webp</image:loc>
+      <image:title>تصاویر یادگاری شما با آرتامن:محمد مهدی حسن نژاد(هنرجو)</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-friends%20(4).webp</image:loc>
+      <image:title>تصاویر یادگاری شما با آرتامن</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-friends%20(5).webp</image:loc>
+      <image:title>تصاویر یادگاری شما با آرتامن(هنرجو)</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-friends%20(6).webp</image:loc>
+      <image:title>تصاویر یادگاری شما با آرتامن: مهدیه جعفری ابربکوه(هنرجو)</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-friends%20(7).webp</image:loc>
+      <image:title>تصاویر یادگاری شما با آرتامن</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-friends%20(8).webp</image:loc>
+      <image:title>تصاویر یادگاری شما با آرتامن</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman-friends%20(9).webp</image:loc>
+      <image:title>تصاویر یادگاری شما با آرتامن: خانواده رفیعی مشتری خوبمون از شیراز</image:title>
+      <image:caption>غرفه آرتامن در سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman%20(1).webp</image:loc>
+      <image:title>غرفه آرتامن: استاد معبودی و مهران زارع</image:title>
+      <image:caption>سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman%20(2).webp</image:loc>
+      <image:title>غرفه آرتامن</image:title>
+      <image:caption>سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman%20(3).webp</image:loc>
+      <image:title>غرفه آرتامن:مشتری محترم آرتامن جناب آقای فراهان پور و دخترشان</image:title>
+      <image:caption>سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman%20(4).webp</image:loc>
+      <image:title>غرفه آرتامن</image:title>
+      <image:caption>سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman%20(5).webp</image:loc>
+      <image:title>غرفه آرتامن: محمودرضا معبودی (استاد ساخت حجم و کارکتر)</image:title>
+      <image:caption>سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman%20(6).webp</image:loc>
+      <image:title>غرفه آرتامن: مجتبی بهمنیار (متصدی غرفه آرتامن)</image:title>
+      <image:caption>سیزدهمین جشنواره بین‌المللی دو سالانه انیمیشن</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-artaaman%20(7).webp</image:loc>
+      <image:title>غرفه آرتامن:نسیم و ندا پیله‌ور ابریشم (مسئول و مدیر غرفه آرتامن)</image:title>
+      <image:caption>عکس از جناب آقای بهنام سامیان</image:caption>
+      </image:image>
+      
+      <image:image>
+      <image:loc>https://artaaman.com/images/PHOTOS/festival13/festival13-lastPhoto.webp</image:loc>
+      <image:title>آخرین تصویر یادگاری تیم آرتامن روبروی سالن حجاب کانون پرورشی فکری کودکان</image:title>
+      <image:caption>باتشکر از هومر ستوده برای ثبت این عکس زیبا</image:caption>
+      </image:image>
+      </url>
+
+
 
 </urlset>
