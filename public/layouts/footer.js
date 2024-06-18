@@ -95,6 +95,13 @@ document.write(`
               <li><a href="https://shop.artaaman.com/product-category/products/stopmotion-armature/armature-kit/">آرماتور کیت</a></li>
             </ul>
           </div>
+               <div id="enamad">
+            <a referrerpolicy='origin' target='_blank'
+              href='https://trustseal.enamad.ir/?id=500624&Code=Ha5PLLSr6ibuQDdUeazROBtXuzxIwBwK'><img
+                referrerpolicy='origin'
+                src='https://trustseal.enamad.ir/logo.aspx?id=500624&Code=Ha5PLLSr6ibuQDdUeazROBtXuzxIwBwK' alt=''
+                style='cursor:pointer' code='Ha5PLLSr6ibuQDdUeazROBtXuzxIwBwK'></a>
+          </div>
         </div>
 
       </div>
