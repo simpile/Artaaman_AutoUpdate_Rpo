@@ -608,13 +608,13 @@ strong {
 /* -------------------------------------------------------------------------- */
 /*                                    MAPS                                    */
 /* -------------------------------------------------------------------------- */
-.myMaps {
+.myProducts {
   background-color: var(--white-color);
   text-align: center;
   font-family: "Shabnam-DG-N";
 }
 
-.myMaps .myMaps-item a {
+.myProducts .myProducts-item a {
   text-align: cernter;
   text-decoration: none;
   display: block;
@@ -622,10 +622,10 @@ strong {
   padding-bottom: 50px;
   cursor: pointer;
 }
-.myMaps-content {
+.myProducts-content {
   text-align: right;
 }
-.myMaps .myMaps-item .myMaps-itemImg {
+.myProducts .myProducts-item .myProducts-itemImg {
   margin-bottom: 30px;
   position: relative;
   top: 0;
@@ -634,13 +634,13 @@ strong {
   transition: 0.3s all ease;
 }
 
-.myMaps .myMaps-item h3 {
+.myProducts .myProducts-item h3 {
   font-weight: 600;
   font-size: 16px;
   text-decoration: none;
 }
 
-.myMaps .myMaps-item .icon-cross {
+.myProducts .myProducts-item .icon-cross {
   position: absolute;
   width: 35px;
   height: 35px;
@@ -662,7 +662,7 @@ strong {
   transition: 0.3s all ease;
 }
 
-.myMaps .myMaps-item .icon-cross img {
+.myProducts .myProducts-item .icon-cross img {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -671,7 +671,7 @@ strong {
   transform: translate(-50%, -50%);
 }
 
-.myMaps .myMaps-item a:before {
+.myProducts .myProducts-item a:before {
   bottom: 0;
   left: 0;
   right: 0;
@@ -685,27 +685,31 @@ strong {
   -o-transition: 0.3s all ease;
   transition: 0.3s all ease;
 }
-
-.myMaps .myMaps-item:hover .myMaps-itemImg {
+.myProducts .myProducts-item .product-price{
+  font-size: larger;
+}
+.myProducts .myProducts-item:hover .myProducts-itemImg {
   top: -25px;
 }
 
-.myMaps .myMaps-item:hover .icon-cross {
+.myProducts .myProducts-item:hover .icon-cross {
   bottom: 0;
   opacity: 1;
   visibility: visible;
 }
 
-.myMaps .myMaps-item:hover a:before {
+.myProducts .myProducts-item:hover a:before {
   height: 70%;
-  content: "download";
+  /* content: "مشاهده محصول";
+  color: var(--blue-light); */
   display: flex;
   align-items: flex-end;
   justify-content: center;
   padding-bottom: 1rem;
 }
+
 @media only screen and (max-width: 768px) {
-  .myMaps-content {
+  .myProducts-content {
     text-align: center;
   }
 }
@@ -828,19 +832,19 @@ strong {
 /* -------------------------------------------------------------------------- */
 /*                                 product's type                                  */
 /* -------------------------------------------------------------------------- */
-.myProducts {
+.myProductsType {
   text-align: right;
 }
 
-.myProducts .myProducts-item {
+.myProductsType .myProductsType-item {
   direction: ltr;
 }
-.myProducts .myProducts-item h3 {
+.myProductsType .myProductsType-item h3 {
   font-size: 14px;
   font-weight: 700;
 }
 
-.myProducts .myProducts-item a {
+.myProductsType .myProductsType-item a {
   text-decoration: none;
   color: var(--green-bg);
   font-weight: 600;
@@ -849,18 +853,18 @@ strong {
   transition: 0.3s all ease;
 }
 
-.myProducts .myProducts-item:hover a {
+.myProductsType .myProductsType-item:hover a {
   color: var(--green-new);
 }
 
-.myProducts .myProducts-item p {
+.myProductsType .myProductsType-item p {
   line-height: 1.4;
   margin-bottom: 10px;
   font-size: 14px;
   color: var(--text-light);
 }
 
-.myProducts .myProducts-item .myProducts-imgWrap {
+.myProductsType .myProductsType-item .myProductsType-imgWrap {
   margin-right: 10px;
   -webkit-box-flex: 0;
   -ms-flex: 0 0 120px;
@@ -871,12 +875,12 @@ strong {
   justify-content: center;
 }
 
-.myProducts .myProducts-item .myProducts-imgWrap img {
+.myProductsType .myProductsType-item .myProductsType-imgWrap img {
   max-width: 100px;
   max-height: 100px;
 }
 
-.myProducts .myProducts-item .myProducts-imgWrap:before {
+.myProductsType .myProductsType-item .myProductsType-imgWrap:before {
   content: "";
   position: absolute;
   border-radius: 20px;
@@ -891,11 +895,11 @@ strong {
   z-index: -1;
 }
 
-.myProducts-item:hover .myProducts-imgWrap img {
+.myProductsType-item:hover .myProductsType-imgWrap img {
   transform: scale(1.1);
 }
 @media only screen and (max-width: 768px) {
-  .myProducts {
+  .myProductsType {
     padding: 1rem;
   }
 }
@@ -1411,6 +1415,7 @@ figcaption {
   vertical-align: middle;
   text-align: left;
   border-radius: 10px;
+  text-align: right;
 }
 
 .mySlogan h2 {
