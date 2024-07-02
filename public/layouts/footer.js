@@ -96,11 +96,11 @@ document.write(`
             </ul>
           </div>
                <div id="enamad">
-            <a referrerpolicy='origin' target='_blank'
-              href='https://trustseal.enamad.ir/?id=500624&Code=Ha5PLLSr6ibuQDdUeazROBtXuzxIwBwK'><img
+              <a referrerpolicy='origin' target='_blank'
+              href='https://trustseal.enamad.ir/?id=504176&Code=E49qGJhbR9s0UllKvlRXAjHuf4iFfmZZ'><img
                 referrerpolicy='origin'
-                src='https://trustseal.enamad.ir/logo.aspx?id=500624&Code=Ha5PLLSr6ibuQDdUeazROBtXuzxIwBwK' alt=''
-                style='cursor:pointer' code='Ha5PLLSr6ibuQDdUeazROBtXuzxIwBwK'></a>
+                src='https://trustseal.enamad.ir/logo.aspx?id=504176&Code=E49qGJhbR9s0UllKvlRXAjHuf4iFfmZZ' alt=''
+                style='cursor:pointer' code='E49qGJhbR9s0UllKvlRXAjHuf4iFfmZZ'></a>
           </div>
         </div>
 
