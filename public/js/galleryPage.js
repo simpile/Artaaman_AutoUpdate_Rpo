@@ -107,3 +107,34 @@ var lightboxDescription = GLightbox({
       
     //   }
 
+// let sitemap = document.getElementById('sitemap')
+
+// const anchors = document.querySelectorAll('a.gallery_product'); // Select target elements
+
+// anchors.forEach(anchor => {
+//   const dataString = anchor.getAttribute('data-glightbox'); // Extract data-glightbox attribute
+//   const match = dataString.match(/title:([^;]*); description:([^;]*)/); // Extract title and description
+
+//   if (match) {
+//     const title = match[1].trim();
+//     const description = match[2].trim();
+//     const imageUrl = anchor.querySelector('img').src; // Get image URL
+
+//     // Get base URL of the current website
+//     const baseUrl = "https://artaaman.com"; // or use a more robust method to get the base URL
+
+//     // Create XML structure
+//     const xmlString = `
+//       <image:image>
+//         <image:loc>${baseUrl}/${imageUrl.split('/').slice(3).join('/')}</image:loc>
+//         <image:title>${title}</image:title>
+//         <image:caption>${description}</image:caption>
+//       </image:image>
+//     `;
+//     // Log or use the XML string as needed
+//     console.log(xmlString);
+//     sitemap.innerText += xmlString ; // Add newline for better readability
+
+//     // alert(xmlString)
+//   }
+// });

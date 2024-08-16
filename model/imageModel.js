@@ -1,11 +1,12 @@
+// imageModel.js 
 const mongoose = require('mongoose');
 
-const imageSchema = mongoose.Schema({
+const imageSchema = new mongoose.Schema({
+    title: String,
+    description: String,
     src: String,
-    alt: String,
-    
+    category: String,  // e.g., 'products', 'pieces', 'maps', etc.
+    createdAt: { type: Date, default: Date.now },
 });
 
-const imgModel = mongoose.model('newImg', imageSchema);
-
-module.exports = imgModel;
+module.exports = mongoose.model('Image', imageSchema);

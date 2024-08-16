@@ -1,296 +1,363 @@
-<!-- adminPanel.ejs  -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex, nofollow">
-
-
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/adminStyles.css">
-
-    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
-
+    <!-- ARTICLE SECTION LINKS -->
     <title>Admin Panel</title>
-    <script src="https://cdn.ckeditor.com/ckeditor5/32.0.0/classic/ckeditor.js"></script>
-    
-
-
 
 </head>
 
 <body>
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                                 NAVBAR                                  -->
+    <!-- ----------------------------------------------------------------------- -->
+    <div class="sidebar" id="sidebar">
+        <a href="#" onclick="showSection('articles')">مقالات</a>
+        <a href="#" onclick="showSection('messages')">پیام‌ها</a>
+        <a href="#" onclick="showSection('images')">تصاویر</a>
+        <a href="#" onclick="showSection('subscribers')">ایمیلهای خبرنامه</a>
+    </div>
 
-    <!-- *************************************************************** -->
-    <!-- *************************** MESSAGES ************************** -->
-    <!-- *************************************************************** -->
+    <div id="toggle-btn" class="toggle-btn">
+        &#9776; <!-- Unicode برای آیکون همبرگر (سه خط افقی) -->
+    </div>
 
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                              MAIN CONTENT                               -->
+    <!-- ----------------------------------------------------------------------- -->
+
+    <div class="content">
+
+
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                             ARTICLE SECTION                             -->
+        <!-- ----------------------------------------------------------------------- -->
+        <div id="articles" class="section ">
+
+            <h1 class="text-center">اخبار و مقالات</h1>
+
+            <div class="admin-list ">
+                <% news.forEach(article=> { %>
+                    <div class="card item eachArticle">
+                        <img class="card-img-top" src="<%= article.img %>" alt="<%= article.alt %>">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <%= article.title %>
+                            </h5>
+                            <h6 class="card-subtitle mb-2 text-muted">
+                                <%= article.label %>
+                            </h6>
+                            <p class="card-text"><%- article.subj %></p>
+                            <div class="btn-container">
+                                <a class="btn btn-outline-danger" href="/deletearticle/<%= article._id %>">حذف مقاله</a>
+                                <a class="btn btn-primary" href="/news/<%= article._id %>">مشاهده مقاله</a>
+                                <button class="btn btn-outline-primary editBtn" data-toggle="modal"
+                                    data-target="#editModal"
+                                    onclick="openEditModal('<%= article._id %>', '<%= article.title %>', '<%= article.desc %>', '<%= article.label %>')">ویرایش
+                                    مقاله</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal for editing article -->
+                    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="editModalLabel">ویرایش مقاله</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <form class="text-right rtl" action="/editarticle/<%= article._id %>" method="post"
+                                    enctype="multipart/form-data">
+                                    <div class="modal-body">
+                                        <div class="form-group">
+                                            <label for="editedTitle">تغییر عنوان</label>
+                                            <input placeholder="ویرایش عنوان" class="form-control" id="editedTitle"
+                                                type="text" name="title" value="<%= article.title %>">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="editedDesc">ویرایش توضیحات</label>
+                                            <textarea placeholder="ویرایش توضیحات" class="form-control" id="editedDesc"
+                                                name="desc"><%- article.desc %></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="label">ویرایش lable</label>
+                                            <input placeholder="ویرایش lable" class="form-control" id="label"
+                                                type="text" name="label" value="<%= article.label %>">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="image">تغییر عکس</label>
+                                            <input class="form-control" type="file" id="image" name="image">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="alt">تغییر alt</label>
+                                            <input placeholder="تغییر alt" class="form-control"
+                                                value="<%= article.alt %>" type="text" id="alt" name="alt">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="keywords">تغییر کلمات کلیدی</label>
+                                            <input placeholder="تغییر کلمات کلیدی" class="form-control"
+                                                value="<%= article.keywords %>" type="text" id="keywords"
+                                                name="keywords">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="subj">تغییر سابجکت</label>
+                                            <input placeholder="تغییر سابجکت" class="form-control"
+                                                value="<%= article.subj %>" type="text" id="subj" name="subj">
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">بستن</button>
+                                        <button class="btn btn-warning" type="submit">ویرایش</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <% }) %>
+            </div>
+
+            <div id="articles-pagination" class="pagination"></div>
+
+            <form class="admin-form" action="/handlenews" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <input placeholder="عنوان مقاله" class="form-control" id="title" type="text" name="title">
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="توضیحات مقاله" id="desc" name="desc"></textarea>
+                </div>
+                <div class="form-group">
+                    <input placeholder="دسته بندی" class="form-control" id="label" type="text" name="label">
+                </div>
+
+                <div class="form-group">
+                    <input placeholder=" keywords meta" class="form-control" type="text" id="keywords" name="keywords">
+                </div>
+                <div class="form-group">
+                    <input placeholder="small subject" class="form-control" type="text" id="subj" name="subj">
+                </div>
+                <div class="form-group">
+                    <input placeholder="افزودن عکس" class="form-control" type="file" id="image" name="image">
+                </div>
+                <div class="form-group">
+                    <input placeholder="photo alt" class="form-control" type="text" id="alt" name="alt">
+                </div>
+                <button class="btn btn-warning" type="submit">افزودن مقاله</button>
+            </form>
+        </div>
+
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                        SUPPORTS MESSAGES SECTION                        -->
+        <!-- ----------------------------------------------------------------------- -->
+        <div id="messages" class="section ">
+
+            <h1 class="text-center">پیام‌های بخش ساپورت</h1>
+
+            <div class="admin-list">
+                <% supportMessages.slice().reverse().forEach(message=> { %>
+                    <div class="message-summary item card">
+                        <p><strong>نام:</strong>
+                            <%= message.name %>
+                        </p>
+                        <p><strong>متن پیام:</strong> <%- message.message %></p>
+                        <div class="details" style="display: none;">
+                            <p><strong>تلفن:</strong>
+                                <%= message.phone %>
+                            </p>
+                            <p><strong>ایمیل:</strong>
+                                <%= message.email %>
+                            </p>
+                            <p><strong>نحوه تماس:</strong>
+                                <%= message.method %>
+                            </p>
+                        </div>
+                        <!-- فرم حذف پیامها -->
+                        <form action="/deleteSupportMsg/<%= message._id %>" method="POST"
+                            onsubmit="return confirm('آیا مطمئن هستید که می‌خواهید این پیام را حذف کنید؟');">
+                            <button type="submit" class="btn btn-danger">حذف</button>
+                        </form>
+                    </div>
+                    <% }) %>
+            </div>
+
+            <div id="message-pagination" class="pagination"></div>
+
+        </div>
+
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                          IMAGE GALLERY SECTION                          -->
+        <!-- ----------------------------------------------------------------------- -->
+        <div id="images" class="section">
+
+            <h1 class="text-center">تصاویر گالری</h1>
+
+            <div class="admin-list">
+                <% if (images.length> 0) { %>
+                    <% images.forEach(image=> { %>
+                        <div class="card item">
+                            <img src="<%= image.src %>" class="card-img-top" alt="<%= image.title %>">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <%= image.title %>
+                                </h5>
+                                <p class="card-text">
+                                    <%= image.description %>
+                                </p>
+                                <a href="/deleteimage/<%= image._id %>" class="btn btn-danger"
+                                    onclick="return confirm('آیا مطمئن هستید؟')">حذف</a>
+                                <button class="btn btn-warning" data-toggle="modal" data-target="#editImageModal"
+                                    onclick="openEditModal('<%= image._id %>', '<%= image.title %>', '<%= image.description %>', '<%= image.category %>', '<%= image.src %>')">ویرایش</button>
+                            </div>
+                        </div>
+                        <% }) %>
+                            <% } else { %>
+                                <p>هیچ تصویری موجود نیست.</p>
+                                <% } %>
+
+                                    <!-- Edit Image Modal -->
+                                    <div class="modal fade rtl" id="editImageModal" tabindex="-1" role="dialog"
+                                        aria-labelledby="editImageModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="editImageModalLabel">
+                                                        ویرایش تصویر</h5>
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form id="editImageForm" action="/updateimage" method="post"
+                                                        enctype="multipart/form-data">
+                                                        <input type="hidden" id="editImageId" name="id">
+                                                        <div class="form-group">
+                                                            <label for="editTitle">عنوان
+                                                                تصویر</label>
+                                                            <input class="form-control" id="editTitle" type="text"
+                                                                name="title" required>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="editDescription">توضیحات
+                                                                تصویر</label>
+                                                            <textarea id="editDescription" name="description"
+                                                                class="form-control" rows="3" required></textarea>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="editCategory">دسته‌بندی</label>
+                                                            <input class="form-control" id="editCategory" type="text"
+                                                                name="category" required>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="editImage">تغییر
+                                                                تصویر</label>
+                                                            <input class="form-control-file" type="file" id="editImage"
+                                                                name="image" accept="image/*">
+                                                            <small class="form-text text-muted">فقط
+                                                                اگر می‌خواهید تصویر جدید بارگذاری
+                                                                کنید.</small>
+                                                        </div>
+                                                        <button class="btn btn-warning" type="submit">بروز رسانی
+                                                            تصویر</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+            </div>
+
+            <div id="images-pagination" class="pagination"></div>
+
+            <form class="admin-form" action="/handleimageupload" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <input placeholder="عنوان تصویر" class="form-control" id="title" type="text" name="title" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="توضیحات تصویر" class="form-control" id="description" name="description"
+                        required></textarea>
+                </div>
+                <div class="form-group">
+                    <input placeholder="دسته بندی" class="form-control" id="category" type="text" name="category"
+                        required>
+                </div>
+                <div class="form-group">
+                    <input placeholder="افزودن تصویر از فایل" class="form-control" type="file" id="image" name="image"
+                        accept="image/*">
+                </div>
+                <div class="form-group">
+                    <input aria-placeholder="افزودن تصویر از URL" class="form-control" class="" type="text"
+                        id="imageUrl" name="imageUrl" placeholder="URL تصویر">
+                </div>
+                <button class="btn btn-warning addBtn" type="submit">افزودن تصویر</button>
+            </form>
+
+        </div>
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                        SUBSRIBERS EMAIL SECTION                         -->
+        <!-- ----------------------------------------------------------------------- -->
+        <div id="subscribers" class="section">
+
+            <h1 class="text-center">ایمیلهای عضویت در خبرنامه</h1>
+
+            <div class="admin-list">
+                <% Subscription.slice().reverse().forEach(subscription=> { %>
+                    <div class="message-summary item card">
+                        <p><strong>نام:</strong>
+                            <%= subscription.name %>
+                        </p>
+
+                        <p><strong>ایمیل:</strong>
+                            <%= subscription.email %>
+                        </p>
+                        <!-- فرم حذف ایمیل عضویت -->
+                        <form action="/deleteSubscribers/<%= subscription._id %>" method="POST"
+                            onsubmit="return confirm('آیا مطمئن هستید که می‌خواهید این پیام را حذف کنید؟');">
+                            <button type="submit" class="btn btn-danger">حذف</button>
+                        </form>
+                    </div>
+                    <% }) %>
+            </div>
+
+            <div id="subscribers-pagination" class="pagination"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                           ADMIN NOTIFICATIONS                           -->
+    <!-- ----------------------------------------------------------------------- -->
     <% if(error.length> 0) { %>
         <p style="background-color: red;">
             <%= error %>
         </p>
-        <% } %>
+    <% } %>
 
-            <% if(success.length> 0) { %>
-                <p style="background-color: rgb(70, 168, 46);">
-                    <%= success %>
-                </p>
-                <% } %>
+    <% if(success.length> 0) { %>
+        <p style="background-color: rgb(70, 168, 46);">
+            <%= success %>
+        </p>
+    <% } %>
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                                 SCRIPTS                                 -->
+    <!-- ----------------------------------------------------------------------- -->
+    <script src="/js/bootstrap.min.js"></script>
 
-                    <!-- *************************************************************** -->
-                    <!-- ************************ ADD NEW ARTICLE ********************** -->
-                    <!-- *************************************************************** -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-                    <div class="addNewOne">
-                        <h1 class="text-light">پنل ادمین</h1>
-                        <a href="/" class="btn btn-warning ">مشاهده ی وبسایت</a>
-                        <button class="btn btn-outline-warning "
-                            onclick="document.getElementById('addNewArticle').style.display='block'">افزودن مقاله
-                            جدید</button>
-                            <button onclick="showSupportMessages()" class="btn btn-outline-info">نمایش پیام‌های ساپورت</button>
-                            <div id="addNewArticle" class="addNewArticle ">
-                                <button onclick="document.getElementById('addNewArticle').style.display='none'"
-                                    class="btn btn-outline-danger closeTab">بستن</button>
-                                <h3 class="">افزودن مقاله جدید</h3>
-                                <form  action="/handlenews" method="post" enctype="multipart/form-data">
-                                    <div  style="display: flex; width: 100%;">
-                                    <label for="title">عنوان مقاله</label>
-                                    <input class=" " id="title" type="text" name="title">
-                                    </div>
-                                    <div class="decs-wrapper" style="display: flex; width: 100%;">
-                                    <label for="desc">توضیحات مقاله</label>
-                                    <textarea id="desc" name="desc"></textarea>
-                                     </div>
-                                     
-                                        <div style="display: flex; ">
-                                            <label for="label">دسته بندی</label>
-                                            <input class=" " id="label" type="text" name="label">
-                                        </div>
-                                        
-                                        <div style="display: flex; ">
-        
-                                        <label for="image">افزودن عکس</label>
-                                            <input class=" " type="file" id="image" name="image">
-                                        </div>
-                                        <div style="display: flex; ">
-                                        <label for="alt">افزودن alt</label>
-                                            <input type="txt" id="alt" name="alt">
-                                        </div>
-                                        <div style="display: flex; ">
-                                        <label for="keywords">افزودن keywords</label>
-                                            <input type="txt" id="keywords" name="keywords">
-                                        </div>
-                                        <div style="display: flex; ">
-                                        <label for="subj">افزودن subj</label>
-                                            <input type="txt" id="subj" name="subj">
-                                        </div>
-                                   
-        
-                                    <button class="btn text-warning addBtn  " type="submit"> افزودن مقاله</button>
-                                </form>
-                            </div>
-                        <h1 style="background-color: rgb(255, 255, 255);">لیست مقالات</h1>
-                    </div>
-
-                    <style>
-                        .message-summary {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-.details {
-    margin-top: 10px;
-}
-
-.show-all-btn {
-    margin-top: 10px;
-}
-                    </style>
-                        <div id="supportMessages" style="display: none;">
-                            <div class="summary">
-                                <% 
-                                // Reverse the array to display the latest messages first
-                                supportMessages.slice().reverse().forEach(message => { %>
-                                    <div class="message-summary">
-                                        <p><strong>نام:</strong> <%= message.name %></p>
-                                        <p><strong>متن پیام:</strong> <%- message.message %></p>
-                                        <button class="show-details-btn">نمایش جزئیات</button>
-                                        <div class="details" style="display: none;">
-                                            <p><strong>تلفن:</strong> <%= message.phone %></p>
-                                            <p><strong>ایمیل:</strong> <%= message.email %></p>
-                                            <p><strong>نحوه تماس:</strong> <%= message.method %></p>
-                                        </div>
-                                    </div>
-                                <% }) %>
-                            </div>
-                            <button id="showAllBtn">نمایش همه</button>
-                        </div>
-                        
-                        <script>
-                            function showSupportMessages() {
-                                var supportMessagesContainer = document.getElementById("supportMessages");
-                                if (supportMessagesContainer.style.display === "none") {
-                                    supportMessagesContainer.style.display = "block";
-                                } else {
-                                    supportMessagesContainer.style.display = "none";
-                                }
-                            }
-                        
-                            document.addEventListener("DOMContentLoaded", function () {
-                                var messages = document.querySelectorAll(".message-summary");
-                                var showAllBtn = document.getElementById("showAllBtn");
-                        
-                                // مخفی کردن پیام‌های بیشتر از 5
-                                for (var i = messages.length - 1; i >= 5; i--) {
-                                    messages[i].style.display = "none";
-                                }
-                        
-                                showAllBtn.addEventListener("click", function () {
-                                    messages.forEach(function (message) {
-                                        message.style.display = "block";
-                                    });
-                                    showAllBtn.style.display = "none";
-                                });
-                        
-                                for (var i = messages.length - 1; i >= 0; i--) {
-                                    var details = messages[i].querySelector(".details");
-                                    var showDetailsBtn = messages[i].querySelector(".show-details-btn");
-                        
-                                    showDetailsBtn.addEventListener("click", function () {
-                                        if (details.style.display === "none") {
-                                            details.style.display = "block";
-                                            showDetailsBtn.textContent = "مخفی کردن جزئیات";
-                                        } else {
-                                            details.style.display = "none";
-                                            showDetailsBtn.textContent = "نمایش جزئیات";
-                                        }
-                                    });
-                                }
-                            });
-                        </script>
-                        <script>
-                            document.addEventListener("DOMContentLoaded", function () {
-                                var messages = document.querySelectorAll(".message-summary");
-                                var showAllBtn = document.getElementById("showAllBtn");
-                        
-                                for (var i = messages.length - 1; i >= 5; i--) {
-                                    messages[i].style.display = "none";
-                                }
-                        
-                                showAllBtn.addEventListener("click", function () {
-                                    messages.forEach(function (message) {
-                                        message.style.display = "block";
-                                    });
-                                    showAllBtn.style.display = "none";
-                                });
-                            });
-                        </script>
-                        
-                    <!-- *************************************************************** -->
-                    <!-- ************************ ARTICLES LIST ************************ -->
-                    <!-- *************************************************************** -->
-
-                    <div style=" display: flex; flex-wrap: wrap; width: 100%;">
-
-                        <% news.forEach((article, i)=> { %>
-                            <div class="eachArticle">
-                                <div class="articleContainer">
-
-                                    <img class="articleImg" src="<%= article.img %>" alt="<%= article.alt %>">
-                                    <div class="article-info">
-                                        <h3 class="title">
-                                            <%= article.title %>
-                                        </h3>
-                                        <h4> <%= article.label %></h4>
-                                        <h5> <%= article.keywords %></h5>
-                                        <!-- <h5> <%= article.subj %></h5> -->
-                                        <div class="desc">
-                                            <%- article.desc %>
-                                        </div>
-                                    </div>
-                               
-                                <div class="btn-container">
-                                    <a class="btn btn-outline-danger deleteBtn"
-                                        href="/deletearticle/<%= article._id %> ">حذف مقاله</a>
-                                    <a class="" href="/news/<%= article._id %> ">مشاهده
-                                        مقاله</a>
-
-                                    <button class=" editBtn" name="form<%= i %>" onclick="openEditForm(this)">ویرایش
-                                        مقاله</button>
-                                </div> </div>
-                                <!-- ********************** EDIT ARTICLE ********************* -->
-
-                                <div id="form<%= i %>" class="editArticle">
-                                    <button name="form<%= i %>" onclick="openEditForm(this)"
-                                        class="btn btn-outline-danger closeTab">بستن</button>
-                                    <h3 class="">ویرایش مقاله</h3>
-                                    <form action="/editarticle/<%= article._id %>" method="post"
-                                        enctype="multipart/form-data">
-                                        <div style="display: flex; width: 100%;">
-                                        <label for="editedTtitle">عنوان مقاله</label>
-                                        <input class="" id="editedTitle" type="text" name="title"
-                                            value="<%= article.title %> ">
-                                            </div>
-                                            <div style="display: flex; width: 100%;">
-                                        <label for="editedDesc">توضیحات مقاله</label>
-                                        <textarea  class=" " id="editedDesc"
-                                            name="desc">
-                                <%- article.desc %>
-                            </textarea>
-                            </div>
-                            <div style="display: flex; width: 100%;">
-                                        <label for="label">دسته بندی</label>
-                                        <input class=" " id="label" type="text" name="label"
-                                            value="<%= article.label %> ">
-                                            </div>
-                                            <div style="display: flex; width: 100%;">
-                                        <label for="image">افزودن عکس</label>
-                                        <input class=" " type="file" id="image" name="image">
-                                        </div>
-                                        <div style="display: flex; ">
-                                            <label for="alt">افزودن alt</label>
-                                                <input   value="<%= article.alt %> " type="txt" id="alt" name="alt">
-                                            </div>
-                                        <div style="display: flex; ">
-                                            <label for="keywords">افزودن keywords</label>
-                                                <input   value="<%= article.keywords %> " type="txt" id="keywords" name="keywords">
-                                            </div>
-                                        <div style="display: flex; ">
-                                            <label for="subj">افزودن subj</label>
-                                                <input   value="<%= article.subj %> " type="txt" id="subj" name="subj">
-                                            </div>
-                                      
-                                            
-                                        <button class="btn text-warning addBtn " type="submit"> ویرایش</button>
-                                    </form>
-                                </div>
-                            </div>
-                            <% }) %>
-                    </div>
-                    <div id="supportResult"></div>
-
-                    <!-- *************************************************************** -->
-                    <!-- *************************** SCRIPTS *************************** -->
-                    <!-- *************************************************************** -->
-                    <!-- <script src="/js/mainPage Copy.js"></script> -->
-
-                    <script src="/js/editArticle.js"></script>
-                    <script>
-                     
-                        ClassicEditor
-                            .create(document.querySelector('#desc'))
-                            .catch(error => {
-                                console.error(error);
-                            });
-        
-                    </script>
-
-
+    <script src="https://cdn.ckeditor.com/ckeditor5/32.0.0/classic/ckeditor.js"></script>
+    <script src="/js/adminPanel.js"></script>
 
 </body>
 

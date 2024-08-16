@@ -1,9 +1,86 @@
+// adminController.js 
 const newsModel = require('../model/newsModel');
 const supportModel = require('../model/supportModel');
+const Subscription = require('../model/subscriptionModel');
+const Image = require('../model/imageModel');
 const passport = require('passport');
 const {formatDate} = require('../utils/jalali');
 
+// gallery image
 
+// کنترلر برای بارگذاری تصویر
+exports.handleImageUpload = async (req, res) => {
+    try {
+        const { title, description, category, imageUrl } = req.body;
+        let src;
+
+        if (req.file) {
+            // اگر فایل بارگذاری شده باشد
+            src = req.file.path.replace(/\\/g, "/").replace('public', '');
+        } else if (imageUrl) {
+            // اگر URL تصویر ارائه شده باشد
+            src = imageUrl;
+        } else {
+            throw new Error('تصویر یا URL تصویر باید ارائه شود');
+        }
+
+        const newImage = new Image({ title, description, src, category });
+        await newImage.save();
+
+        res.redirect('/adminpanel'); // یا مسیر مناسب برای نمایش موفقیت
+    } catch (err) {
+        console.error(err);
+        res.status(500).send('Server Error');
+    }
+};
+
+
+
+// حذف تصویر
+exports.deleteImage = async (req, res) => {
+    try {
+        const { id } = req.params;
+        // پیدا کردن و حذف تصویر
+        await Image.findByIdAndDelete(id);
+        req.flash('success', 'تصویر با موفقیت حذف شد');
+        res.redirect('/adminpanel');
+    } catch (err) {
+        console.error(err);
+        res.status(500).send('Server Error');
+    }
+};
+
+// Update image
+exports.updateImage = async (req, res) => {
+    try {
+        const { id, title, description, category } = req.body;
+        const image = await Image.findById(id);
+
+        // Check if image exists
+        if (!image) {
+            req.flash('error', 'تصویر یافت نشد');
+            return res.redirect('/adminpanel');
+        }
+
+        // Update image fields
+        image.title = title;
+        image.description = description;
+        image.category = category;
+
+        // Update image file if a new file is uploaded
+        if (req.file) {
+            image.src = req.file.path.replace(/\\/g, "/").replace('public', '');
+        }
+
+        await image.save();
+        req.flash('success', 'تصویر با موفقیت به‌روزرسانی شد');
+        res.redirect('/adminpanel');
+    } catch (err) {
+        console.error(err);
+        req.flash('error', 'خطا در به‌روزرسانی تصویر');
+        res.redirect('/adminpanel');
+    }
+};
 //? loading admin login page
 
 exports.getAdminLogin = (req, res) => {
@@ -17,12 +94,18 @@ exports.getAdminLogin = (req, res) => {
 exports.getAdminPanel = async (req, res) => {
     const news = await newsModel.find();
     const supportMessages = await supportModel.find(); // خواندن پیام‌های ساپورت
+    const images = await Image.find(); // تصاویر گالری
+    const subscribers = await Subscription.find(); //ایمیلهای عضویت در خبرنامه
+
 
     if(req.isAuthenticated()) return res.render('adminPanel', {
         news: news.reverse(),
         error: req.flash('error'),
         success: req.flash('success'),
         supportMessages: supportMessages, // ارسال پیام‌های ساپورت به صفحه
+        images: images, //  ارسال تصاویر به صفحه گالری
+        Subscription:subscribers// ایمیلهای بخش خبرنامه
+
 
     });
     return res.redirect('/adminlogin');
@@ -110,3 +193,27 @@ exports.deleteArticle = async (req, res) => {
     }
 }
 
+// delete support msge 
+// حذف پیام ساپورت
+exports.deleteSupportMsg = async (req, res) => {
+    try {
+        await supportModel.deleteOne({_id: req.params.id});
+        req.flash('success', 'پیام با موفقیت حذف شد');
+        res.redirect('/adminpanel');
+    } catch (err) {
+        req.flash('error', 'مشکلی از سمت سرور وجود دارد');
+        res.redirect('/adminpanel');
+    }
+};
+//  deleteSubscribers  
+// حذف ایمیلهای عضویت در خبرنامه
+exports.deleteSubscribers = async (req, res) => {
+    try {
+        await Subscription.deleteOne({_id: req.params.id});
+        req.flash('success', 'پیام با موفقیت حذف شد');
+        res.redirect('/adminpanel');
+    } catch (err) {
+        req.flash('error', 'مشکلی از سمت سرور وجود دارد');
+        res.redirect('/adminpanel');
+    }
+};
