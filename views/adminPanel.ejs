@@ -16,6 +16,7 @@
     <!--                                 NAVBAR                                  -->
     <!-- ----------------------------------------------------------------------- -->
     <div class="sidebar" id="sidebar">
+        <a href="#" onclick="showSection('main')">صفحه اصلی</a>
         <a href="#" onclick="showSection('articles')">مقالات</a>
         <a href="#" onclick="showSection('messages')">پیام‌ها</a>
         <a href="#" onclick="showSection('images')">تصاویر</a>
@@ -30,8 +31,82 @@
     <!--                              MAIN CONTENT                               -->
     <!-- ----------------------------------------------------------------------- -->
 
-    <div class="content">
-
+    <div id="main" class="content">
+        <div class="section active-section">
+            <h1 class="text-center">صفحه اصلی</h1>
+            <nav class="myNavbar">
+                  <ul>
+                    <li class="myNavbar-item">
+                      <a href="/">
+                        <div>
+                          <span class="iconify" data-icon="carbon:home" data-width="30" data-height="25"></span>
+                        </div>
+                        <p>خانه</p>
+                      </a>
+                    </li>
+                    <li class="myNavbar-item">
+                      <a href="https://shop.artaaman.com/?v=c0a5d2d67475">
+                        <div>
+                          <span class="iconify" data-icon="carbon:store" data-width="25"></span>
+                        </div>
+                        <p> فروشگاه</p>
+                      </a>
+                    </li>
+            
+                    <li class="myNavbar-item">
+                      <a href="https://shop.artaaman.com/my-account">
+                        <div>
+                          <span class="iconify" data-icon="carbon:user-profile" data-width="25"></span>
+                        </div>
+                        <p> پروفایل کاربری</p>
+            
+                      </a>
+                    </li>
+                    <li class="myNavbar-item">
+                      <a href="https://shop.artaaman.com/shop/cart">
+                        <div>
+                          <span class="iconify" data-icon="bytesize:cart" data-width="25"></span>
+                        </div>
+                        <p> سبد خرید</p>
+            
+                      </a>
+                    </li>
+                    <li class="myNavbar-item">
+                      <a href="/gallery">
+                        <div>
+                          <span class="iconify" data-width="20" data-icon="grommet-icons:gallery"></span>
+                        </div>
+                        <p>گالری</p>
+                      </a>
+                    <li class="myNavbar-item">
+                      <a href="/news">
+                        <div>
+                          <span class="iconify" data-icon="emojione-monotone:rolled-up-newspaper" data-width="28"
+                            data-height="30"></span>
+                        </div>
+                        <p>اخبار و مقالات</p>
+                      </a>
+                    </li>
+                    </li>
+                    <li class="myNavbar-item">
+                      <a href="/contact">
+                        <div>
+                          <span class="iconify" data-icon="clarity:phone-handset-line" data-width="25" data-height="30"></span>
+                        </div>
+                        <p>تماس با ما</p>
+                      </a>
+                    </li>
+                    <li class="myNavbar-item">
+                      <a href="/about">
+                        <div>
+                          <span class="iconify" data-icon="clarity:info-circle-line" data-width="45" data-height="30"></span>
+                        </div>
+                        <p>درباره‌ی ما</p>
+                      </a>
+                    </li>
+                  </ul>
+              </nav>
+        </div>
 
         <!-- ----------------------------------------------------------------------- -->
         <!--                             ARTICLE SECTION                             -->
@@ -340,24 +415,24 @@
         <p style="background-color: red;">
             <%= error %>
         </p>
-    <% } %>
+        <% } %>
 
-    <% if(success.length> 0) { %>
-        <p style="background-color: rgb(70, 168, 46);">
-            <%= success %>
-        </p>
-    <% } %>
-    <!-- ----------------------------------------------------------------------- -->
-    <!--                                 SCRIPTS                                 -->
-    <!-- ----------------------------------------------------------------------- -->
-    <script src="/js/bootstrap.min.js"></script>
+            <% if(success.length> 0) { %>
+                <p style="background-color: rgb(70, 168, 46);">
+                    <%= success %>
+                </p>
+                <% } %>
+                    <!-- ----------------------------------------------------------------------- -->
+                    <!--                                 SCRIPTS                                 -->
+                    <!-- ----------------------------------------------------------------------- -->
+                    <script src="/js/bootstrap.min.js"></script>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+                    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+                    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <script src="https://cdn.ckeditor.com/ckeditor5/32.0.0/classic/ckeditor.js"></script>
-    <script src="/js/adminPanel.js"></script>
+                    <script src="https://cdn.ckeditor.com/ckeditor5/32.0.0/classic/ckeditor.js"></script>
+                    <script src="/js/adminPanel.js"></script>
 
 </body>
 
