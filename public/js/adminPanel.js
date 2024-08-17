@@ -62,8 +62,8 @@ paginateItems("messages", 6); // 6 مقاله در هر صفحه نمایش دا
 /*                 HANDLE EDITE PARTS FOR ARTICLES AND IMAGES                 */
 /* -------------------------------------------------------------------------- */
 
-function openEditModal(id, title, description, category, src = '') {
-    const fields = { editImageId: id, editTitle: title, editDescription: description, editCategory: category };
+function openEditModal(id, title, description, category,link, src = '') {
+    const fields = { editImageId: id, editTitle: title, editDescription: description, editCategory: category, editLink:link };
     for (let key in fields) {
         document.getElementById(key).value = fields[key];
     }

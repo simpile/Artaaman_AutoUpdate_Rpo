@@ -11,7 +11,7 @@ const {formatDate} = require('../utils/jalali');
 // کنترلر برای بارگذاری تصویر
 exports.handleImageUpload = async (req, res) => {
     try {
-        const { title, description, category, imageUrl } = req.body;
+        const { title, description, category, imageUrl, link } = req.body;
         let src;
 
         if (req.file) {
@@ -24,7 +24,7 @@ exports.handleImageUpload = async (req, res) => {
             throw new Error('تصویر یا URL تصویر باید ارائه شود');
         }
 
-        const newImage = new Image({ title, description, src, category });
+        const newImage = new Image({ title, description, src, category, link });
         await newImage.save();
 
         res.redirect('/adminpanel'); // یا مسیر مناسب برای نمایش موفقیت
@@ -53,7 +53,7 @@ exports.deleteImage = async (req, res) => {
 // Update image
 exports.updateImage = async (req, res) => {
     try {
-        const { id, title, description, category } = req.body;
+        const { id, title, description, category, link } = req.body;
         const image = await Image.findById(id);
 
         // Check if image exists
@@ -66,6 +66,7 @@ exports.updateImage = async (req, res) => {
         image.title = title;
         image.description = description;
         image.category = category;
+        image.link = link;
 
         // Update image file if a new file is uploaded
         if (req.file) {

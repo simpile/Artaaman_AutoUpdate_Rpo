@@ -289,7 +289,7 @@
                                 <a href="/deleteimage/<%= image._id %>" class="btn btn-danger"
                                     onclick="return confirm('آیا مطمئن هستید؟')">حذف</a>
                                 <button class="btn btn-warning" data-toggle="modal" data-target="#editImageModal"
-                                    onclick="openEditModal('<%= image._id %>', '<%= image.title %>', '<%= image.description %>', '<%= image.category %>', '<%= image.src %>')">ویرایش</button>
+                                    onclick="openEditModal('<%= image._id %>', '<%= image.title %>', '<%= image.description %>', '<%= image.category %>', '<%= image.src %> , <%= image.link %>')">ویرایش</button>
                             </div>
                         </div>
                         <% }) %>
@@ -315,21 +315,26 @@
                                                         enctype="multipart/form-data">
                                                         <input type="hidden" id="editImageId" name="id">
                                                         <div class="form-group">
-                                                            <label for="editTitle">عنوان
+                                                            <label for="editTitle">تغییر عنوان
                                                                 تصویر</label>
                                                             <input class="form-control" id="editTitle" type="text"
                                                                 name="title" required>
                                                         </div>
                                                         <div class="form-group">
-                                                            <label for="editDescription">توضیحات
+                                                            <label for="editDescription">تغییر توضیحات
                                                                 تصویر</label>
                                                             <textarea id="editDescription" name="description"
                                                                 class="form-control" rows="3" required></textarea>
                                                         </div>
                                                         <div class="form-group">
-                                                            <label for="editCategory">دسته‌بندی</label>
+                                                            <label for="editCategory">تغییر دسته‌بندی</label>
                                                             <input class="form-control" id="editCategory" type="text"
                                                                 name="category" required>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="editLink">تغییر لینک سفارش</label>
+                                                            <input class="form-control" id="editLink" type="text"
+                                                                name="link" required>
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="editImage">تغییر
@@ -361,6 +366,10 @@
                 </div>
                 <div class="form-group">
                     <input placeholder="دسته بندی" class="form-control" id="category" type="text" name="category"
+                        required>
+                </div>
+                <div class="form-group">
+                    <input placeholder="لینک" class="form-control" id="link" type="text" name="link"
                         required>
                 </div>
                 <div class="form-group">
