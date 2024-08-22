@@ -59,7 +59,7 @@
           </div>
         </div>
         
-        <% images.forEach(image=> { %>
+        <% images.forEach(image=> { images.reverse()%>
           <a href="<%= image.src %>"
             data-glightbox="title:<%= image.title %>   <%= image.link ? `|<a href='${image.link}'>ثبت سفارش</a>` : ''; %>; description:<%= image.description %>"
             class="glightbox gallery_product col-lg-4 col-md-6 col-sm-12 filter <%= image.category %>">
@@ -68,7 +68,7 @@
           <% }) %>
 
    
-<a href="/images/PHOTOS/pro+front.webp"
+<!-- <a href="/images/PHOTOS/pro+front.webp"
 data-glightbox="title:آرماتور انسانی مدل پروپلاس نمای روبرو | <a href=' https://shop.artaaman.com/product/proplus-stopmotion-human-armature'>ثبت سفارش</a>; description:2.500.000 تومان:قیمت "
 class="glightbox gallery_product  col-lg-4 col-md-6 col-sm-12  filter products">
 <img alt="آرماتور استاپ موشن انسان" src="/images/PHOTOS/pro+front.webp">
@@ -362,7 +362,7 @@ class="glightbox gallery_product  col-lg-4 col-md-6 col-sm-12  filter olds">
 data-glightbox="title:نقشه‌ی اولیه‌ی تولید قطعات; description: این نقشه‌ تنها برای مراحل پیش تولید آرماتورهای آرتامن طراحی شده‌است"
 class="glightbox gallery_product  col-lg-4 col-md-6 col-sm-12  filter olds">
 <img alt="نقشه ساخت آرماتور" src="/images/MAP/img1 (4).webp">
-</a>
+</a> -->
 
 <!--  جشنواره -->
 <!-- اساتید -->
