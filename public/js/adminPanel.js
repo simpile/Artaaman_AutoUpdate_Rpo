@@ -74,6 +74,9 @@ function openEditModal(id, title, description, category,link, src = '') {
     } else {
         preview.style.display = 'none';
     }
+
+    // Set the URL field with the current image URL
+    document.getElementById('editImageUrl').value = src;
 }
 
 /* -------------------------------------------------------------------------- */

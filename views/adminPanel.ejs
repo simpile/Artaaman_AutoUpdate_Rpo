@@ -345,6 +345,14 @@
                                                                 اگر می‌خواهید تصویر جدید بارگذاری
                                                                 کنید.</small>
                                                         </div>
+                                                        <div class="form-group">
+                                                            <label for="editImageUrl">تغییر URL تصویر</label>
+                                                            <input class="form-control" type="text" id="editImageUrl" name="imageUrl" placeholder="URL تصویر">
+                                                            <small class="form-text text-muted">اگر می‌خواهید تصویر را با URL تغییر دهید، این فیلد را پر کنید.</small>
+                                                        </div>
+                                                        <img id="editImagePreview" src="" alt="Preview" style="display:none; max-width:100%;"/>
+                                                        
+                                                        
                                                         <button class="btn btn-warning" type="submit">بروز رسانی
                                                             تصویر</button>
                                                     </form>
@@ -369,7 +377,7 @@
                         required>
                 </div>
                 <div class="form-group">
-                    <input placeholder="لینک" class="form-control" id="link" type="text" name="link">
+                    <input placeholder=" لینک سفارش از فروشگاه" class="form-control" id="link" type="text" name="link">
                 </div>
                 <div class="form-group">
                     <input placeholder="افزودن تصویر از فایل" class="form-control" type="file" id="image" name="image"
