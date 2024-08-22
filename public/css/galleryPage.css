@@ -1,3 +1,4 @@
+
 h1{
   font-size: 32px;
 }
@@ -10,9 +11,10 @@ a:hover{
 }
 .outerPart {
   background-color: var(--white-color);
-  direction: ltr;
+  /* direction: rtl; */
   margin-bottom: 4rem;
 }
+
 .myMainTitle{margin-top: 4rem;}
 .outerPart::after{
   content: "";
@@ -40,9 +42,11 @@ a:hover{
 }
 .myFilterGallery .row {
   flex-direction: row-reverse;
+  /* direction: ltr;  */
+
 }
 .gallery {
-  direction: rtl;
+  /* direction: ltr; */
   margin-bottom: 1rem;
   margin-top: 1rem;
 }
@@ -60,7 +64,7 @@ a:hover{
 .gslide-description
 {
 text-align: right !important;
-direction: rtl !important;
+/* direction: rtl !important; */
 
 } 
  .gslide-title{
@@ -74,6 +78,7 @@ direction: rtl !important;
 }
 
 .filter-button:hover {
+
   font-size: 18px;
   border-radius: 5px;
   text-align: center;
