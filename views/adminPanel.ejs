@@ -116,6 +116,7 @@
             <h1 class="text-center">اخبار و مقالات</h1>
 
             <div class="admin-list ">
+                <% if (news.length> 0) { %>
                 <% news.forEach(article=> { %>
                     <div class="card item eachArticle">
                         <img class="card-img-top" src="<%= article.img %>" alt="<%= article.alt %>">
@@ -198,6 +199,9 @@
                         </div>
                     </div>
                     <% }) %>
+                    <% } else { %>
+                        <p>هیچ مقاله‌ای موجود نیست.</p>
+                        <% } %>
             </div>
 
             <div id="articles-pagination" class="pagination"></div>
@@ -237,6 +241,7 @@
             <h1 class="text-center">پیام‌های بخش ساپورت</h1>
 
             <div class="admin-list">
+                <% if (supportMessages.length> 0) { %>
                 <% supportMessages.slice().reverse().forEach(message=> { %>
                     <div class="message-summary item card">
                         <p><strong>نام:</strong>
@@ -261,6 +266,9 @@
                         </form>
                     </div>
                     <% }) %>
+                    <% } else { %>
+                        <p>هیچ پیامی موجود نیست.</p>
+                        <% } %>
             </div>
 
             <div id="message-pagination" class="pagination"></div>
@@ -400,6 +408,7 @@
             <h1 class="text-center">ایمیلهای عضویت در خبرنامه</h1>
 
             <div class="admin-list">
+                <% if (Subscription.length> 0) { %>
                 <% Subscription.slice().reverse().forEach(subscription=> { %>
                     <div class="message-summary item card">
                         <p><strong>نام:</strong>
@@ -416,6 +425,9 @@
                         </form>
                     </div>
                     <% }) %>
+                    <% } else { %>
+                        <p>هیچ ایمیلی موجود نیست.</p>
+                        <% } %>
             </div>
 
             <div id="subscribers-pagination" class="pagination"></div>
