@@ -276,6 +276,7 @@
 
             <div class="admin-list">
                 <% if (images.length> 0) { %>
+                    <% images.reverse(); %>
                     <% images.forEach(image=> { %>
                         <div class="card item">
                             <img src="<%= image.src %>" class="card-img-top" alt="<%= image.title %>">
