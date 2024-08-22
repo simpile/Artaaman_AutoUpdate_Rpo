@@ -53,24 +53,25 @@ exports.deleteImage = async (req, res) => {
 // Update image
 exports.updateImage = async (req, res) => {
     try {
-        const { id, title, description, category, link } = req.body;
+        const { id, title, description, category, link, imageUrl } = req.body;
         const image = await Image.findById(id);
 
-        // Check if image exists
         if (!image) {
             req.flash('error', 'تصویر یافت نشد');
             return res.redirect('/adminpanel');
         }
 
-        // Update image fields
         image.title = title;
         image.description = description;
         image.category = category;
         image.link = link;
 
-        // Update image file if a new file is uploaded
         if (req.file) {
+            // Update with uploaded file
             image.src = req.file.path.replace(/\\/g, "/").replace('public', '');
+        } else if (imageUrl) {
+            // Update with provided URL
+            image.src = imageUrl;
         }
 
         await image.save();
@@ -82,6 +83,7 @@ exports.updateImage = async (req, res) => {
         res.redirect('/adminpanel');
     }
 };
+
 //? loading admin login page
 
 exports.getAdminLogin = (req, res) => {
