@@ -341,17 +341,7 @@
                                                             <input class="form-control" id="editLink" type="text"
                                                                 name="link" >
                                                         </div>
-                                                        <div class="form-group">
-                                                            <label for="editCategory">دسته‌بندی</label><br>
-                                                            <input type="checkbox" name="category[]" value="products "> محصولات<br>
-                                                            <input type="checkbox" name="category[]" value="pieces "> قطعات<br>
-                                                            <input type="checkbox" name="category[]" value="maps "> نقشه‌ها<br>
-                                                            <input type="checkbox" name="category[]" value="specials "> نمونه‌های خاص<br>
-                                                            <input type="checkbox" name="category[]" value="festival "> جشنواره <br>
-                                                            <input type="checkbox" name="category[]" value="olds "> آرشیو<br>
-                                                            <input type="checkbox" name="category[]" value="all "> همه<br>
-                                                        </div>
-                                        
+                                                                                    
                                                         <div class="form-group">
                                                             <label for="editImage">تغییر
                                                                 تصویر</label>
@@ -365,6 +355,16 @@
                                                             <label for="editImageUrl">تغییر URL تصویر</label>
                                                             <input class="form-control" type="text" id="editImageUrl" name="imageUrl" placeholder="URL تصویر">
                                                             <small class="form-text text-muted">اگر می‌خواهید تصویر را با URL تغییر دهید، این فیلد را پر کنید.</small>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="editCategory">دسته‌بندی</label><br>
+                                                            <input type="checkbox" name="category[]" value="products "> محصولات<br>
+                                                            <input type="checkbox" name="category[]" value="pieces "> قطعات<br>
+                                                            <input type="checkbox" name="category[]" value="maps "> نقشه‌ها<br>
+                                                            <input type="checkbox" name="category[]" value="specials "> نمونه‌های خاص<br>
+                                                            <input type="checkbox" name="category[]" value="festival "> جشنواره <br>
+                                                            <input type="checkbox" name="category[]" value="olds "> آرشیو<br>
+                                                            <input type="checkbox" name="category[]" value="all "> همه<br>
                                                         </div>
                                                         <img id="editImagePreview" src="" alt="Preview" style="display:none; max-width:100%;"/>
                                                         
@@ -391,7 +391,16 @@
                 <div class="form-group">
                     <input placeholder=" لینک سفارش از فروشگاه" class="form-control" id="link" type="text" name="link">
                 </div>
-               
+                              
+                <div class="form-group">
+                    <input placeholder="افزودن تصویر از فایل" class="form-control" type="file" id="image" name="image"
+                        accept="image/*">
+                </div>
+                <div class="form-group">
+                    <input aria-placeholder="افزودن تصویر از URL" class="form-control" class="" type="text"
+                        id="imageUrl" name="imageUrl" placeholder="URL تصویر">
+                </div>
+
                 <div class="form-group">
                     <label for="category">دسته‌بندی</label><br>
                     <input type="checkbox" name="category[]" value="products "> محصولات<br>
@@ -403,15 +412,7 @@
                     <input type="checkbox" name="category[]" value="all "> همه<br>
                 </div>
                 
-               
-                <div class="form-group">
-                    <input placeholder="افزودن تصویر از فایل" class="form-control" type="file" id="image" name="image"
-                        accept="image/*">
-                </div>
-                <div class="form-group">
-                    <input aria-placeholder="افزودن تصویر از URL" class="form-control" class="" type="text"
-                        id="imageUrl" name="imageUrl" placeholder="URL تصویر">
-                </div>
+
                 <button class="btn btn-warning addBtn" type="submit">افزودن تصویر</button>
                 
             </form>
