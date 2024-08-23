@@ -287,6 +287,13 @@
                     <% images.reverse(); %>
                     <% images.forEach(image=> { %>
                         <div class="card item">
+                            <div class="pb-3">
+                            <a href="/deleteimage/<%= image._id %>" class="btn btn-danger"
+                                onclick="return confirm('آیا مطمئن هستید؟')">X</a>
+                            <button class="btn btn-info" data-toggle="modal" data-target="#editImageModal"
+                                onclick="openEditModal('<%= image._id %>', '<%= image.title %>', '<%= image.description %>', '<%= image.category %>', '<%= image.src %> , <%= image.link %>')">🖉
+                            </button>
+                            </div>
                             <img src="<%= image.src %>" class="card-img-top" alt="<%= image.title %>">
                             <div class="card-body">
                                 <h5 class="card-title">
@@ -298,10 +305,7 @@
                                 <p>
                                     دسته بندی:     <%= image.category %>
                                 </p>
-                                <a href="/deleteimage/<%= image._id %>" class="btn btn-danger"
-                                    onclick="return confirm('آیا مطمئن هستید؟')">حذف</a>
-                                <button class="btn btn-warning" data-toggle="modal" data-target="#editImageModal"
-                                    onclick="openEditModal('<%= image._id %>', '<%= image.title %>', '<%= image.description %>', '<%= image.category %>', '<%= image.src %> , <%= image.link %>')">ویرایش</button>
+                                
                             </div>
                         </div>
                         <% }) %>
