@@ -290,12 +290,14 @@
                             <img src="<%= image.src %>" class="card-img-top" alt="<%= image.title %>">
                             <div class="card-body">
                                 <h5 class="card-title">
-                                    <%= image.title %>
+                                   <%= image.title %>
                                 </h5>
                                 <p class="card-text">
                                     <%= image.description %>
                                 </p>
-                                <p><%= image.category %></p>
+                                <p>
+                                    دسته بندی:     <%= image.category %>
+                                </p>
                                 <a href="/deleteimage/<%= image._id %>" class="btn btn-danger"
                                     onclick="return confirm('آیا مطمئن هستید؟')">حذف</a>
                                 <button class="btn btn-warning" data-toggle="modal" data-target="#editImageModal"
