@@ -335,6 +335,12 @@
                                                             <textarea id="editDescription" name="description"
                                                                 class="form-control" rows="3" required></textarea>
                                                         </div>
+                                                        
+                                                        <div class="form-group">
+                                                            <label for="editLink">تغییر لینک سفارش</label>
+                                                            <input class="form-control" id="editLink" type="text"
+                                                                name="link" >
+                                                        </div>
                                                         <div class="form-group">
                                                             <label for="editCategory">دسته‌بندی</label><br>
                                                             <input type="checkbox" name="category[]" value="products "> محصولات<br>
@@ -345,12 +351,7 @@
                                                             <input type="checkbox" name="category[]" value="olds "> آرشیو<br>
                                                             <input type="checkbox" name="category[]" value="all "> همه<br>
                                                         </div>
-                                                        
-                                                        <div class="form-group">
-                                                            <label for="editLink">تغییر لینک سفارش</label>
-                                                            <input class="form-control" id="editLink" type="text"
-                                                                name="link" >
-                                                        </div>
+                                        
                                                         <div class="form-group">
                                                             <label for="editImage">تغییر
                                                                 تصویر</label>
@@ -387,6 +388,9 @@
                     <textarea placeholder="توضیحات تصویر" class="form-control" id="description" name="description"
                         required></textarea>
                 </div>
+                <div class="form-group">
+                    <input placeholder=" لینک سفارش از فروشگاه" class="form-control" id="link" type="text" name="link">
+                </div>
                
                 <div class="form-group">
                     <label for="category">دسته‌بندی</label><br>
@@ -409,9 +413,7 @@
                         id="imageUrl" name="imageUrl" placeholder="URL تصویر">
                 </div>
                 <button class="btn btn-warning addBtn" type="submit">افزودن تصویر</button>
-                <div class="form-group">
-                    <input placeholder=" لینک سفارش از فروشگاه" class="form-control" id="link" type="text" name="link">
-                </div>
+                
             </form>
 
         </div>
