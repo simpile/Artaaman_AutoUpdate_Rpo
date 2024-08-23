@@ -336,14 +336,20 @@
                                                                 class="form-control" rows="3" required></textarea>
                                                         </div>
                                                         <div class="form-group">
-                                                            <label for="editCategory">تغییر دسته‌بندی</label>
-                                                            <input class="form-control" id="editCategory" type="text"
-                                                                name="category" required>
+                                                            <label for="editCategory">دسته‌بندی</label><br>
+                                                            <input type="checkbox" name="category[]" value="products "> محصولات<br>
+                                                            <input type="checkbox" name="category[]" value="pieces "> قطعات<br>
+                                                            <input type="checkbox" name="category[]" value="maps "> نقشه‌ها<br>
+                                                            <input type="checkbox" name="category[]" value="specials "> نمونه‌های خاص<br>
+                                                            <input type="checkbox" name="category[]" value="festival "> جشنواره 13<br>
+                                                            <input type="checkbox" name="category[]" value="olds "> آرشیو<br>
+                                                            <input type="checkbox" name="category[]" value="all "> همه<br>
                                                         </div>
+                                                        
                                                         <div class="form-group">
                                                             <label for="editLink">تغییر لینک سفارش</label>
                                                             <input class="form-control" id="editLink" type="text"
-                                                                name="link" required>
+                                                                name="link" >
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="editImage">تغییر
@@ -381,10 +387,18 @@
                     <textarea placeholder="توضیحات تصویر" class="form-control" id="description" name="description"
                         required></textarea>
                 </div>
+               
                 <div class="form-group">
-                    <input placeholder="دسته بندی" class="form-control" id="category" type="text" name="category"
-                        required>
+                    <label for="category">دسته‌بندی</label><br>
+                    <input type="checkbox" name="category[]" value="products "> محصولات<br>
+                    <input type="checkbox" name="category[]" value="pieces "> قطعات<br>
+                    <input type="checkbox" name="category[]" value="maps "> نقشه‌ها<br>
+                    <input type="checkbox" name="category[]" value="specials "> نمونه‌های خاص<br>
+                    <input type="checkbox" name="category[]" value="festival "> جشنواره 13<br>
+                    <input type="checkbox" name="category[]" value="olds "> آرشیو<br>
+                    <input type="checkbox" name="category[]" value="all "> همه<br>
                 </div>
+                
                 <div class="form-group">
                     <input placeholder=" لینک سفارش از فروشگاه" class="form-control" id="link" type="text" name="link">
                 </div>

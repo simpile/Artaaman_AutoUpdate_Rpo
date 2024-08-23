@@ -19,12 +19,28 @@ exports.handleImageUpload = async (req, res) => {
             src = req.file.path.replace(/\\/g, "/").replace('public', '');
         } else if (imageUrl) {
             // اگر URL تصویر ارائه شده باشد
+
             src = imageUrl;
         } else {
             throw new Error('تصویر یا URL تصویر باید ارائه شود');
         }
-
-        const newImage = new Image({ title, description, src, category, link });
+        
+         // بررسی نوع داده category و ترکیب آن
+         let categories = '';
+         if (Array.isArray(category)) {
+             // اگر category یک آرایه باشد، آن را با فاصله ترکیب کنید
+             categories = category.join(' ').replace(/\s+/g, ' ').trim();
+         } else if (category) {
+             // اگر فقط یک رشته باشد، آن را trim کنید
+             categories = category.trim();
+         }
+ 
+         console.log("تعداد دسته‌ها: " + (Array.isArray(category) ? category.length : 1));
+         console.log("دسته‌ها: " + categories);
+ 
+         const newImage = new Image({ title, description, src, category: categories, link });
+        
+        
         await newImage.save();
 
         res.redirect('/adminpanel'); // یا مسیر مناسب برای نمایش موفقیت
@@ -63,7 +79,15 @@ exports.updateImage = async (req, res) => {
 
         image.title = title;
         image.description = description;
-        image.category = category;
+        // image.category = category;
+           // بررسی و مدیریت ورودی category
+           let categories = '';
+           if (Array.isArray(category)) {
+               categories = category.join(' ').replace(/\s+/g, ' ').trim();
+           } else if (category) {
+               categories = category.trim();
+           }
+           image.category = categories;
         image.link = link;
 
         if (req.file) {
