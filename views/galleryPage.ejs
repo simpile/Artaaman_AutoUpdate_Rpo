@@ -49,9 +49,16 @@
             <button data-aos="fade-up" data-aos-delay="400" class="btn btn-default filter-button <%= activeCategory === 'festival' ? 'active' : '' %>" id="festival" onclick="location.href='?category=festival'">جشنواره</button>
             <button data-aos="fade-up" data-aos-delay="400" class="btn btn-default filter-button <%= activeCategory === 'olds' ? 'active' : '' %>" id="olds" onclick="location.href='?category=olds'">آرشیو</button>
             <button data-aos="fade-up" data-aos-delay="500" class="btn btn-default filter-button <%= activeCategory === 'all' ? 'active' : '' %>" id="all" onclick="location.href='?category=all'">همه</button>
-          </div>
-          
+          </div>         
         </div>
+
+        
+        <!-- قسمت اسکلتون لودینگ -->
+        <div id="skeleton-container" class="skeleton-container">
+          <!-- اسکلتون‌ها به صورت داینامیک اینجا قرار می‌گیرند -->
+        </div>
+        
+
         <% images.reverse(); %>
         <% images.forEach(image=> {%>  
           <a href="<%= image.src %>"

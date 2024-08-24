@@ -104,24 +104,6 @@ text-align: right !important;
 .block {
   opacity: 0;
 }
-.pagination {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.page-link {
-  padding: 10px 15px;
-  margin: 0 5px;
-  background-color: #f0f0f0;
-  color: #333;
-  text-decoration: none;
-}
-
-.page-link.active {
-  background-color: #333;
-  color: #fff;
-}
 
 
 @-webkit-keyframes fadeIn {
@@ -148,5 +130,76 @@ text-align: right !important;
 @media only screen and (max-width: 425px) {
   .outerPart::after{
     width: 143px; 
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 pagination                                 */
+/* -------------------------------------------------------------------------- */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.page-link {
+  padding: 10px 15px;
+  margin: 0 5px;
+  background-color: #f0f0f0;
+  color: #333;
+  text-decoration: none;
+}
+
+.page-link.active {
+  background-color: #333;
+  color: #fff;
+}
+
+ /* -------------------------------------------------------------------------- */
+ /*                               skleton styles                               */
+ /* -------------------------------------------------------------------------- */
+ .skeleton-container {
+  display: flex;
+  flex-wrap: wrap; /* برای چینش اسکلتون‌ها */
+  margin: -10px; /* برای حذف فاصله بین اسکلتون‌ها */
+}
+
+.skeleton-loader {
+  flex: 1 1 calc(33.333% - 20px); /* عرض هر اسکلتون */
+  margin: 10px; /* فاصله */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skeleton-image {
+  width: 100%; /* عرض کامل */
+  height: 200px; /* ارتفاع تصویر */
+  background-color: #e0e0e0; /* رنگ خاکستری */
+  border-radius: 8px; /* گوشه‌های گرد */
+  animation: pulse 1.5s infinite ease-in-out; /* انیمیشن */
+}
+
+.skeleton-text {
+  width: 80%; /* عرض متن */
+  height: 20px; /* ارتفاع متن */
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  margin: 6px 0; /* فاصله بین متون */
+}
+
+.skeleton-text.short {
+  width: 60%; /* عرض کوتاه‌تر */
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #e0e0e0;
+  }
+  50% {
+    background-color: #c0c0c0; /* رنگ تیره‌تر */
+  }
+  100% {
+    background-color: #e0e0e0;
   }
 }
