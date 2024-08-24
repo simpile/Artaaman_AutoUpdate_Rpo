@@ -1,7 +1,7 @@
-// galleryController 
+// // galleryController 
 
-// Get gallery images with filtering and pagination
 const Image = require('../model/imageModel');
+
 exports.getGalleryPage = async (req, res) => {
     const page = parseInt(req.query.page) || 1; // صفحه فعلی
     const limit = 9; // تعداد تصاویر در هر صفحه
@@ -11,7 +11,9 @@ exports.getGalleryPage = async (req, res) => {
     try {
         const query = category === 'all' ? {} : { category: category }; // فیلتر بر اساس کتگوری
         const totalImages = await Image.countDocuments(query); // تعداد کل تصاویر بر اساس فیلتر
-        const images = await Image.find(query).skip(skip).limit(limit); // بارگذاری تصاویر با پجینیشن و فیلتر
+        
+        // بارگذاری تصاویر با پجینیشن و فیلتر و ترتیب معکوس
+        const images = await Image.find(query).sort({ createdAt: -1 }).skip(skip).limit(limit); // بارگذاری 9 تصویر آخر
 
         const totalPages = Math.ceil(totalImages / limit); // محاسبه تعداد صفحات
         const current = page; // صفحه فعلی

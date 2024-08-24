@@ -87,7 +87,6 @@ document.addEventListener("DOMContentLoaded", function() {
   // نمایش اسکلتون
   skeletonContainer.style.display = 'flex';
 
-  // مخفی کردن اسکلتون و نمایش تصاویر بعد از 2 ثانیه
   setTimeout(() => {
     // مخفی کردن اسکلتون
     skeletonContainer.style.display = 'none';

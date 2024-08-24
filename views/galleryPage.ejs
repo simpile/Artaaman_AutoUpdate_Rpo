@@ -59,8 +59,8 @@
         </div>
         
 
-        <% images.reverse(); %>
-        <% images.forEach(image=> {%>  
+        <!-- <% images.reverse(); %> -->
+        <% images.reverse().forEach(image=> {%>  
           <a href="<%= image.src %>"
             data-glightbox="title:<%= image.title %>   <%= image.link ? `|<a href='${image.link}'>ثبت سفارش</a>` : ''; %>; description:<%= image.description %>"
             class="glightbox gallery_product col-lg-4 col-md-6 col-sm-12 filter <%= image.category %>">
@@ -72,38 +72,15 @@
       </div>
     </div>
 <!-- pagination -->
-   <!-- <div id="images-pagination" class="pagination">
-    <% if (totalPages > 1) { %>
-        <% if (current > 1) { %>
-            <a href="?page=<%= current - 1 %>&category=<%= activeCategory %>" class="page-link">صفحه قبل</a>
-        <% } %>
-
-        <% 
-        // تعیین محدوده شروع و پایان صفحات نمایش داده شده
-        const startPage = Math.max(1, current - 1); 
-        const endPage = Math.min(totalPages, startPage + 2); 
-        %>
-
-        <% for (let i = startPage; i <= endPage; i++) { %>
-            <a href="?page=<%= i %>&category=<%= activeCategory %>" class="page-link <%= current == i ? 'active' : '' %>"><%= i %></a>
-        <% } %>
-
-        <% if (current < totalPages) { %>
-            <a href="?page=<%= current + 1 %>&category=<%= activeCategory %>" class="page-link">صفحه بعد</a>
-        <% } %>
-    <% } %>
-</div> -->
+  
 <div id="images-pagination" class="pagination">
   <% if (totalPages > 1) { %>
 
       <% if (current > 1) { %>
           <a href="?page=1&category=<%= activeCategory %>" class="page-link">
-            <!-- صفحه اول -->
-            <!-- <iconify-icon icon="ic:round-double-arrow"></iconify-icon> -->
             <iconify-icon icon="solar:double-alt-arrow-right-line-duotone"></iconify-icon>
 
           </a>
-          <!-- <a href="?page=<%= current - 1 %>&category=<%= activeCategory %>" class="page-link">صفحه قبل</a> -->
       <% } %>
 
       <% 
@@ -117,7 +94,6 @@
       <% } %>
 
       <% if (current < totalPages) { %>
-          <!-- <a href="?page=<%= current + 1 %>&category=<%= activeCategory %>" class="page-link">صفحه بعد</a> -->
           <a href="?page=<%= totalPages %>&category=<%= activeCategory %>" class="page-link">
             <iconify-icon icon="solar:double-alt-arrow-left-line-duotone"></iconify-icon>
           </a>
@@ -125,9 +101,6 @@
   <% } %>
 </div>
 
-    <!-- <div class="backBtnWrapper">
-      <a data-aos="fade-up" class="myBackBtn" onclick="history.back()">بازگشت به صفحه‌ی قبل</a>
-    </div> -->
   </main>
 
   <!-- ----------------------------------------------------------------------- -->
