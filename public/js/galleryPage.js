@@ -96,5 +96,5 @@ document.addEventListener("DOMContentLoaded", function() {
     images.forEach(image => {
       image.style.display = 'block'; // نمایش تصاویر
     });
-  }, 2000); // مدت زمان بارگذاری به میلی‌ثانیه
+  }, 500); // مدت زمان بارگذاری به میلی‌ثانیه
 });
