@@ -26,41 +26,44 @@ var lightboxDescription = GLightbox({
   /*                                 filter buttons                             */
   /* -------------------------------------------------------------------------- */
 
-//   function call(id) {
-//     const items = Array.from(document.getElementsByClassName("filter"));
-//     items.forEach(function (item) {
-//         if (id === "all") {
-//             item.classList.remove('d-none');
-//             item.classList.add('fadeIn', 'glightbox');
-//         } else {
-//             if (item.classList.contains(id)) {
-//                 item.classList.remove('d-none');
-//                 item.classList.add('fadeIn', 'glightbox');
-//             } else {
-//                 item.classList.add('d-none');
-//                 item.classList.remove('fadeIn', 'glightbox');
-//             }
-//         }
-//     });
-//     // Reset fadeIn after a timeout
-//     setTimeout(clean, 500);
-// }
+  function call(id) {
+    const items = Array.from(document.getElementsByClassName("filter"));
+    items.forEach(function (item) {
+        if (id === "all") {
+            item.classList.remove('d-none');
+            item.classList.add('fadeIn', 'glightbox');
+        } else {
+            if (item.classList.contains(id)) {
+                item.classList.remove('d-none');
+                item.classList.add('fadeIn', 'glightbox');
+            } else {
+                item.classList.add('d-none');
+                item.classList.remove('fadeIn', 'glightbox');
+            }
+        }
+    });
+    // Reset fadeIn after a timeout
+    setTimeout(clean, 500);
+}
 
-// function clean() {
-//     const items = Array.from(document.getElementsByClassName("filter"));
-//     items.forEach(function (item) {
-//         item.classList.remove('fadeIn');
-//     });
-// }
+function clean() {
+    const items = Array.from(document.getElementsByClassName("filter"));
+    items.forEach(function (item) {
+        item.classList.remove('fadeIn');
+    });
+}
 
 /* -------------------------------------------------------------------------- */
 /*                                   skleton                                  */
 /* -------------------------------------------------------------------------- */
-window.onload = function() {
-  const skeletonContainer = document.getElementById('skeleton-container');
+// مخفی کردن همه تصاویر قبل از بارگذاری
+document.addEventListener("DOMContentLoaded", function() {
   const images = document.querySelectorAll('.filter');
+  // images.forEach(image => {
+  //   image.style.display = 'none'; // مخفی کردن تصاویر
+  // });
 
-  // تعداد تصاویر موجود
+  const skeletonContainer = document.getElementById('skeleton-container');
   const totalImages = images.length;
 
   // حداکثر تعداد تصاویر در هر صفحه
@@ -74,12 +77,15 @@ window.onload = function() {
     const skeletonLoader = document.createElement('div');
     skeletonLoader.classList.add('skeleton-loader');
     skeletonLoader.innerHTML = `
-      <div class="skeleton-image gallery_product col-lg-4 col-md-6 col-sm-12 filter"></div>
+      <div class="skeleton-image"></div>
       <div class="skeleton-text"></div>
       <div class="skeleton-text short"></div>
     `;
     skeletonContainer.appendChild(skeletonLoader);
   }
+
+  // نمایش اسکلتون
+  skeletonContainer.style.display = 'flex';
 
   // مخفی کردن اسکلتون و نمایش تصاویر بعد از 2 ثانیه
   setTimeout(() => {
@@ -90,36 +96,5 @@ window.onload = function() {
     images.forEach(image => {
       image.style.display = 'block'; // نمایش تصاویر
     });
-  }, 200000); // مدت زمان بارگذاری به میلی‌ثانیه
-};
-
-// کنترل فیلتر کردن تصاویر
-function call(id) {
-  const items = Array.from(document.getElementsByClassName("filter"));
-  const skeletonContainer = document.getElementById('skeleton-container');
-
-  // مخفی کردن همه تصاویر
-  items.forEach(item => {
-    item.style.display = 'none';
-  });
-
-  // نشان دادن اسکلتون
-  skeletonContainer.style.display = 'flex';
-
-  setTimeout(() => {
-    if (id === "all") {
-      items.forEach(item => {
-        item.style.display = 'block'; // نمایش همه تصاویر
-      });
-    } else {
-      items.forEach(item => {
-        if (item.classList.contains(id)) {
-          item.style.display = 'block'; // نمایش تصاویر مربوط به کتگوری
-        }
-      });
-    }
-
-    // مخفی کردن اسکلتون
-    skeletonContainer.style.display = 'none';
-  }, 2000); // مدت زمان بارگذاری
-}
+  }, 2000); // مدت زمان بارگذاری به میلی‌ثانیه
+});
