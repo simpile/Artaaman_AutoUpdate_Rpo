@@ -23,37 +23,66 @@ var lightboxDescription = GLightbox({
    }
 
   
+  // function call(id) {
+  //   const items = Array.from(document.getElementsByClassName("filter"));
+  //   items.map(function (item, index) {
+  //     // console.log(item);
+  //     if (id === "all") {
+  //       item.classList.remove('d-none');
+  //       item.classList.add('fadeIn','glightbox');
+  //       setTimeout(clean,500);
+  //     } else {
+  //       const check = items[index].classList.contains(id);
+  //       // console.log("check:"+check);
+  
+  //       if (check) {
+  //         item.classList.remove('d-none');
+  //         item.classList.add('fadeIn','glightbox');
+  //       } else {
+  //         item.classList.add('d-none');
+  //         item.classList.remove('fadeIn','glightbox');
+  //       }
+  //     }
+  //   }
+  //   )
+  // }
+
+  
+  
+  // function clean() {
+  //   const items = Array.from(document.getElementsByClassName("filter"));
+  //   items.map(function (item, index) {
+  //     item.classList.remove('fadeIn');
+  //   })
+  // }
+  // window.onload=call('products');
   function call(id) {
     const items = Array.from(document.getElementsByClassName("filter"));
-    items.map(function (item, index) {
-      // console.log(item);
-      if (id === "all") {
-        item.classList.remove('d-none');
-        item.classList.add('fadeIn','glightbox');
-        setTimeout(clean,500);
-      } else {
-        const check = items[index].classList.contains(id);
-        // console.log("check:"+check);
-  
-        if (check) {
-          item.classList.remove('d-none');
-          item.classList.add('fadeIn','glightbox');
+    items.forEach(function (item) {
+        if (id === "all") {
+            item.classList.remove('d-none');
+            item.classList.add('fadeIn', 'glightbox');
         } else {
-          item.classList.add('d-none');
-          item.classList.remove('fadeIn','glightbox');
+            if (item.classList.contains(id)) {
+                item.classList.remove('d-none');
+                item.classList.add('fadeIn', 'glightbox');
+            } else {
+                item.classList.add('d-none');
+                item.classList.remove('fadeIn', 'glightbox');
+            }
         }
-      }
-    }
-    )
-  }
-  
-  function clean() {
+    });
+    // Reset fadeIn after a timeout
+    setTimeout(clean, 500);
+}
+
+function clean() {
     const items = Array.from(document.getElementsByClassName("filter"));
-    items.map(function (item, index) {
-      item.classList.remove('fadeIn');
-    })
-  }
-  window.onload=call('products');
+    items.forEach(function (item) {
+        item.classList.remove('fadeIn');
+    });
+}
+
 
   function checkHistory(){
     if (document.referrer === "http://localhost:3000/" ){
