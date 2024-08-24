@@ -41,7 +41,7 @@
     <div class="container myFilterGallery">
       <div class="row">
         <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
-          <div data-aos-delay="100" class="text-center" id="myBtn-wrapper">
+          <!-- <div data-aos-delay="100" class="text-center" id="myBtn-wrapper">
             <button data-aos="fade-up" data-aos-delay="100" class="btn btn-default filter-button " id="products"
               onclick="call(this.id)">محصولات</button>
             <button data-aos="fade-up" data-aos-delay="200" class="btn btn-default filter-button " id="pieces"
@@ -54,7 +54,16 @@
               onclick="call(this.id)">آرشیو</button>
             <button data-aos="fade-up" data-aos-delay="500" class="btn btn-default filter-button active" id="all"
               onclick="call(this.id)">همه</button>
+          </div> -->
+          <div class="text-center" id="myBtn-wrapper">
+            <button data-aos="fade-up" data-aos-delay="100" class="btn btn-default filter-button <%= activeCategory === 'products' ? 'active' : '' %>" id="products" onclick="location.href='?category=products'">محصولات</button>
+            <button data-aos="fade-up" data-aos-delay="200" class="btn btn-default filter-button <%= activeCategory === 'pieces' ? 'active' : '' %>" id="pieces" onclick="location.href='?category=pieces'">قطعات</button>
+            <button data-aos="fade-up" data-aos-delay="300" class="btn btn-default filter-button <%= activeCategory === 'maps' ? 'active' : '' %>" id="maps" onclick="location.href='?category=maps'">نقشه‌ها</button>
+            <button data-aos="fade-up" data-aos-delay="400" class="btn btn-default filter-button <%= activeCategory === 'festival' ? 'active' : '' %>" id="festival" onclick="location.href='?category=festival'">جشنواره</button>
+            <button data-aos="fade-up" data-aos-delay="400" class="btn btn-default filter-button <%= activeCategory === 'olds' ? 'active' : '' %>" id="olds" onclick="location.href='?category=olds'">آرشیو</button>
+            <button data-aos="fade-up" data-aos-delay="500" class="btn btn-default filter-button <%= activeCategory === 'all' ? 'active' : '' %>" id="all" onclick="location.href='?category=all'">همه</button>
           </div>
+          
         </div>
         <% images.reverse(); %>
         <% images.forEach(image=> {%>  
@@ -68,9 +77,40 @@
 
       </div>
     </div>
-    <div class="backBtnWrapper">
-      <a data-aos="fade-up" class="myBackBtn" onclick="history.back()">بازگشت به صفحه‌ی قبل</a>
+    <!-- <div id="images-pagination" class="pagination">
+      <% if (totalPages > 1) { %>
+        <% if (currentPage > 1) { %>
+          <a href="?page=<%= currentPage - 1 %>" class="page-link">صفحه قبل</a>
+        <% } %>
+    
+        <% for (let i = 1; i <= totalPages; i++) { %>
+          <a href="?page=<%= i %>" class="page-link <%= currentPage == i ? 'active' : '' %>"><%= i %></a>
+        <% } %>
+    
+        <% if (currentPage < totalPages) { %>
+          <a href="?page=<%= currentPage + 1 %>" class="page-link">صفحه بعد</a>
+        <% } %>
+      <% } %>
+    </div> -->
+    <div id="images-pagination"  data-aos="fade-up" class="pagination">
+      <% if (totalPages > 1) { %>
+        <% if (currentPage > 1) { %>
+          <a href="?page=<%= currentPage - 1 %>&category=<%= activeCategory %>" class="page-link">صفحه قبل</a>
+        <% } %>
+    
+        <% for (let i = 1; i <= totalPages; i++) { %>
+          <a href="?page=<%= i %>&category=<%= activeCategory %>" class="page-link <%= currentPage == i ? 'active' : '' %>"><%= i %></a>
+        <% } %>
+    
+        <% if (currentPage < totalPages) { %>
+          <a href="?page=<%= currentPage + 1 %>&category=<%= activeCategory %>" class="page-link">صفحه بعد</a>
+        <% } %>
+      <% } %>
     </div>
+    
+    <!-- <div class="backBtnWrapper">
+      <a data-aos="fade-up" class="myBackBtn" onclick="history.back()">بازگشت به صفحه‌ی قبل</a>
+    </div> -->
   </main>
 
   <!-- ----------------------------------------------------------------------- -->
