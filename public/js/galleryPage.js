@@ -74,7 +74,7 @@ window.onload = function() {
     const skeletonLoader = document.createElement('div');
     skeletonLoader.classList.add('skeleton-loader');
     skeletonLoader.innerHTML = `
-      <div class="skeleton-image"></div>
+      <div class="skeleton-image gallery_product col-lg-4 col-md-6 col-sm-12 filter"></div>
       <div class="skeleton-text"></div>
       <div class="skeleton-text short"></div>
     `;
@@ -90,7 +90,7 @@ window.onload = function() {
     images.forEach(image => {
       image.style.display = 'block'; // نمایش تصاویر
     });
-  }, 2000); // مدت زمان بارگذاری به میلی‌ثانیه
+  }, 200000); // مدت زمان بارگذاری به میلی‌ثانیه
 };
 
 // کنترل فیلتر کردن تصاویر
