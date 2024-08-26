@@ -4,7 +4,7 @@ const Image = require('../model/imageModel');
 
 exports.getGalleryPage = async (req, res) => {
     const page = parseInt(req.query.page) || 1; // صفحه فعلی
-    const limit = 9; // تعداد تصاویر در هر صفحه
+    const limit = 12; // تعداد تصاویر در هر صفحه
     const skip = (page - 1) * limit; // محاسبه موقعیت شروع
     const category = req.query.category || 'all'; // دریافت کتگوری از query params
 

@@ -56,44 +56,93 @@ function clean() {
 /* -------------------------------------------------------------------------- */
 /*                                   skleton                                  */
 /* -------------------------------------------------------------------------- */
-// مخفی کردن همه تصاویر قبل از بارگذاری
-document.addEventListener("DOMContentLoaded", function() {
-  const images = document.querySelectorAll('.filter');
-  // images.forEach(image => {
-  //   image.style.display = 'none'; // مخفی کردن تصاویر
-  // });
+// // مخفی کردن همه تصاویر قبل از بارگذاری
+// document.addEventListener("DOMContentLoaded", function() {
+//   const images = document.querySelectorAll('.filter');
+//   // images.forEach(image => {
+//   //   image.style.display = 'none'; // مخفی کردن تصاویر
+//   // });
 
+//   const skeletonContainer = document.getElementById('skeleton-container');
+//   const totalImages = images.length;
+
+//   // حداکثر تعداد تصاویر در هر صفحه
+//   const maxImagesPerPage = 12;
+
+//   // تعداد اسکلتون‌ها باید برابر با تعداد تصاویر در صفحه باشد
+//   const skeletonCount = Math.min(totalImages, maxImagesPerPage);
+
+//   // ایجاد اسکلتون‌ها به صورت داینامیک
+//   for (let i = 0; i < skeletonCount; i++) {
+//     const skeletonLoader = document.createElement('div');
+//     skeletonLoader.classList.add('skeleton-loader');
+//     skeletonLoader.innerHTML = `
+//       <div class="skeleton-image"></div>
+//       <div class="skeleton-text"></div>
+//       <div class="skeleton-text short"></div>
+//     `;
+//     skeletonContainer.appendChild(skeletonLoader);
+//   }
+
+//   // نمایش اسکلتون
+//   skeletonContainer.style.display = 'flex';
+
+//   setTimeout(() => {
+//     // مخفی کردن اسکلتون
+//     skeletonContainer.style.display = 'none';
+
+//     // نمایش تصاویر
+//     images.forEach(image => {
+//       image.style.display = 'block'; // نمایش تصاویر
+//     });
+//   }, 500); // مدت زمان بارگذاری به میلی‌ثانیه
+// });
+document.addEventListener("DOMContentLoaded", function () {
+  const images = document.querySelectorAll('.filter img'); // انتخاب تصاویر
   const skeletonContainer = document.getElementById('skeleton-container');
-  const totalImages = images.length;
 
   // حداکثر تعداد تصاویر در هر صفحه
-  const maxImagesPerPage = 9;
+  const maxImagesPerPage = 12;
 
   // تعداد اسکلتون‌ها باید برابر با تعداد تصاویر در صفحه باشد
-  const skeletonCount = Math.min(totalImages, maxImagesPerPage);
+  const skeletonCount = Math.min(images.length, maxImagesPerPage);
 
   // ایجاد اسکلتون‌ها به صورت داینامیک
   for (let i = 0; i < skeletonCount; i++) {
-    const skeletonLoader = document.createElement('div');
-    skeletonLoader.classList.add('skeleton-loader');
-    skeletonLoader.innerHTML = `
-      <div class="skeleton-image"></div>
-      <div class="skeleton-text"></div>
-      <div class="skeleton-text short"></div>
-    `;
-    skeletonContainer.appendChild(skeletonLoader);
+      const skeletonLoader = document.createElement('div');
+      skeletonLoader.classList.add('skeleton-loader');
+      skeletonLoader.innerHTML = `
+          <div class="skeleton-image"></div>
+          <div class="skeleton-text"></div>
+          <div class="skeleton-text short"></div>
+      `;
+      skeletonContainer.appendChild(skeletonLoader);
   }
 
   // نمایش اسکلتون
   skeletonContainer.style.display = 'flex';
 
-  setTimeout(() => {
-    // مخفی کردن اسکلتون
-    skeletonContainer.style.display = 'none';
+  // مخفی کردن اسکلتون‌ها و نمایش تصاویر وقتی بارگذاری شد
+  images.forEach((image, index) => {
+      const skeletonLoader = skeletonContainer.children[index]; // اسکلتون مربوط به این تصویر
 
-    // نمایش تصاویر
-    images.forEach(image => {
-      image.style.display = 'block'; // نمایش تصاویر
-    });
-  }, 500); // مدت زمان بارگذاری به میلی‌ثانیه
+      // وقتی تصویر بارگذاری شد
+      image.addEventListener('load', () => {
+          // مخفی کردن اسکلتون
+          if (skeletonLoader) {
+              skeletonLoader.style.display = 'none';
+          }
+          // نمایش تصویر بارگذاری شده
+          image.style.display = 'block'; // نمایش تصویر
+      });
+
+      // اگر تصویر از قبل بارگذاری شده باشد
+      if (image.complete) {
+          skeletonLoader.style.display = 'none'; // مخفی کردن اسکلتون
+          image.style.display = 'block'; // نمایش تصویر
+      } else {
+          // اگر تصویر بارگذاری نشود
+          image.style.display = 'none'; // مخفی کردن تصویر تا بارگذاری شود
+      }
+  });
 });
