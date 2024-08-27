@@ -93,6 +93,7 @@ exports.postSupport = async (req, res) => {
 
 const xmlbuilder = require('xmlbuilder');
 const News = require('../model/newsModel'); // فرض می‌کنیم مدل News در فایل newsModel.js تعریف شده است
+const Image = require('../model/imageModel');
 
 exports.getSitemap = async (req, res) => {
     try {
@@ -150,7 +151,23 @@ exports.getSitemap = async (req, res) => {
                 console.error('Invalid news item:', item._id, 'title:', item.title, 'createdAt:', item.createdAt);
             }
         });
+        
+        
+        // بارگذاری تصاویر از مدل Image
+        const images = await Image.find({}, 'title description src'); // بارگذاری تصاویر
 
+        // اضافه کردن تگ‌های تصاویر به خروجی
+        images.forEach(image => {
+            const imageUrlElement = xml.ele('url');
+            imageUrlElement.ele('loc', image.src); // آدرس تصویر
+            imageUrlElement.ele('priority', '0.8');
+
+            const imageElement = imageUrlElement.ele('image:image');
+            imageElement.ele('image:loc', image.src); // آدرس تصویر
+            imageElement.ele('image:title', image.title); // عنوان تصویر
+            imageElement.ele('image:caption', image.description); // توضیحات تصویر
+        });
+        
         const xmlString = xml.end({ pretty: true });
         res.header('Content-Type', 'text/xml');
         res.send(xmlString);
