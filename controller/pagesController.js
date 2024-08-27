@@ -109,7 +109,8 @@ exports.getSitemap = async (req, res) => {
 
         const staticPages = [
             { loc: 'https://artaaman.com/', lastmod: '2024-02-23T12:02:28+00:00', priority: '1.0' },
-            { loc: 'https://artaaman.com/gallery', lastmod: '2024-02-23T12:02:28+00:00', priority: '1.0' },
+            { loc: 'https://shop.artaaman.com', lastmod: '2024-02-23T12:02:28+00:00', priority: '1.0' },
+            { loc: 'https://artaaman.com/gallery', lastmod: '2024-02-23T12:02:28+00:00', priority: '8.0' },
             { loc: 'https://artaaman.com/about', lastmod: '2024-02-23T12:02:28+00:00', priority: '0.8' },
             { loc: 'https://artaaman.com/contact', lastmod: '2024-02-23T12:02:28+00:00', priority: '0.8' },
             { loc: 'https://artaaman.com/news', lastmod: '2024-02-23T12:02:28+00:00', priority: '0.8' }
