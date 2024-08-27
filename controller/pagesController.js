@@ -159,15 +159,15 @@ exports.getSitemap = async (req, res) => {
         // اضافه کردن تگ‌های تصاویر به خروجی
         images.forEach(image => {
             const imageUrlElement = xml.ele('url');
-            imageUrlElement.ele('loc', image.src); // آدرس تصویر
+            imageUrlElement.ele('loc', "https://artaaman.com"+image.src); // آدرس تصویر
             imageUrlElement.ele('priority', '0.8');
 
             const imageElement = imageUrlElement.ele('image:image');
-            imageElement.ele('image:loc', image.src); // آدرس تصویر
+            imageElement.ele('image:loc', "https://artaaman.com"+image.src); // آدرس تصویر
             imageElement.ele('image:title', image.title); // عنوان تصویر
             imageElement.ele('image:caption', image.description); // توضیحات تصویر
         });
-        
+
         const xmlString = xml.end({ pretty: true });
         res.header('Content-Type', 'text/xml');
         res.send(xmlString);
