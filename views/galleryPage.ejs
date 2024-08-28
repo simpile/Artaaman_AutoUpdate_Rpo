@@ -62,7 +62,7 @@
         <!-- <% images.reverse(); %> -->
         <% images.reverse().forEach(image=> {%>  
           <a href="<%= image.src %>"
-            data-glightbox="title:<%= image.title %>   <%= image.link ? `|<a href='${image.link}'>ثبت سفارش</a>` : ''; %>; description:<%= image.description %>"
+            data-glightbox="title:<%= image.title %>   <%= image.link ? `|<a href='${image.link}' target='_blank'>ثبت سفارش</a>` : ''; %>; description:<%= image.description %>"
             class="glightbox gallery_product col-lg-4 col-md-6 col-sm-12 filter <%= image.category %>">
             <img alt="<%= image.title %>" src="<%= image.src %>">
           </a>
