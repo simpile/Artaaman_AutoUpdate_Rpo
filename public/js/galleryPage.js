@@ -5,6 +5,8 @@
 
 var lightboxDescription = GLightbox({
     selector: 'glightbox',
+    touchNavigation: true, // Enable touch navigation for swipe gestures
+
     
   });
    // Get the container element
