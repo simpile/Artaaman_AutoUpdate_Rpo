@@ -5,12 +5,12 @@
 
 var lightboxDescription = GLightbox({
     selector: 'glightbox',
-    touchNavigation: true,
-    closeOnOutsideClick:false,
-    
+    loopAtEnd: !0,
+    touchNavigation: !0,
 
     
   });
+  
    // Get the container element
    var btnContainer = document.getElementById("myBtn-wrapper");
   
