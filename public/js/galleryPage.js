@@ -3,29 +3,12 @@
 /*                                  GLightbox                                 */
 /* -------------------------------------------------------------------------- */
 
-// var lightboxDescription = GLightbox({
-//     selector: 'glightbox',
-//     touchNavigation: true,    
-//   });
-  
-//    // Get the container element
-//    var btnContainer = document.getElementById("myBtn-wrapper");
-  
-//    // Get all buttons with class="btn" inside the container
-//    var btns = btnContainer.getElementsByClassName("btn");
-   
-//    // Loop through the buttons and add the active class to the current/clicked button
-//    for (var i = 0; i < btns.length; i++) {
-//      btns[i].addEventListener("click", function() {
-//        var current = document.getElementsByClassName("active");
-//        current[0].className = current[0].className.replace(" active", "");
-//        this.className += " active";
-//      });
-//    }
 document.addEventListener("DOMContentLoaded", function () {
     var lightboxDescription = GLightbox({
         selector: 'glightbox',
         touchNavigation: false, // غیرفعال کردن پیمایش لمسی داخلی
+        loop: true,
+        // closeOnOutsideClick: false, // بسته نشود با کلیک خارج
         onOpen: function() {
             const lightboxContainer = document.querySelector('#glightbox-body');
 
@@ -36,19 +19,15 @@ document.addEventListener("DOMContentLoaded", function () {
                 // تنظیم حرکات Swipe
                 hammer.on('swipeleft', function(event) {
                     event.preventDefault(); // جلوگیری از بسته شدن GLightbox
-                    console.log("Swipe left detected");
                     lightboxDescription.nextSlide(); // پیمایش به اسلاید بعدی
                 });
 
                 hammer.on('swiperight', function(event) {
                     event.preventDefault(); // جلوگیری از بسته شدن GLightbox
-                    console.log("Swipe right detected");
                     lightboxDescription.prevSlide(); // پیمایش به اسلاید قبلی
                 });
 
-                console.log("Swipe events have been added after GLightbox opened.");
-            } else {
-                console.log("No lightbox container found.");
+          
             }
         }
     });
@@ -90,47 +69,7 @@ function clean() {
 /* -------------------------------------------------------------------------- */
 /*                                   skleton                                  */
 /* -------------------------------------------------------------------------- */
-// // مخفی کردن همه تصاویر قبل از بارگذاری
-// document.addEventListener("DOMContentLoaded", function() {
-//   const images = document.querySelectorAll('.filter');
-//   // images.forEach(image => {
-//   //   image.style.display = 'none'; // مخفی کردن تصاویر
-//   // });
 
-//   const skeletonContainer = document.getElementById('skeleton-container');
-//   const totalImages = images.length;
-
-//   // حداکثر تعداد تصاویر در هر صفحه
-//   const maxImagesPerPage = 12;
-
-//   // تعداد اسکلتون‌ها باید برابر با تعداد تصاویر در صفحه باشد
-//   const skeletonCount = Math.min(totalImages, maxImagesPerPage);
-
-//   // ایجاد اسکلتون‌ها به صورت داینامیک
-//   for (let i = 0; i < skeletonCount; i++) {
-//     const skeletonLoader = document.createElement('div');
-//     skeletonLoader.classList.add('skeleton-loader');
-//     skeletonLoader.innerHTML = `
-//       <div class="skeleton-image"></div>
-//       <div class="skeleton-text"></div>
-//       <div class="skeleton-text short"></div>
-//     `;
-//     skeletonContainer.appendChild(skeletonLoader);
-//   }
-
-//   // نمایش اسکلتون
-//   skeletonContainer.style.display = 'flex';
-
-//   setTimeout(() => {
-//     // مخفی کردن اسکلتون
-//     skeletonContainer.style.display = 'none';
-
-//     // نمایش تصاویر
-//     images.forEach(image => {
-//       image.style.display = 'block'; // نمایش تصاویر
-//     });
-//   }, 500); // مدت زمان بارگذاری به میلی‌ثانیه
-// });
 document.addEventListener("DOMContentLoaded", function () {
   const images = document.querySelectorAll('.filter img'); // انتخاب تصاویر
   const skeletonContainer = document.getElementById('skeleton-container');
