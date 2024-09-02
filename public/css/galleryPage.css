@@ -77,6 +77,14 @@ text-align: right !important;
 
 }
 
+/* select descriptions in glightbox  */
+/* .glightbox-container .gslide,
+.gslide-image img {
+	-webkit-user-select: auto;
+	-moz-user-select: auto;
+	-ms-user-select: auto;
+	user-select: auto;
+} */
 .filter-button:hover {
 
   font-size: 18px;

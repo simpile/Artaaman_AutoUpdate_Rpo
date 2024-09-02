@@ -22,50 +22,41 @@
 //        this.className += " active";
 //      });
 //    }
-var lightboxDescription = GLightbox({
-    selector: 'glightbox',
-    touchNavigation: false, // غیرفعال کردن پیمایش لمسی داخلی
-});
-
-// Get the container element
-var btnContainer = document.getElementById("myBtn-wrapper");
-
-// Get all buttons with class="btn" inside the container
-var btns = btnContainer.getElementsByClassName("btn");
-
-// Loop through the buttons and add the active class to the current/clicked button
-for (var i = 0; i < btns.length; i++) {
-    btns[i].addEventListener("click", function() {
-        var current = document.getElementsByClassName("active");
-        current[0].className = current[0].className.replace(" active", "");
-        this.className += " active";
-    });
-}
-
-// اضافه کردن قابلیت swipe به صورت دستی
-let touchStartX = 0;
-let touchEndX = 0;
-
-const lightboxElements = document.querySelectorAll('.gslide');
-
-lightboxElements.forEach((element) => {
-    element.addEventListener('touchstart', function(event) {
-        touchStartX = event.changedTouches[0].screenX;
+document.addEventListener("DOMContentLoaded", function () {
+    var lightboxDescription = GLightbox({
+        selector: 'glightbox',
+        touchNavigation: false, // غیرفعال کردن پیمایش لمسی داخلی
+        // loop: true,
     });
 
-    element.addEventListener('touchend', function(event) {
-        touchEndX = event.changedTouches[0].screenX;
-        handleSwipe();
-    });
+    // اضافه کردن قابلیت swipe با Hammer.js
+    const lightboxElements = document.querySelectorAll('.glightbox'); // اسلایدهای Glightbox
 
-    function handleSwipe() {
-        if (touchEndX < touchStartX - 50) {
+    lightboxElements.forEach((element) => {
+        const hammer = new Hammer(element);
+
+        // hammer.on('swipeleft', () => {
+        //     lightboxDescription.nextSlide();
+        // });
+
+        // hammer.on('swiperight', () => {
+        //     lightboxDescription.prevSlide();
+        // });
+        hammer.on('swipeleft', (event) => {
+            event.preventDefault(); // جلوگیری از رفتار پیش‌فرض
+            console.log("Swipe left detected");
             lightboxDescription.nextSlide();
-        } 
-        if (touchEndX > touchStartX + 50) {
+        });
+        
+        hammer.on('swiperight', (event) => {
+            event.preventDefault(); // جلوگیری از رفتار پیش‌فرض
+            console.log("Swipe right detected");
             lightboxDescription.prevSlide();
-        }
-    }
+        });
+        
+    });
+
+    // console.log("Hammer.js swipe events have been added.");
 });
 
 
