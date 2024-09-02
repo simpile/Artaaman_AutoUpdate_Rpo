@@ -3,28 +3,71 @@
 /*                                  GLightbox                                 */
 /* -------------------------------------------------------------------------- */
 
+// var lightboxDescription = GLightbox({
+//     selector: 'glightbox',
+//     touchNavigation: true,    
+//   });
+  
+//    // Get the container element
+//    var btnContainer = document.getElementById("myBtn-wrapper");
+  
+//    // Get all buttons with class="btn" inside the container
+//    var btns = btnContainer.getElementsByClassName("btn");
+   
+//    // Loop through the buttons and add the active class to the current/clicked button
+//    for (var i = 0; i < btns.length; i++) {
+//      btns[i].addEventListener("click", function() {
+//        var current = document.getElementsByClassName("active");
+//        current[0].className = current[0].className.replace(" active", "");
+//        this.className += " active";
+//      });
+//    }
 var lightboxDescription = GLightbox({
     selector: 'glightbox',
-    loopAtEnd: !0,
-    touchNavigation: !0,
+    touchNavigation: false, // غیرفعال کردن پیمایش لمسی داخلی
+});
 
-    
-  });
-  
-   // Get the container element
-   var btnContainer = document.getElementById("myBtn-wrapper");
-  
-   // Get all buttons with class="btn" inside the container
-   var btns = btnContainer.getElementsByClassName("btn");
-   
-   // Loop through the buttons and add the active class to the current/clicked button
-   for (var i = 0; i < btns.length; i++) {
-     btns[i].addEventListener("click", function() {
-       var current = document.getElementsByClassName("active");
-       current[0].className = current[0].className.replace(" active", "");
-       this.className += " active";
-     });
-   }
+// Get the container element
+var btnContainer = document.getElementById("myBtn-wrapper");
+
+// Get all buttons with class="btn" inside the container
+var btns = btnContainer.getElementsByClassName("btn");
+
+// Loop through the buttons and add the active class to the current/clicked button
+for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+    });
+}
+
+// اضافه کردن قابلیت swipe به صورت دستی
+let touchStartX = 0;
+let touchEndX = 0;
+
+const lightboxElements = document.querySelectorAll('.gslide');
+
+lightboxElements.forEach((element) => {
+    element.addEventListener('touchstart', function(event) {
+        touchStartX = event.changedTouches[0].screenX;
+    });
+
+    element.addEventListener('touchend', function(event) {
+        touchEndX = event.changedTouches[0].screenX;
+        handleSwipe();
+    });
+
+    function handleSwipe() {
+        if (touchEndX < touchStartX - 50) {
+            lightboxDescription.nextSlide();
+        } 
+        if (touchEndX > touchStartX + 50) {
+            lightboxDescription.prevSlide();
+        }
+    }
+});
+
 
   /* -------------------------------------------------------------------------- */
   /*                                 filter buttons                             */
