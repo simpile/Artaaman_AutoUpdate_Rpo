@@ -26,38 +26,34 @@ document.addEventListener("DOMContentLoaded", function () {
     var lightboxDescription = GLightbox({
         selector: 'glightbox',
         touchNavigation: false, // غیرفعال کردن پیمایش لمسی داخلی
-        // loop: true,
+        onOpen: function() {
+            const lightboxContainer = document.querySelector('#glightbox-body');
+
+            if (lightboxContainer) {
+                // اضافه کردن Hammer.js برای شناسایی حرکات Swipe
+                var hammer = new Hammer(lightboxContainer);
+
+                // تنظیم حرکات Swipe
+                hammer.on('swipeleft', function(event) {
+                    event.preventDefault(); // جلوگیری از بسته شدن GLightbox
+                    console.log("Swipe left detected");
+                    lightboxDescription.nextSlide(); // پیمایش به اسلاید بعدی
+                });
+
+                hammer.on('swiperight', function(event) {
+                    event.preventDefault(); // جلوگیری از بسته شدن GLightbox
+                    console.log("Swipe right detected");
+                    lightboxDescription.prevSlide(); // پیمایش به اسلاید قبلی
+                });
+
+                console.log("Swipe events have been added after GLightbox opened.");
+            } else {
+                console.log("No lightbox container found.");
+            }
+        }
     });
-
-    // اضافه کردن قابلیت swipe با Hammer.js
-    const lightboxElements = document.querySelectorAll('.glightbox'); // اسلایدهای Glightbox
-
-    lightboxElements.forEach((element) => {
-        const hammer = new Hammer(element);
-
-        // hammer.on('swipeleft', () => {
-        //     lightboxDescription.nextSlide();
-        // });
-
-        // hammer.on('swiperight', () => {
-        //     lightboxDescription.prevSlide();
-        // });
-        hammer.on('swipeleft', (event) => {
-            event.preventDefault(); // جلوگیری از رفتار پیش‌فرض
-            console.log("Swipe left detected");
-            lightboxDescription.nextSlide();
-        });
-        
-        hammer.on('swiperight', (event) => {
-            event.preventDefault(); // جلوگیری از رفتار پیش‌فرض
-            console.log("Swipe right detected");
-            lightboxDescription.prevSlide();
-        });
-        
-    });
-
-    // console.log("Hammer.js swipe events have been added.");
 });
+
 
 
   /* -------------------------------------------------------------------------- */
