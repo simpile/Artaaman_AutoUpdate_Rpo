@@ -62,7 +62,7 @@ paginateItems("messages", 6); // 6 مقاله در هر صفحه نمایش دا
 /*                 HANDLE EDITE PARTS FOR ARTICLES AND IMAGES                 */
 /* -------------------------------------------------------------------------- */
 
-function openEditModal(id, title, description, category,link, src = '') {
+function openEditImgModal(id, title, description, category,link, src = '') {
     const fields = { editImageId: id, editTitle: title, editDescription: description, editCategory: category, editLink:link };
     for (let key in fields) {
         document.getElementById(key).value = fields[key];
@@ -78,15 +78,40 @@ function openEditModal(id, title, description, category,link, src = '') {
     // Set the URL field with the current image URL
     document.getElementById('editImageUrl').value = src;
 }
+// articl
+function openEditModal(button) {
+  const id = button.getAttribute('data-id');
+  const title = button.getAttribute('data-title');
+  const desc = button.getAttribute('data-desc');
+  const label = button.getAttribute('data-label');
+  const alt = button.getAttribute('data-alt');
+  const keywords = button.getAttribute('data-keywords');
+  const subj = button.getAttribute('data-subj');
+
+  // مقداردهی به فیلدهای مدال
+  document.getElementById('editedTitle').value = title;
+  document.getElementById('editedDesc').value = desc;
+  document.getElementById('label').value = label;
+  document.getElementById('alt').value = alt;
+  document.getElementById('keywords').value = keywords;
+  document.getElementById('subj').value = subj;
+
+  // تنظیم آدرس ارسال فرم
+  const form = document.getElementById('editArticleForm');
+  form.action = `/editarticle/${id}`;
+}
 
 /* -------------------------------------------------------------------------- */
 /*                      CK-EDITORS FOR ARTICLE TEXTAREAS                      */
 /* -------------------------------------------------------------------------- */
-const editors = ['#desc', '#editedDesc'];
+const editors = ['#desc'];
+// , '#editedDesc'
 
 editors.forEach(selector => {
     ClassicEditor
-        .create(document.querySelector(selector))
+        .create(document.querySelector(selector), {
+          language: 'fa', // زبان فارسی برای راست‌چین شدن)
+          } )
         .catch(error => {
             console.error(error);
         });

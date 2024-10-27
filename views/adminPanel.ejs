@@ -112,100 +112,99 @@
         <!--                             ARTICLE SECTION                             -->
         <!-- ----------------------------------------------------------------------- -->
         <div id="articles" class="section ">
-
             <h1 class="text-center">اخبار و مقالات</h1>
-
             <div class="admin-list ">
-                <% if (news.length> 0) { %>
-                <% news.forEach(article=> { %>
-                    <div class="card item eachArticle">
-                        <img class="card-img-top" src="<%= article.img %>" alt="<%= article.alt %>">
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                <%= article.title %>
-                            </h5>
-                            <h6 class="card-subtitle mb-2 text-muted">
-                                <%= article.label %>
-                            </h6>
-                            <p class="card-text"><%- article.subj %></p>
-                            <div class="btn-container">
-                                <a class="btn btn-outline-danger" href="/deletearticle/<%= article._id %>">حذف مقاله</a>
-                                <a class="btn btn-primary" href="/news/<%= article._id %>">مشاهده مقاله</a>
-                                <button class="btn btn-outline-primary editBtn" data-toggle="modal"
-                                    data-target="#editModal"
-                                    onclick="openEditModal('<%= article._id %>', '<%= article.title %>', '<%= article.desc %>', '<%= article.label %>')">ویرایش
-                                    مقاله</button>
-                            </div>
-                        </div>
-                    </div>
+                <% if (news.length > 0) { %>
+                    <% news.forEach(article => { %>
+                        <div class="card item eachArticle">
+                            <img class="card-img-top" src="<%= article.img %>" alt="<%= article.alt %>">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <%= article.title %>
+                                </h5>
+                                <h6 class="card-subtitle mb-2 text-muted">
+                                    <%= article.label %>
+                                </h6>
+                                <p class="card-text"><%- article.subj %></p>
+                                <div class="btn-container">
+                                    <a class="btn btn-outline-danger" href="/deletearticle/<%= article._id %>">حذف مقاله</a>
+                                    <a class="btn btn-primary" href="/news/<%= article._id %>">مشاهده مقاله</a>
+                                    <!-- <button class="btn btn-outline-primary editBtn" data-toggle="modal"
+                                        data-target="#editModal"
+                                        onclick="openEditModal('<%= article._id %>', '<%= article.title %>', '<%= article.desc %>', '<%= article.label %>', '<%= article.alt %>', '<%= article.keywords %>', '<%= article.subj %>')">ویرایش مقاله</button> -->
+                                        <button class="btn btn-outline-primary editBtn" 
+    data-toggle="modal" 
+    data-target="#editModal"
+    data-id="<%= article._id %>"
+    data-title="<%= article.title %>"
+    data-desc="<%= article.desc %>"
+    data-label="<%= article.label %>"
+    data-alt="<%= article.alt %>"
+    data-keywords="<%= article.keywords %>"
+    data-subj="<%= article.subj %>"
+    onclick="openEditModal(this)">ویرایش مقاله</button>
 
-                    <!-- Modal for editing article -->
-                    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="editModalLabel">ویرایش مقاله</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
                                 </div>
-                                <form class="text-right rtl" action="/editarticle/<%= article._id %>" method="post"
-                                    enctype="multipart/form-data">
-                                    <div class="modal-body">
-                                        <div class="form-group">
-                                            <label for="editedTitle">تغییر عنوان</label>
-                                            <input placeholder="ویرایش عنوان" class="form-control" id="editedTitle"
-                                                type="text" name="title" value="<%= article.title %>">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="editedDesc">ویرایش توضیحات</label>
-                                            <textarea placeholder="ویرایش توضیحات" class="form-control" id="editedDesc"
-                                                name="desc"><%- article.desc %></textarea>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="label">ویرایش lable</label>
-                                            <input placeholder="ویرایش lable" class="form-control" id="label"
-                                                type="text" name="label" value="<%= article.label %>">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="image">تغییر عکس</label>
-                                            <input class="form-control" type="file" id="image" name="image">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="alt">تغییر alt</label>
-                                            <input placeholder="تغییر alt" class="form-control"
-                                                value="<%= article.alt %>" type="text" id="alt" name="alt">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="keywords">تغییر کلمات کلیدی</label>
-                                            <input placeholder="تغییر کلمات کلیدی" class="form-control"
-                                                value="<%= article.keywords %>" type="text" id="keywords"
-                                                name="keywords">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="subj">تغییر سابجکت</label>
-                                            <input placeholder="تغییر سابجکت" class="form-control"
-                                                value="<%= article.subj %>" type="text" id="subj" name="subj">
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-dismiss="modal">بستن</button>
-                                        <button class="btn btn-warning" type="submit">ویرایش</button>
-                                    </div>
-                                </form>
                             </div>
                         </div>
-                    </div>
                     <% }) %>
-                    <% } else { %>
-                        <p>هیچ مقاله‌ای موجود نیست.</p>
-                        <% } %>
+                <% } else { %>
+                    <p>هیچ مقاله‌ای موجود نیست.</p>
+                <% } %>
             </div>
-
+        
+            <!-- Modal for editing article (این باید خارج از حلقه باشد) -->
+            <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="editModalLabel">ویرایش مقاله</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <form id="editArticleForm" class="text-right rtl" method="post" enctype="multipart/form-data">
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="editedTitle">تغییر عنوان</label>
+                                    <input placeholder="ویرایش عنوان" class="form-control" id="editedTitle" type="text" name="title">
+                                </div>
+                                <div class="form-group">
+                                    <label for="editedDesc">ویرایش توضیحات</label>
+                                    <textarea placeholder="ویرایش توضیحات" class="form-control" id="editedDesc" name="desc"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="label">ویرایش lable</label>
+                                    <input placeholder="ویرایش lable" class="form-control" id="label" type="text" name="label">
+                                </div>
+                                <div class="form-group">
+                                    <label for="image">تغییر عکس</label>
+                                    <input class="form-control" type="file" id="image" name="image">
+                                </div>
+                                <div class="form-group">
+                                    <label for="alt">تغییر alt</label>
+                                    <input placeholder="تغییر alt" class="form-control" type="text" id="alt" name="alt">
+                                </div>
+                                <div class="form-group">
+                                    <label for="keywords">تغییر کلمات کلیدی</label>
+                                    <input placeholder="تغییر کلمات کلیدی" class="form-control" type="text" id="keywords" name="keywords">
+                                </div>
+                                <div class="form-group">
+                                    <label for="subj">تغییر سابجکت</label>
+                                    <input placeholder="تغییر سابجکت" class="form-control" type="text" id="subj" name="subj">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">بستن</button>
+                                <button class="btn btn-warning" type="submit">ویرایش</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        
             <div id="articles-pagination" class="pagination"></div>
-
+        
             <form class="admin-form" action="/handlenews" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     <input placeholder="عنوان مقاله" class="form-control" id="title" type="text" name="title">
@@ -216,7 +215,6 @@
                 <div class="form-group">
                     <input placeholder="دسته بندی" class="form-control" id="label" type="text" name="label">
                 </div>
-
                 <div class="form-group">
                     <input placeholder=" keywords meta" class="form-control" type="text" id="keywords" name="keywords">
                 </div>
@@ -232,7 +230,7 @@
                 <button class="btn btn-warning" type="submit">افزودن مقاله</button>
             </form>
         </div>
-
+        
         <!-- ----------------------------------------------------------------------- -->
         <!--                        SUPPORTS MESSAGES SECTION                        -->
         <!-- ----------------------------------------------------------------------- -->
@@ -291,7 +289,7 @@
                             <a href="/deleteimage/<%= image._id %>" class="btn btn-danger"
                                 onclick="return confirm('آیا مطمئن هستید؟')">X</a>
                             <button class="btn btn-info" data-toggle="modal" data-target="#editImageModal"
-                                onclick="openEditModal('<%= image._id %>', '<%= image.title %>', '<%= image.description %>', '<%= image.category %>', '<%= image.src %> , <%= image.link %>')">🖉
+                                onclick="openEditImgModal('<%= image._id %>', '<%= image.title %>', '<%= image.description %>', '<%= image.category %>', '<%= image.src %> , <%= image.link %>')">🖉
                             </button>
                             </div>
                             <img src="<%= image.src %>" class="card-img-top" alt="<%= image.title %>">
