@@ -105,6 +105,7 @@ function openEditModal(button) {
 /*                      CK-EDITORS FOR ARTICLE TEXTAREAS                      */
 /* -------------------------------------------------------------------------- */
 const editors = ['#desc'];
+
 // , '#editedDesc'
 
 editors.forEach(selector => {
