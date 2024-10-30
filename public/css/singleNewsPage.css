@@ -68,11 +68,12 @@ a:hover {
   max-width: 100%;
   /* min-width: 51%; */
 }
+
 .myNews-figureCapion {
   width: 82%;
   margin: 0 auto;
   margin-top: 2rem;
-  font-size: 20px;
+  font-size: 1rem;
   padding: 2rem;
   /* column-count: 2; */
 }
@@ -87,6 +88,17 @@ a:hover {
 }
 .myNews-figureCapion img{
   margin: 1rem auto;
+}
+.myNews-figureCapion h2{
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+.myNews-figureCapion h3,
+.myNews-figureCapion h4,
+.myNews-figureCapion h5,
+.myNews-figureCapion h6{
+  font-size: 1.4rem;
+  line-height: 2.5rem;
 }
 /* -------------------------------------------------------------------------- */
 /*                                RELATED-NEWS                                */
@@ -140,9 +152,7 @@ aside h4 {
   width: 100%;
 }
 
-/* .myCardDetails {
-  -webkit-transition: all 1s;
-} */
+
 
 .myCardDetails h3 {
   color: var(--green-dark);
@@ -277,10 +287,14 @@ aside h4 {
   transition-delay: 0.25s;
 }
 
+.myNews-figureCapion p, li{
+  font-size: 1.2rem;
+}
 @media (max-width: 425px) {
   .myNews-header h1 {
     font-size: 25px;
     line-height: 2rem;
+    font-weight: bold;
   }
   
   .myNews-figureCapion, 
@@ -294,8 +308,16 @@ aside h4 {
     /* padding: .5rem; */
     /* text-align: justify; */
 /* font-size: 18px; */
-line-height: 2.5em;
+line-height: 2.5rem;
   }
+  .myNews-figureCapion h2,
+  .myNews-figureCapion h3,
+.myNews-figureCapion h4,
+.myNews-figureCapion h5,
+.myNews-figureCapion h6{
+  font-size: 1.5rem;
+font-weight: bold;
+}
 }
 @media (max-width: 600px) {
   .myNews-figureCapion {
@@ -337,6 +359,10 @@ margin-bottom: 0;
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
+}
+.festivalfig figcaption {
+width: 100%;
+text-align: center;
 }
 @media (max-width: 1013px){
   .festivalfig img, .festivalfig figcaption {
