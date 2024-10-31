@@ -5,20 +5,30 @@ strong:not(.myFooter-header strong) {
   color: var(--grey-dark);
 }
 
-a{
-  color: var(--yellow-dark);
+.myNews-figureCapion a{
+  color: var(--blue-light);
   cursor: pointer;
+  text-decoration: underline;
+  font-weight: bold;
 }
 
-a:hover {
+
+.myNews-figureCapion a:hover {
   
   color: var(--green-dark);
 }
 
+
+
+.myNews-figureCapion a:visited{
+  color: var(--green-bg);
+}
 .refrence {
   text-align: left;
 }
-
+.myNews-figureCapion p a{
+  color: inherit;
+}
 .myNews-outerPart {
   min-height: 100vh;
   text-align: right;
