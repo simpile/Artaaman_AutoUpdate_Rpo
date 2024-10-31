@@ -13,10 +13,25 @@ document.addEventListener("DOMContentLoaded", function () {
 /* -------------------------------------------------------------------------- */
 /*                               CONTENT SECTION                              */
 /* -------------------------------------------------------------------------- */
+
 function showSection(sectionId) {
   $(".section").removeClass("active-section");
   $("#" + sectionId).addClass("active-section");
+  
+  // ذخیره شناسه تب فعال در localStorage
+  localStorage.setItem("activeSection", sectionId);
 }
+
+$(document).ready(function() {
+  // بررسی و بازیابی شناسه تب فعال از localStorage
+  var activeSection = localStorage.getItem("activeSection");
+  if (activeSection) {
+      showSection(activeSection);
+  } else {
+      showSection('main'); // در صورتی که هیچ تب فعالی وجود نداشته باشد، تب اول را نمایش می‌دهد
+  }
+});
+
 
 /* -------------------------------------------------------------------------- */
 /*                               PAGINATION PART                              */
