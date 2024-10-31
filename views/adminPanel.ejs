@@ -127,7 +127,7 @@
                                 </h6>
                                 <p class="card-text"><%- article.subj %></p>
                                 <div class="btn-container">
-                                    <a class="btn btn-outline-danger" href="/deletearticle/<%= article._id %>">حذف مقاله</a>
+                                    <a class="btn btn-outline-danger"  onclick="return confirm('آیا مطمئن به حذف هستید؟')" href="/deletearticle/<%= article._id %>">حذف مقاله</a>
                                     <a class="btn btn-primary" href="/news/<%= article._id %>">مشاهده مقاله</a>
                                     <!-- <button class="btn btn-outline-primary editBtn" data-toggle="modal"
                                         data-target="#editModal"
@@ -196,7 +196,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">بستن</button>
-                                <button class="btn btn-warning" type="submit">ویرایش</button>
+                                <button  onclick="return confirm('آیا مطمئن به ویرایش هستید؟')" class="btn btn-warning" type="submit">ویرایش</button>
                             </div>
                         </form>
                     </div>
