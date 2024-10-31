@@ -42,8 +42,6 @@ exports.getMain = async (req, res) => {
     
 }
 
-
-
 exports.postSubscribe = async (req, res) => {
     const { name, email } = req.body;
   
@@ -155,7 +153,7 @@ exports.getSitemap = async (req, res) => {
             }
         });
         
-        
+    
         // بارگذاری تصاویر از مدل Image
         const images = await Image.find({}, 'title description src'); // بارگذاری تصاویر
 
