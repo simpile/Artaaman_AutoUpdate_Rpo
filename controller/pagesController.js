@@ -147,7 +147,9 @@ exports.getSitemap = async (req, res) => {
                 newsElement.ele('news:publication_date', item.createdAt.toISOString());
                 newsElement.ele('news:title', item.title);
                 newsElement.ele('news:keywords', item.keywords);
-                newsElement.ele('news:image_link', "https://artaaman.com"+item.img);
+                // newsElement.ele('news:image_link', "https://artaaman.com"+item.img);
+                const imageElement = newsUrlElement.ele('image:image');
+                imageElement.ele('image:loc', "https://artaaman.com" + item.img);
             } else {
                 console.error('Invalid news item:', item._id, 'title:', item.title, 'createdAt:', item.createdAt);
             }
