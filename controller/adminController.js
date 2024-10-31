@@ -107,6 +107,35 @@ exports.updateImage = async (req, res) => {
         res.redirect('/adminpanel');
     }
 };
+exports.copyImage = async (req, res) => {
+    try {
+        
+        const image = await Image.findById(req.params.id); // استفاده از مدل Image
+        
+        if (!image) {
+            req.flash('error', 'تصویر یافت نشد');
+            return res.redirect('/adminpanel');
+        }
+
+        const newImage = new Image({ // استفاده از مدل Image
+            title: image.title + " - کپی",
+            description: image.description,
+            src: image.src,
+            category: image.category,
+            link: image.link, 
+            imageUrl: image.imageUrl
+        });
+
+        await newImage.save();
+        
+
+        req.flash('success', 'کپی تصویر با موفقیت ایجاد شد');
+        res.redirect('/adminpanel');
+    } catch (err) {
+        req.flash('error', 'مشکلی در کپی کردن تصویر رخ داد');
+        res.redirect('/adminpanel');
+    }
+};
 
 //? loading admin login page
 

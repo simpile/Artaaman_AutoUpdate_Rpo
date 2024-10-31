@@ -130,20 +130,19 @@
                                     <a class="btn btn-outline-danger"  onclick="return confirm('آیا مطمئن به حذف هستید؟')" href="/deletearticle/<%= article._id %>">حذف مقاله</a>
                                     <a class="btn btn-outline-primary" onclick="return confirm('آیا میخواهید این مقاله را کپی کنید؟')" href="/copyarticle/<%= article._id %>">کپی مقاله</a>
                                     <a class="btn btn-primary" href="/news/<%= article._id %>">مشاهده مقاله</a>
-                                    <!-- <button class="btn btn-outline-primary editBtn" data-toggle="modal"
+                                    <button class="btn btn-outline-primary editBtn" 
+                                        data-toggle="modal" 
                                         data-target="#editModal"
-                                        onclick="openEditModal('<%= article._id %>', '<%= article.title %>', '<%= article.desc %>', '<%= article.label %>', '<%= article.alt %>', '<%= article.keywords %>', '<%= article.subj %>')">ویرایش مقاله</button> -->
-                                        <button class="btn btn-outline-primary editBtn" 
-    data-toggle="modal" 
-    data-target="#editModal"
-    data-id="<%= article._id %>"
-    data-title="<%= article.title %>"
-    data-desc="<%= article.desc %>"
-    data-label="<%= article.label %>"
-    data-alt="<%= article.alt %>"
-    data-keywords="<%= article.keywords %>"
-    data-subj="<%= article.subj %>"
-    onclick="openEditModal(this)">ویرایش مقاله</button>
+                                        data-id="<%= article._id %>"
+                                        data-title="<%= article.title %>"
+                                        data-desc="<%= article.desc %>"
+                                        data-label="<%= article.label %>"
+                                        data-alt="<%= article.alt %>"
+                                        data-keywords="<%= article.keywords %>"
+                                        data-subj="<%= article.subj %>"
+                                        onclick="openEditModal(this)">
+                                        ویرایش مقاله
+                                    </button>
 
                                 </div>
                             </div>
@@ -289,6 +288,8 @@
                             <div class="pb-3">
                             <a href="/deleteimage/<%= image._id %>" class="btn btn-danger"
                                 onclick="return confirm('آیا مطمئن هستید؟')">X</a>
+                                <a class="btn btn-outline-primary" onclick="return confirm('آیا میخواهید این تصویر را کپی کنید؟')" href="/copyimage/<%= image._id %>">کپی</a>
+
                             <button class="btn btn-info" data-toggle="modal" data-target="#editImageModal"
                                 onclick="openEditImgModal('<%= image._id %>', '<%= image.title %>', '<%= image.description %>', '<%= image.category %>', '<%= image.src %> , <%= image.link %>')">🖉
                             </button>

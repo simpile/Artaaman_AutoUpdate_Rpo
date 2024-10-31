@@ -14,6 +14,7 @@ const {
     copyArticle, 
     handleImageUpload,
     deleteImage,
+    copyImage,
     updateImage,
     deleteSupportMsg,
     deleteSubscribers
@@ -35,6 +36,7 @@ router.get('/deletearticle/:id', deleteArticle);
 router.get('/copyArticle/:id', copyArticle );
 router.post('/handleimageupload', galleryUpload.single('image'), handleImageUpload);
 router.get('/deleteimage/:id', deleteImage);
+router.get('/copyimage/:id', copyImage);
 router.post('/updateimage', galleryUpload.single('image'), updateImage); // اضافه کردن مسیر جدید
 router.post('/deleteSupportMsg/:id', deleteSupportMsg);
 router.post('/deleteSubscribers/:id', deleteSubscribers);
