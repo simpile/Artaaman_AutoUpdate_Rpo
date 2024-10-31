@@ -103,7 +103,7 @@ exports.getSitemap = async (req, res) => {
         })
         .att('xmlns', 'http://www.sitemaps.org/schemas/sitemap/0.9')
         .att('xmlns:xsi', 'http://www.w3.org/2001/XMLSchema-instance')
-        .att('xmlns:image', 'http://artaaman.com/sitemap-gallery/1.1')
+        .att('xmlns:image', 'http://www.google.com/schemas/sitemap-images/1.1')
         .att('xmlns:news', 'http://www.google.com/schemas/sitemap-news/0.9')
         .att('xsi:schemaLocation', 'http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd');
 
