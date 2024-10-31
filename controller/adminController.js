@@ -219,6 +219,39 @@ exports.deleteArticle = async (req, res) => {
         res.redirect('/adminpanel');
     }
 }
+// افزودن تابع کپی مقاله
+exports.copyArticle = async (req, res) => {
+    try {
+        // پیدا کردن مقاله با آیدی
+        const article = await newsModel.findById(req.params.id);
+        
+        if (!article) {
+            req.flash('error', 'مقاله یافت نشد');
+            return res.redirect('/adminpanel');
+        }
+
+        // ساختن مقاله جدید با همان اطلاعات
+        const newArticle = new newsModel({
+            title: article.title + " - کپی", // افزودن عنوان برای نشان دادن کپی
+            desc: article.desc,
+            img: article.img,
+            alt: article.alt, 
+            keywords: article.keywords, 
+            subj: article.subj, 
+            label: article.label, 
+          
+        });
+
+        // ذخیره مقاله جدید
+        await newArticle.save();
+
+        req.flash('success', 'کپی مقاله با موفقیت ایجاد شد');
+        res.redirect('/adminpanel');
+    } catch (err) {
+        req.flash('error', 'مشکلی در کپی کردن مقاله رخ داد');
+        res.redirect('/adminpanel');
+    }
+};
 
 // delete support msge 
 // حذف پیام ساپورت

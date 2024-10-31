@@ -11,6 +11,7 @@ const {
     handleNews,
     handleLoadingNews,
     deleteArticle,
+    copyArticle, 
     handleImageUpload,
     deleteImage,
     updateImage,
@@ -31,6 +32,7 @@ router.post('/handlenews', upload.single('image'), handleNews);
 router.post('/editarticle/:id', upload.single('image'), handleNews);
 router.get('/news/:id', handleLoadingNews);
 router.get('/deletearticle/:id', deleteArticle);
+router.get('/copyArticle/:id', copyArticle );
 router.post('/handleimageupload', galleryUpload.single('image'), handleImageUpload);
 router.get('/deleteimage/:id', deleteImage);
 router.post('/updateimage', galleryUpload.single('image'), updateImage); // اضافه کردن مسیر جدید
