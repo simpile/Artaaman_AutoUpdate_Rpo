@@ -22,7 +22,7 @@ router.get('/news', getNews);
 router.get('/gallery', getGalleryPage);
 router.post('/subscribe', postSubscribe);
 router.post('/support', postSupport);
-router.get('/sitemap.xml', getSitemap);
+router.get('/sitemap2.xml', getSitemap);
 
 
 module.exports = router;
