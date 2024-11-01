@@ -93,87 +93,87 @@ const xmlbuilder = require('xmlbuilder');
 const News = require('../model/newsModel'); // فرض می‌کنیم مدل News در فایل newsModel.js تعریف شده است
 const Image = require('../model/imageModel');
 
-exports.getSitemap = async (req, res) => {
-    try {
-        const xml = xmlbuilder.create('urlset', { 
-            version: '1.0', 
-            encoding: 'UTF-8'
-        })
-        .att('xmlns', 'http://www.sitemaps.org/schemas/sitemap/0.9')
-        .att('xmlns:xsi', 'http://www.w3.org/2001/XMLSchema-instance')
-        .att('xmlns:image', 'http://www.google.com/schemas/sitemap-images/1.1')
-        .att('xmlns:news', 'http://www.google.com/schemas/sitemap-news/0.9')
-        .att('xsi:schemaLocation', 'http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd');
+// exports.getSitemap = async (req, res) => {
+//     try {
+//         const xml = xmlbuilder.create('urlset', { 
+//             version: '1.0', 
+//             encoding: 'UTF-8'
+//         })
+//         .att('xmlns', 'http://www.sitemaps.org/schemas/sitemap/0.9')
+//         .att('xmlns:xsi', 'http://www.w3.org/2001/XMLSchema-instance')
+//         .att('xmlns:image', 'http://www.google.com/schemas/sitemap-images/1.1')
+//         .att('xmlns:news', 'http://www.google.com/schemas/sitemap-news/0.9')
+//         .att('xsi:schemaLocation', 'http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd');
 
-        const staticPages = [
-            { loc: 'https://artaaman.com/', lastmod: '2024-02-23T12:02:28+00:00', priority: '1.0' },
-            { loc: 'https://shop.artaaman.com', lastmod: '2024-02-23T12:02:28+00:00', priority: '1.0' },
-            { loc: 'https://artaaman.com/gallery', lastmod: '2024-02-23T12:02:28+00:00', priority: '8.0' },
-            { loc: 'https://artaaman.com/about', lastmod: '2024-02-23T12:02:28+00:00', priority: '0.8' },
-            { loc: 'https://artaaman.com/contact', lastmod: '2024-02-23T12:02:28+00:00', priority: '0.8' },
-            { loc: 'https://artaaman.com/news', lastmod: '2024-02-23T12:02:28+00:00', priority: '0.8' }
-        ];
+//         const staticPages = [
+//             { loc: 'https://artaaman.com/', lastmod: '2024-02-23T12:02:28+00:00', priority: '1.0' },
+//             { loc: 'https://shop.artaaman.com', lastmod: '2024-02-23T12:02:28+00:00', priority: '1.0' },
+//             { loc: 'https://artaaman.com/gallery', lastmod: '2024-02-23T12:02:28+00:00', priority: '8.0' },
+//             { loc: 'https://artaaman.com/about', lastmod: '2024-02-23T12:02:28+00:00', priority: '0.8' },
+//             { loc: 'https://artaaman.com/contact', lastmod: '2024-02-23T12:02:28+00:00', priority: '0.8' },
+//             { loc: 'https://artaaman.com/news', lastmod: '2024-02-23T12:02:28+00:00', priority: '0.8' }
+//         ];
 
-        staticPages.forEach(page => {
-            const urlElement = xml.ele('url');
-            urlElement.ele('loc', page.loc);
-            urlElement.ele('lastmod', page.lastmod);
-            urlElement.ele('priority', page.priority);
-        });
+//         staticPages.forEach(page => {
+//             const urlElement = xml.ele('url');
+//             urlElement.ele('loc', page.loc);
+//             urlElement.ele('lastmod', page.lastmod);
+//             urlElement.ele('priority', page.priority);
+//         });
 
-        const news = await News.find({}, 'title id createdAt keywords img');
+//         const news = await News.find({}, 'title id createdAt keywords img');
 
-        if (news.length === 0) {
-            console.error('No news found');
-            return res.status(404).send('No news found');
-        }
+//         if (news.length === 0) {
+//             console.error('No news found');
+//             return res.status(404).send('No news found');
+//         }
 
-        news.forEach(item => {
-            const url = `https://artaaman.com/news/${item.id}`;
+//         news.forEach(item => {
+//             const url = `https://artaaman.com/news/${item.id}`;
 
-            if (item && url && item.createdAt) {
-                const newsUrlElement = xml.ele('url');
-                newsUrlElement.ele('loc', url);
-                newsUrlElement.ele('priority', '1.0');
+//             if (item && url && item.createdAt) {
+//                 const newsUrlElement = xml.ele('url');
+//                 newsUrlElement.ele('loc', url);
+//                 newsUrlElement.ele('priority', '1.0');
 
-                const newsElement = newsUrlElement.ele('news:news');
-                const publicationElement = newsElement.ele('news:publication');
+//                 const newsElement = newsUrlElement.ele('news:news');
+//                 const publicationElement = newsElement.ele('news:publication');
                 
-                publicationElement.ele('news:name', 'Artaaman');
-                publicationElement.ele('news:language', 'fa');
+//                 publicationElement.ele('news:name', 'Artaaman');
+//                 publicationElement.ele('news:language', 'fa');
                 
-                newsElement.ele('news:publication_date', item.createdAt.toISOString());
-                newsElement.ele('news:title', item.title);
-                newsElement.ele('news:keywords', item.keywords);
-                // newsElement.ele('news:image_link', "https://artaaman.com"+item.img);
-                const imageElement = newsUrlElement.ele('image:image');
-                imageElement.ele('image:loc', "https://artaaman.com" + item.img);
-            } else {
-                console.error('Invalid news item:', item._id, 'title:', item.title, 'createdAt:', item.createdAt);
-            }
-        });
+//                 newsElement.ele('news:publication_date', item.createdAt.toISOString());
+//                 newsElement.ele('news:title', item.title);
+//                 newsElement.ele('news:keywords', item.keywords);
+//                 // newsElement.ele('news:image_link', "https://artaaman.com"+item.img);
+//                 const imageElement = newsUrlElement.ele('image:image');
+//                 imageElement.ele('image:loc', "https://artaaman.com" + item.img);
+//             } else {
+//                 console.error('Invalid news item:', item._id, 'title:', item.title, 'createdAt:', item.createdAt);
+//             }
+//         });
         
     
-        // بارگذاری تصاویر از مدل Image
-        const images = await Image.find({}, 'title description src'); // بارگذاری تصاویر
+//         // بارگذاری تصاویر از مدل Image
+//         const images = await Image.find({}, 'title description src'); // بارگذاری تصاویر
 
-        // اضافه کردن تگ‌های تصاویر به خروجی
-        images.forEach(image => {
-            const imageUrlElement = xml.ele('url');
-            imageUrlElement.ele('loc', "https://artaaman.com"+image.src); // آدرس تصویر
-            imageUrlElement.ele('priority', '0.8');
+//         // اضافه کردن تگ‌های تصاویر به خروجی
+//         images.forEach(image => {
+//             const imageUrlElement = xml.ele('url');
+//             imageUrlElement.ele('loc', "https://artaaman.com"+image.src); // آدرس تصویر
+//             imageUrlElement.ele('priority', '0.8');
 
-            const imageElement = imageUrlElement.ele('image:image');
-            imageElement.ele('image:loc', "https://artaaman.com"+image.src); // آدرس تصویر
-            imageElement.ele('image:title', image.title); // عنوان تصویر
-            imageElement.ele('image:caption', image.description); // توضیحات تصویر
-        });
+//             const imageElement = imageUrlElement.ele('image:image');
+//             imageElement.ele('image:loc', "https://artaaman.com"+image.src); // آدرس تصویر
+//             imageElement.ele('image:title', image.title); // عنوان تصویر
+//             imageElement.ele('image:caption', image.description); // توضیحات تصویر
+//         });
 
-        const xmlString = xml.end({ pretty: true });
-        res.header('Content-Type', 'text/xml');
-        res.send(xmlString);
-    } catch (error) {
-        console.error('Error generating Sitemap:', error);
-        res.status(500).send('Internal Server Error');
-    }
-};
+//         const xmlString = xml.end({ pretty: true });
+//         res.header('Content-Type', 'text/xml');
+//         res.send(xmlString);
+//     } catch (error) {
+//         console.error('Error generating Sitemap:', error);
+//         res.status(500).send('Internal Server Error');
+//     }
+// };
