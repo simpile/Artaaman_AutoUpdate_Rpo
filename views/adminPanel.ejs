@@ -129,7 +129,7 @@
                                 <div class="btn-container">
                                     <a class="btn btn-outline-danger"  onclick="return confirm('آیا مطمئن به حذف هستید؟')" href="/deletearticle/<%= article._id %>">حذف مقاله</a>
                                     <a class="btn btn-outline-primary" onclick="return confirm('آیا میخواهید این مقاله را کپی کنید؟')" href="/copyarticle/<%= article._id %>">کپی مقاله</a>
-                                    <a class="btn btn-primary" href="/news/<%=  article.slug || encodeURIComponent(article._id) %>">مشاهده مقاله</a>
+                                    <a class="btn btn-primary" href="/news/<%=  article.slug || encodeURIComponent(article._id) %>" target="_blank">مشاهده مقاله</a>
                                     <button class="btn btn-outline-primary editBtn" 
                                         data-toggle="modal" 
                                         data-target="#editModal"
