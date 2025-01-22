@@ -122,7 +122,7 @@
           <% related.forEach(related=> { %>
             <div class="myCardItem" id="newsItem">
               <!-- ITEM START -->
-              <a href="/news/<%= related._id %>">
+              <a href="/news/<%=related.slug || encodeURIComponent(related._id)%>">
                 <img src="<%= related.img %> " alt="<%= related.alt || related.title %>">
                 <div class="myCardDetails">
                   <small>

@@ -87,7 +87,7 @@ exports.postSupport = async (req, res) => {
   }
 };
 
-//? loading sitemap
+// loading sitemap
 
 const xmlbuilder = require('xmlbuilder');
 const News = require('../model/newsModel'); // فرض می‌کنیم مدل News در فایل newsModel.js تعریف شده است
@@ -121,7 +121,7 @@ exports.getSitemap = async (req, res) => {
             urlElement.ele('priority', page.priority);
         });
 
-        const news = await News.find({}, 'title id createdAt keywords img');
+        const news = await News.find({}, 'title id createdAt keywords img slug');
 
         if (news.length === 0) {
             console.error('No news found');
@@ -129,7 +129,7 @@ exports.getSitemap = async (req, res) => {
         }
 
         news.forEach(item => {
-            const url = `https://artaaman.com/news/${item.id}`;
+            const url = `https://artaaman.com/news/${item.slug || item.id}`;
 
             if (item && url && item.createdAt) {
                 const newsUrlElement = xml.ele('url');

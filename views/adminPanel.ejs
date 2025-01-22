@@ -129,7 +129,7 @@
                                 <div class="btn-container">
                                     <a class="btn btn-outline-danger"  onclick="return confirm('آیا مطمئن به حذف هستید؟')" href="/deletearticle/<%= article._id %>">حذف مقاله</a>
                                     <a class="btn btn-outline-primary" onclick="return confirm('آیا میخواهید این مقاله را کپی کنید؟')" href="/copyarticle/<%= article._id %>">کپی مقاله</a>
-                                    <a class="btn btn-primary" href="/news/<%= article._id %>">مشاهده مقاله</a>
+                                    <a class="btn btn-primary" href="/news/<%=  article.slug || encodeURIComponent(article._id) %>">مشاهده مقاله</a>
                                     <button class="btn btn-outline-primary editBtn" 
                                         data-toggle="modal" 
                                         data-target="#editModal"
@@ -140,6 +140,7 @@
                                         data-alt="<%= article.alt %>"
                                         data-keywords="<%= article.keywords %>"
                                         data-subj="<%= article.subj %>"
+                                        data-slug="<%= article.slug %>"
                                         onclick="openEditModal(this)">
                                         ویرایش مقاله
                                     </button>
@@ -168,6 +169,10 @@
                                 <div class="form-group">
                                     <label for="editedTitle">تغییر عنوان</label>
                                     <input placeholder="ویرایش عنوان" class="form-control" id="editedTitle" type="text" name="title">
+                                </div>
+                                <div class="form-group">
+                                    <label for="editSlug">تغییر پیوند/اسلاگ</label>
+                                    <input placeholder="ویرایش پیوند" class="form-control" id="editSlug" type="text" name="slug">
                                 </div>
                                 <div class="form-group">
                                     <label for="editedDesc">ویرایش توضیحات</label>
@@ -208,6 +213,9 @@
             <form class="admin-form" action="/handlenews" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     <input placeholder="عنوان مقاله" class="form-control" id="title" type="text" name="title">
+                </div>
+                <div class="form-group">
+                    <input placeholder="عنوان پیوند" class="form-control" id="slug" type="text" name="slug">
                 </div>
                 <div class="form-group">
                     <textarea placeholder="توضیحات مقاله" id="desc" name="desc"></textarea>

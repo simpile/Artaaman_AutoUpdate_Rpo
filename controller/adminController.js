@@ -181,7 +181,7 @@ exports.handleAdminLogin = (req, res) => {
 //? sending news 
 
 exports.handleNews = async (req, res) => {
-    const {title, desc, alt, keywords, subj, label} = req.body;
+    const {title, desc, alt, keywords, subj, label, slug} = req.body;
 
     if(!title || !desc) {
         req.flash('error', 'عنوان و توضیحات مقاله را وارد کنید')
@@ -199,6 +199,7 @@ exports.handleNews = async (req, res) => {
         keywords,
          subj,
         label: label.trim(),
+        slug
         
     }
 
@@ -225,17 +226,57 @@ exports.handleNews = async (req, res) => {
 
 
 
+// exports.handleLoadingNews = async (req, res) => {
+//     try {
+        
+//       const article = await newsModel.findOne({ slug: req.params.slug });
+//       if (!article) {
+//         // ساختن اسلاگ از عنوان
+//         article = params.title.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '');
+//         await article.save();
+//     }
+//       const relatedLabels = article.label.split(/\s*,\s*/);
+//       const regexLabels = relatedLabels.map(label => new RegExp(label, 'i'));
+//       const related = await newsModel.find({ label: { $in: regexLabels }, _id: { $ne: article._id } });
+//       res.render('singleNewsPage', { article, formatDate, related: related.reverse() });
+//     } catch (err) {
+//       console.log(err);
+//     }
+//   }
 exports.handleLoadingNews = async (req, res) => {
     try {
-      const article = await newsModel.findOne({ _id: req.params.id });
-      const relatedLabels = article.label.split(/\s*,\s*/);
-      const regexLabels = relatedLabels.map(label => new RegExp(label, 'i'));
-      const related = await newsModel.find({ label: { $in: regexLabels }, _id: { $ne: article._id } });
-      res.render('singleNewsPage', { article, formatDate, related: related.reverse() });
+        const slugOrId = req.params.slugOrId;
+
+        // جستجوی مقاله با استفاده از slug
+        let article = await newsModel.findOne({ slug: slugOrId });
+
+        // اگر مقاله با slug پیدا نشد، جستجو با id
+        if (!article) {
+            article = await newsModel.findOne({ _id: slugOrId });
+        }
+
+        // اگر هیچ مقاله‌ای پیدا نشد
+        if (!article) {
+            return res.status(404).send('Article not found');
+        }
+
+        // پیدا کردن مقالات مرتبط
+        const relatedLabels = article.label.split(/\s*,\s*/);
+        const regexLabels = relatedLabels.map(label => new RegExp(label, 'i'));
+
+        const related = await newsModel.find({
+            label: { $in: regexLabels },
+            _id: { $ne: article._id },
+            
+        });
+
+        res.render('singleNewsPage', { article, formatDate, related: related.reverse() });
     } catch (err) {
-      console.log(err);
+        console.error(err);
+        res.status(500).send('Server Error');
     }
-  }
+};
+
 //? delete article
 
 exports.deleteArticle = async (req, res) => {

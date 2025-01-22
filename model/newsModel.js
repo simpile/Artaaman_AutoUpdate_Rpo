@@ -14,6 +14,10 @@ const newsSchema = mongoose.Schema({
     },
     updatedAt: {
         type: Date
+    },
+    slug: {
+        type: String,
+        unique: true // اطمینان از اینکه slug یکتا باشد
     }
 });
 // این hook برای تنظیم createdAt و updatedAt هنگام ایجاد و ویرایش مقاله است

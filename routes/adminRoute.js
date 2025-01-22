@@ -31,7 +31,7 @@ router.get('/adminpanel', getAdminPanel);
 router.post('/adminlogin', handleAdminLogin);
 router.post('/handlenews', upload.single('image'), handleNews);
 router.post('/editarticle/:id', upload.single('image'), handleNews);
-router.get('/news/:id', handleLoadingNews);
+router.get('/news/:slugOrId', handleLoadingNews);
 router.get('/deletearticle/:id', deleteArticle);
 router.get('/copyArticle/:id', copyArticle );
 router.post('/handleimageupload', galleryUpload.single('image'), handleImageUpload);

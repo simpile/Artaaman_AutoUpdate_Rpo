@@ -58,7 +58,7 @@
       <% news.forEach(article => { %>
 
         <div class="news-card" id="newsCard-1" >
-          <a href="/news/<%= article._id %> " class="news-card__card-link"></a>
+          <a href="/news/<%= article.slug || encodeURIComponent(article._id) %> " class="news-card__card-link"></a>
           <img src="<%= article.img %>"  alt="<%= article.alt || article.title %>" class="news-card__image">
           <div class="news-card__text-wrapper">
             <h2 class="news-card__title"><%= article.title %> </h2>
